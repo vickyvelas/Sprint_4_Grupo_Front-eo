@@ -35,7 +35,7 @@ public class sprint_4_Application {
         System.out.println("Hola, estoy andando bien");
     }
 
-
+/*
     @Bean
     CommandLineRunner init() {
         return args -> {
@@ -316,5 +316,6 @@ public class sprint_4_Application {
         };
     }
 
-
+*/
+    
 }
