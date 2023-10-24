@@ -21,6 +21,7 @@ Se puede acceder al deploy en Render desde [aqui](https://dashboard.render.com/w
 
 Una captura mostrando el correcto funcionamiento
 
-<img width="828" alt="Deploy Render" src="https://github.com/Facustriker/Sprint_4_Grupo_Front-eo/assets/141864931/a0519bdc-a672-4d8f-8fce-23131db5a09b">
+<img width="825" alt="Deploy Render" src="https://github.com/Facustriker/Sprint_4_Grupo_Front-eo/assets/141864931/f3b697c6-08e4-49a8-9d58-9941d1864dc6">
+
 
 
