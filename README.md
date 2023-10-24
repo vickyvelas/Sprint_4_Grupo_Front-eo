@@ -23,5 +23,8 @@ Una captura mostrando el correcto funcionamiento
 
 <img width="825" alt="Deploy Render" src="https://github.com/Facustriker/Sprint_4_Grupo_Front-eo/assets/141864931/f3b697c6-08e4-49a8-9d58-9941d1864dc6">
 
-
+## ORDEN DE FUNCIONAMIENTO PARA CREAR OBJETOS DESDE POSTMAN
+1) Primero creamos los clientes, tantos como queramos (cada cliente viene con dos pedidos)
+2) Luego creamos los articulos manufacturados
+3) Por ultimo creamos la unidad de medida (asignar a cada factura un ID distinto que se corresponda con el obtenido al crear los clientes, el ID de articulos manufacturados se puede repetir) 
 
