@@ -7,7 +7,8 @@ El proyecto completo se puede descargar como .rar desde [aqui](https://github.co
 ## DIAGRAMA DE CLASES
 Este es el diagrama de clases utilizado para realizar la implementacion del proyecto
 
-![](https://github.com/Facustriker/Sprint_4_Grupo_Front-eo/assets/141864931/d209ad24-b3f9-4eae-96d0-1f2e52fa2ee1)
+![](https://github.com/Facustriker/Sprint_4_Grupo_Front-eo/assets/141864931/b7b34ece-a8f2-4baf-aa06-d9736f2cad53)
+
 
 
 ## COLECCION DE POSTMAN
