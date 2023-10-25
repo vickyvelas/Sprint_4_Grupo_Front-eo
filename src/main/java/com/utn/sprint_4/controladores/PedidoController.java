@@ -15,7 +15,7 @@ public class PedidoController extends BaseControllerImpl<Pedido, PedidoServiceIm
     @GetMapping("/search")
     public ResponseEntity<?> search(@RequestParam String filtro){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchFpago(filtro));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
