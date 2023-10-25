@@ -20,6 +20,9 @@ Debido a las restricciones de tamaño de GitHub el .jar no se encuentra en el re
 ## LINK A RENDER
 Se puede acceder al deploy en Render desde [aqui](https://dashboard.render.com/web/srv-ckri7n81hnes73fdddog/deploys/dep-ckrj98prfc9c73fqfpug)
 
+## LINK A JIRA
+Se puede acceder a nuestro tablero de Jira mediante: https://tp2scrumgrupo4.atlassian.net/jira/software/projects/GRUP/boards/1/backlog
+
 Una captura mostrando el correcto funcionamiento
 
 <img width="825" alt="Deploy Render" src="https://github.com/Facustriker/Sprint_4_Grupo_Front-eo/assets/141864931/f3b697c6-08e4-49a8-9d58-9941d1864dc6">
