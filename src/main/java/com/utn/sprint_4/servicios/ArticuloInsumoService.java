@@ -9,4 +9,5 @@ import java.util.List;
 public interface ArticuloInsumoService extends BaseService<ArticuloInsumo, Long> {
     List<ArticuloInsumo> search(String filtro) throws Exception;
     Page<ArticuloInsumo> search(String filtro, Pageable pageable) throws Exception;
+
 }
