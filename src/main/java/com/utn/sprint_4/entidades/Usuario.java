@@ -16,7 +16,7 @@ import java.util.Date;
 public class Usuario extends Base {
 
     @NotNull
-    @Column(name = "auth0_id", nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String auth0Id;
 
     @NotNull
