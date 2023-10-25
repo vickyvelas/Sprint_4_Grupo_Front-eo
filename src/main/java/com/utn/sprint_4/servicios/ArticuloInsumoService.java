@@ -12,4 +12,4 @@ public interface ArticuloInsumoService extends BaseService<ArticuloInsumo, Long>
     Page<ArticuloInsumo> search(String filtro, Pageable pageable) throws Exception;
 }
 //hoal
-//hola
+//hola prueba 
