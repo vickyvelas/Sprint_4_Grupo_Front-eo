@@ -26,7 +26,7 @@ public class PedidoServiceImpl extends BaseServiceImpl<Pedido,Long> implements P
     @Override
     public List<Pedido> search(String filtro) throws Exception {
         try {
-            List<Pedido> pedidos = pedidoRepository.searchNativo(filtro);
+            List<Pedido> pedidos = pedidoRepository.searchNativoFpago(filtro);
             return pedidos;
         } catch (Exception e){
             throw new Exception(e.getMessage());
@@ -36,7 +36,7 @@ public class PedidoServiceImpl extends BaseServiceImpl<Pedido,Long> implements P
     @Override
     public Page<Pedido> search(String filtro, Pageable pageable) throws Exception {
         try {
-            Page<Pedido> pedidos = pedidoRepository.searchNativo(filtro, pageable);
+            Page<Pedido> pedidos = pedidoRepository.searchNativoFpagoPageabe(filtro, pageable);
             return pedidos;
         } catch (Exception e){
             throw new Exception(e.getMessage());

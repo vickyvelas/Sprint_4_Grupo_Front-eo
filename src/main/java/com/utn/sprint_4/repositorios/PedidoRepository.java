@@ -17,5 +17,16 @@ public interface PedidoRepository extends BaseRepository<Pedido,Long> {
     @Query(value = "SELECT * FROM pedido WHERE pedido.forma_pago LIKE %:filtro% ",
             countQuery = "SELECT count(*) FROM pedido",
             nativeQuery = true)
-    Page<Pedido> searchNativo(@Param("filtro") String filtro, Pageable pageable);
+    Page<Pedido> searchNativoFpagoPageabe(@Param("filtro") String filtro, Pageable pageable);
+
+        @Query(value = "SELECT * FROM pedido WHERE pedido.Id LIKE %:filtro% ",
+                nativeQuery = true)
+        List<Pedido> searchNativoID(@Param("filtro") int filtro);
+
+        @Query(value = "SELECT * FROM pedido WHERE pedido.Id LIKE %:filtro% ",
+                countQuery = "SELECT count(*) FROM pedido",
+                nativeQuery = true)
+        Page<Pedido> searchNativoIDPageable(@Param("filtro") int filtro, Pageable pageable);
+
+
 }

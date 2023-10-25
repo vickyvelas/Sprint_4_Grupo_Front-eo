@@ -14,8 +14,7 @@ public interface ArticuloManufacturadoRepository extends BaseRepository<Articulo
     @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:filtro% ",
             nativeQuery = true)
     List<ArticuloManufacturado> searchNativo(@Param("filtro") String filtro);
-
-
+    
     @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:filtro% ",
             countQuery = "SELECT count(*) FROM Articulo_Manufacturado",
             nativeQuery = true)
