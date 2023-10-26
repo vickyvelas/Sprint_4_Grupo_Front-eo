@@ -15,10 +15,6 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-
-
-
-
 public class Cliente extends Base {
 
     private String nombre;
