@@ -30,6 +30,7 @@ public class Cliente extends Base {
     private Usuario usuario;
 
 
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
     @Builder.Default
