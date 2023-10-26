@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f7357b84-78ab-4f18-802f-8d16df6f050d",
+		"_postman_id": "98e75f9b-2be6-4ebc-9886-78632230a96f",
 		"name": "SPRINT 4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "30177056"
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Alfredro\",\r\n    \"apellido\":\"Alcoraz\",\r\n    \"telefono\": 2617438823,\r\n    \"email\": \"alfredito@gmail.com\",\r\n    \"usuario\": {\r\n            \"auth0Id\": \"User03\",\r\n            \"username\": \"Alfredito\",\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n    \"domicilios\": [\r\n            {\r\n                \"calle\": \"San Martin\",\r\n                \"numero\": 287,\r\n                \"codigoPostal\": 5533,\r\n                \"localidad\": \"Guaymallen\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 4,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n            {\r\n                \"calle\": \"Tucuman\",\r\n                \"numero\": 543,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        ],\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"pedidos\": [\r\n            {\r\n                \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                \"total\": 9000,\r\n                \"totalCosto\": 3000,\r\n                \"estado\": \"PAGADO\",\r\n                \"tipoEnvio\": \"TAKE_AWAY\",\r\n                \"formaPago\": \"EFECTIVO\",\r\n                \"domicilioEntrega\": {\r\n                \"calle\": \"San Martin\",\r\n                \"numero\": 287,\r\n                \"codigoPostal\": 5533,\r\n                \"localidad\": \"Guaymallen\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 4,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                \"detallesPedidos\": [\r\n                    {\r\n                        \"cantidad\": 3,\r\n                        \"subtotal\": 2000,\r\n                        \"subtotalCosto\": 1000\r\n                    },\r\n                    {\r\n                        \"cantidad\": 7,\r\n                        \"subtotal\": 5000,\r\n                        \"subtotalCosto\": 2500\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                \"total\": 12000,\r\n                \"totalCosto\": 6260,\r\n                \"estado\": \"COMPLETADO\",\r\n                \"tipoEnvio\": \"TAKE_AWAY\",\r\n                \"formaPago\": \"EFECTIVO\",\r\n                \"domicilioEntrega\": {\r\n                \"calle\": \"Tucuman\",\r\n                \"numero\": 543,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                \"detallesPedidos\": [\r\n                    {\r\n                        \"cantidad\": 15,\r\n                        \"subtotal\": 16000,\r\n                        \"subtotalCosto\": 7500\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }",
+							"raw": "{\r\n    \"nombre\": \"Alfredro\",\r\n    \"apellido\":\"Alcoraz\",\r\n    \"telefono\": 2617438823,\r\n    \"email\": \"alfredito@gmail.com\",\r\n    \"usuario\": {\r\n            \"auth0Id\": \"User01\",\r\n            \"username\": \"Alfredito\",\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n    \"domicilios\": [\r\n            {\r\n                \"calle\": \"San Martin\",\r\n                \"numero\": 287,\r\n                \"codigoPostal\": 5533,\r\n                \"localidad\": \"Guaymallen\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 4,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n            {\r\n                \"calle\": \"Tucuman\",\r\n                \"numero\": 543,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        ],\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"pedidos\": [\r\n            {\r\n                \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                \"total\": 9000,\r\n                \"totalCosto\": 3000,\r\n                \"estado\": \"PAGADO\",\r\n                \"tipoEnvio\": \"TAKE_AWAY\",\r\n                \"formaPago\": \"EFECTIVO\",\r\n                \"domicilioEntrega\": {\r\n                \"calle\": \"San Martin\",\r\n                \"numero\": 287,\r\n                \"codigoPostal\": 5533,\r\n                \"localidad\": \"Guaymallen\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 4,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                \"detallesPedidos\": [\r\n                    {\r\n                        \"cantidad\": 3,\r\n                        \"subtotal\": 2000,\r\n                        \"subtotalCosto\": 1000\r\n                    },\r\n                    {\r\n                        \"cantidad\": 7,\r\n                        \"subtotal\": 5000,\r\n                        \"subtotalCosto\": 2500\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                \"total\": 12000,\r\n                \"totalCosto\": 6260,\r\n                \"estado\": \"COMPLETADO\",\r\n                \"tipoEnvio\": \"TAKE_AWAY\",\r\n                \"formaPago\": \"EFECTIVO\",\r\n                \"domicilioEntrega\": {\r\n                \"calle\": \"Tucuman\",\r\n                \"numero\": 543,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                \"detallesPedidos\": [\r\n                    {\r\n                        \"cantidad\": 15,\r\n                        \"subtotal\": 16000,\r\n                        \"subtotalCosto\": 7500\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -78,6 +78,29 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/2",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
 							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/1",
 							"protocol": "https",
 							"host": [
@@ -90,29 +113,6 @@
 								"v1",
 								"clientes",
 								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ONE",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/3",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"clientes",
-								"3"
 							]
 						}
 					},
@@ -178,12 +178,12 @@
 					"response": []
 				},
 				{
-					"name": "SEARCH",
+					"name": "SEARCH BY NAME OR SURNAME",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/search?filtro=Juan",
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/search?filtro=Gim",
 							"protocol": "https",
 							"host": [
 								"sprint4-front-eo",
@@ -199,7 +199,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "Juan"
+									"value": "Gim"
 								}
 							]
 						}
@@ -207,7 +207,7 @@
 					"response": []
 				},
 				{
-					"name": "SEARCH PAGED",
+					"name": "SEARCH PAGED BY NAME OR SURNAME",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -229,6 +229,665 @@
 								{
 									"key": "filtro",
 									"value": "Juan"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"auth0Id\": \"User03\",\r\n        \"username\": \"Alfredito\",\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": 3,\r\n        \"auth0Id\": \"User05\",\r\n        \"username\": \"Vegetta777\",\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/3",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/4",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/1",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/paged?page=0&size=2&sort=id,desc",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH BY USERNAME OR AUTH0ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/search?filtro=Alfre",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Alfre"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH PAGED BY USERNAME OR AUTH0ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/searchPaged?filtro=Alfredito&page=0&size=2&sort=id,desc",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Alfredito"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 9000,\r\n        \"totalCosto\": 3000,\r\n        \"estado\": \"PAGADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \r\n            \"calle\": \"San Martin\",\r\n            \"numero\": 287,\r\n            \"codigoPostal\": 5533,\r\n            \"localidad\": \"Guaymallen\",\r\n            \"numeroDpto\": 2,\r\n            \"pisoDpto\": 4,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n               \r\n                \"cantidad\": 3,\r\n                \"subtotal\": 2000,\r\n                \"subtotalCosto\": 1000\r\n            },\r\n            {\r\n               \r\n                \"cantidad\": 7,\r\n                \"subtotal\": 5000,\r\n                \"subtotalCosto\": 2500\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"id\": 7,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 900,\r\n        \"totalCosto\": 3000,\r\n        \"estado\": \"PAGADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 3,\r\n            \"calle\": \"San Martin\",\r\n            \"numero\": 287,\r\n            \"codigoPostal\": 5533,\r\n            \"localidad\": \"Guaymallen\",\r\n            \"numeroDpto\": 2,\r\n            \"pisoDpto\": 4,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 1,\r\n                \"cantidad\": 3,\r\n                \"subtotal\": 2000,\r\n                \"subtotalCosto\": 1000\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"cantidad\": 7,\r\n                \"subtotal\": 5000,\r\n                \"subtotalCosto\": 2500\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/7",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/7",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/5",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/paged?page=0&size=2&sort=id,desc",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Factura",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"mpPaymentId\": 3423523525,\r\n    \"mpMerchantOrderId\": 285929394,\r\n    \"mpPreferenceId\": \"IDPreferido\",\r\n    \"mpPaymentType\": \"MercadoPago\",\r\n    \"formaPago\": \"EFECTIVO\",\r\n    \"totalVenta\": 3092939,\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": null,\r\n    \"pedido\": {\r\n        \"id\": 1,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 4000,\r\n        \"totalCosto\": 2000,\r\n        \"estado\": \"PAGADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 3,\r\n            \"calle\": \"Beltrán\",\r\n            \"numero\": 342,\r\n            \"codigoPostal\": 5500,\r\n            \"localidad\": \"Godoy Cruz\",\r\n            \"numeroDpto\": 3,\r\n            \"pisoDpto\": 2,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 3,\r\n                \"cantidad\": 6,\r\n                \"subtotal\": 7000,\r\n                \"subtotalCosto\": 5000\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"cantidad\": 4,\r\n                \"subtotal\": 3000,\r\n                \"subtotalCosto\": 1000\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"fechaFacturacion\": \"2023-08-21T03:00:00.000+00:00\",\r\n    \"mpPaymentId\": 23456791,\r\n    \"mpMerchantOrderId\": 585929394,\r\n    \"mpPreferenceId\": \"Idea\",\r\n    \"mpPaymentType\": \"MercadoPago\",\r\n    \"formaPago\": \"MERCADO_PAGO\",\r\n    \"totalVenta\": 23000,\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": null,\r\n    \"pedido\": {\r\n        \"id\": 2,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 9000,\r\n        \"totalCosto\": 3260,\r\n        \"estado\": \"COMPLETADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 2,\r\n            \"calle\": \"Belgrano\",\r\n            \"numero\": 302,\r\n            \"codigoPostal\": 5519,\r\n            \"localidad\": \"Capital\",\r\n            \"numeroDpto\": 4,\r\n            \"pisoDpto\": 1,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 3,\r\n                \"cantidad\": 12,\r\n                \"subtotal\": 13000,\r\n                \"subtotalCosto\": 4500\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/2",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/7",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/2",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/paged?page=0&size=3&sort=id,desc",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/search?filtro=Men",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Men"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/searchPaged?filtro=MenosIdea&page=0&size=3&sort=id,desc",
+							"protocol": "https",
+							"host": [
+								"sprint4-front-eo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "MenosIdea"
 								},
 								{
 									"key": "page",
@@ -958,249 +1617,6 @@
 								{
 									"key": "filtro",
 									"value": "litro"
-								},
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "3"
-								},
-								{
-									"key": "sort",
-									"value": "id,desc"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Factura",
-			"item": [
-				{
-					"name": "CREATE",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"mpPaymentId\": 3423523525,\r\n    \"mpMerchantOrderId\": 285929394,\r\n    \"mpPreferenceId\": \"IDPreferido\",\r\n    \"mpPaymentType\": \"MercadoPago\",\r\n    \"formaPago\": \"EFECTIVO\",\r\n    \"totalVenta\": 3092939,\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": null,\r\n    \"pedido\": {\r\n        \"id\": 1,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 4000,\r\n        \"totalCosto\": 2000,\r\n        \"estado\": \"PAGADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 3,\r\n            \"calle\": \"Beltrán\",\r\n            \"numero\": 342,\r\n            \"codigoPostal\": 5500,\r\n            \"localidad\": \"Godoy Cruz\",\r\n            \"numeroDpto\": 3,\r\n            \"pisoDpto\": 2,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 3,\r\n                \"cantidad\": 6,\r\n                \"subtotal\": 7000,\r\n                \"subtotalCosto\": 5000\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"cantidad\": 4,\r\n                \"subtotal\": 3000,\r\n                \"subtotalCosto\": 1000\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "UPDATE",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": 2,\r\n    \"fechaFacturacion\": \"2023-08-21T03:00:00.000+00:00\",\r\n    \"mpPaymentId\": 23456791,\r\n    \"mpMerchantOrderId\": 585929394,\r\n    \"mpPreferenceId\": \"Idea\",\r\n    \"mpPaymentType\": \"MercadoPago\",\r\n    \"formaPago\": \"MERCADO_PAGO\",\r\n    \"totalVenta\": 23000,\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": null,\r\n    \"pedido\": {\r\n        \"id\": 2,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 9000,\r\n        \"totalCosto\": 3260,\r\n        \"estado\": \"COMPLETADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 2,\r\n            \"calle\": \"Belgrano\",\r\n            \"numero\": 302,\r\n            \"codigoPostal\": 5519,\r\n            \"localidad\": \"Capital\",\r\n            \"numeroDpto\": 4,\r\n            \"pisoDpto\": 1,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 3,\r\n                \"cantidad\": 12,\r\n                \"subtotal\": 13000,\r\n                \"subtotalCosto\": 4500\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/2",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/7",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"7"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ONE",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/2",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL PAGED",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/paged?page=0&size=3&sort=id,desc",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"paged"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "3"
-								},
-								{
-									"key": "sort",
-									"value": "id,desc"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SEARCH",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/search?filtro=Men",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"search"
-							],
-							"query": [
-								{
-									"key": "filtro",
-									"value": "Men"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SEARCH PAGED",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/searchPaged?filtro=MenosIdea&page=0&size=3&sort=id,desc",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"searchPaged"
-							],
-							"query": [
-								{
-									"key": "filtro",
-									"value": "MenosIdea"
 								},
 								{
 									"key": "page",

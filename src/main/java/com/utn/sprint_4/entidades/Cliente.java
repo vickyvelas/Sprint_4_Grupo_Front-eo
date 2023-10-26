@@ -33,6 +33,8 @@ public class Cliente extends Base {
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
+
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
     @Builder.Default

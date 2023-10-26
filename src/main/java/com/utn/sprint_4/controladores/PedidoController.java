@@ -15,7 +15,7 @@ public class PedidoController extends BaseControllerImpl<Pedido, PedidoServiceIm
     @GetMapping("/search")
     public ResponseEntity<?> search(@RequestParam String filtro){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchFpago(filtro));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
@@ -25,7 +25,26 @@ public class PedidoController extends BaseControllerImpl<Pedido, PedidoServiceIm
     @GetMapping("/searchPaged")
     public ResponseEntity<?> search(@RequestParam String filtro, Pageable pageable){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro, pageable));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchFpagoPageable(filtro, pageable));
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
+        }
+    }
+    @GetMapping("/searchByID")
+    public ResponseEntity<?> search(@RequestParam int filtro){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchID(filtro));
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
+        }
+    }
+
+    @GetMapping("/searchByIDPaged")
+    public ResponseEntity<?> search(@RequestParam int filtro, Pageable pageable){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchIDPageable(filtro, pageable));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
