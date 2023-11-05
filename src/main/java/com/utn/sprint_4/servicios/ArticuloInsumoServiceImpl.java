@@ -20,9 +20,9 @@ public class ArticuloInsumoServiceImpl extends BaseServiceImpl<ArticuloInsumo, L
         this.articuloInsumoRepository = articuloInsumoRepository;
     }
     @Override
-    public List<ArticuloInsumo> search(String filtro) throws Exception {
+    public List<ArticuloInsumo> search(String denominacion, Number min, Number max, Number stockMenor, Number minStock, Number maxStock) throws Exception {
         try {
-            List<ArticuloInsumo> articuloInsumos = articuloInsumoRepository.searchNativo(filtro);
+            List<ArticuloInsumo> articuloInsumos = articuloInsumoRepository.searchNativo(denominacion,min,max,stockMenor,minStock,maxStock);
             return articuloInsumos;
         } catch (Exception e){
             throw new Exception(e.getMessage());
@@ -30,9 +30,9 @@ public class ArticuloInsumoServiceImpl extends BaseServiceImpl<ArticuloInsumo, L
     }
 
     @Override
-    public Page<ArticuloInsumo> search(String filtro, Pageable pageable) throws Exception {
+    public Page<ArticuloInsumo> search(String denominacion, Number min, Number max, Number stockMenor, Number minStock, Number maxStock, Pageable pageable) throws Exception {
         try {
-            Page<ArticuloInsumo> articuloInsumos = articuloInsumoRepository.searchNativo(filtro, pageable);
+            Page<ArticuloInsumo> articuloInsumos = articuloInsumoRepository.searchNativo(denominacion,min,max,stockMenor,minStock,maxStock, pageable);
             return articuloInsumos;
         } catch (Exception e){
             throw new Exception(e.getMessage());

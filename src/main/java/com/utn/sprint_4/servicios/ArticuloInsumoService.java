@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 public interface ArticuloInsumoService extends BaseService<ArticuloInsumo, Long> {
-    List<ArticuloInsumo> search(String filtro) throws Exception;
+    List<ArticuloInsumo> search(String denominacion, Number min, Number max, Number stockMenor, Number minStock, Number maxStock) throws Exception;
 
-    Page<ArticuloInsumo> search(String filtro, Pageable pageable) throws Exception;
+    Page<ArticuloInsumo> search(String denominacion, Number min, Number max, Number stockMenor, Number minStock, Number maxStock, Pageable pageable) throws Exception;
 }

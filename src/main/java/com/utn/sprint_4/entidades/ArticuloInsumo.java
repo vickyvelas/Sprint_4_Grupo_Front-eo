@@ -18,6 +18,7 @@ import java.util.List;
 public class ArticuloInsumo extends Base {
 
     @NotNull
+    @Column(name = "denominacion")
     private String denominacion;
 
     @Column(name = "url_imagen")

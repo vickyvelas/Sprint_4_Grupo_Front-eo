@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "api/v1/ArticuloInsumo")
 public class ArticuloInsumoController extends BaseControllerImpl<ArticuloInsumo, ArticuloInsumoServiceImpl>{
     @GetMapping("/search")
-    public ResponseEntity<?> search(@RequestParam String filtro){
+    public ResponseEntity<?> search( String denominacion, Number min, Number max, Number stockMenor, Number minStock, Number maxStock){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(denominacion,min,max,stockMenor,minStock,maxStock));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
@@ -22,9 +22,9 @@ public class ArticuloInsumoController extends BaseControllerImpl<ArticuloInsumo,
     }
 
     @GetMapping("/searchPaged")
-    public ResponseEntity<?> search(@RequestParam String filtro, Pageable pageable){
+    public ResponseEntity<?> search(String denominacion, Number min, Number max, Number stockMenor, Number minStock, Number maxStock, Pageable pageable){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro, pageable));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(denominacion,min,max,stockMenor,minStock,maxStock, pageable));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));

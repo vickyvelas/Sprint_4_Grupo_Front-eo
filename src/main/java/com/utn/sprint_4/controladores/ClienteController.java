@@ -14,18 +14,18 @@ import org.springframework.web.bind.annotation.*;
 public class ClienteController extends BaseControllerImpl<Cliente, ClienteServiceImpl>{
 
     @GetMapping("/search")
-    public ResponseEntity<?> search (@RequestParam String filtro){
+    public ResponseEntity<?> search (String nombre, String apellido,String email, String telefono){
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(nombre, apellido, email, telefono));
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
         }
     }
 
     @GetMapping("/searchPaged")
-    public ResponseEntity<?> search (@RequestParam String filtro, Pageable pageable){
+    public ResponseEntity<?> search (String nombre, String apellido,String email, String telefono, Pageable pageable){
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro, pageable));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(nombre, apellido, email, telefono, pageable));
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
         }
