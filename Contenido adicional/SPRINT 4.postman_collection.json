@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "98e75f9b-2be6-4ebc-9886-78632230a96f",
+		"_postman_id": "0cb7e53a-d228-4958-b8be-d9c88ab92887",
 		"name": "SPRINT 4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30177056"
+		"_exporter_id": "30253405"
 	},
 	"item": [
 		{
@@ -587,7 +587,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/5",
+							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/1",
 							"protocol": "https",
 							"host": [
 								"sprint4-front-eo",
@@ -598,7 +598,7 @@
 								"api",
 								"v1",
 								"pedidos",
-								"5"
+								"1"
 							]
 						}
 					},
@@ -1632,6 +1632,59 @@
 								}
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Domicilio",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE BY ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
