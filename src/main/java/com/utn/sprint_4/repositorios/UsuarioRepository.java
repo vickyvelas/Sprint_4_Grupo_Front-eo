@@ -7,10 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
 public interface UsuarioRepository extends BaseRepository<Usuario, Long>{
+
     @Query(value = "Select u FROM Usuario u WHERE u.username LIKE %:filtro% OR u.auth0Id LIKE %:filtro% ")
     List<Usuario> search(@Param("filtro") String filtro);
 

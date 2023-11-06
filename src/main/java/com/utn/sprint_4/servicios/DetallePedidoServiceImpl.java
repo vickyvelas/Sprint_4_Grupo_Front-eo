@@ -22,9 +22,9 @@ public class DetallePedidoServiceImpl extends BaseServiceImpl<DetallePedido, Lon
     }
 
     @Override
-    public List<DetallePedido> search(int filtro) throws Exception {
+    public List<DetallePedido> search(int filtro, int subtotal, int subtotal_costo ) throws Exception {
         try {
-            List<DetallePedido> detallePedidos = detallePedidoRepository.searchNativo(filtro);
+            List<DetallePedido> detallePedidos = detallePedidoRepository.searchNativo(filtro, subtotal, subtotal_costo);
             return detallePedidos;
         }catch (Exception e){
             throw new Exception(e.getMessage());
@@ -32,9 +32,9 @@ public class DetallePedidoServiceImpl extends BaseServiceImpl<DetallePedido, Lon
     }
 
     @Override
-    public Page<DetallePedido> search(int filtro, Pageable pageable) throws Exception {
+    public Page<DetallePedido> search(int filtro, int subtotal, int subtotal_costo, Pageable pageable) throws Exception {
         try {
-            Page<DetallePedido> detallePedidos = detallePedidoRepository.searchNativo(filtro, pageable);
+            Page<DetallePedido> detallePedidos = detallePedidoRepository.searchNativo(filtro, subtotal, subtotal_costo, pageable);
             return detallePedidos;
         }catch (Exception e){
             throw new Exception(e.getMessage());

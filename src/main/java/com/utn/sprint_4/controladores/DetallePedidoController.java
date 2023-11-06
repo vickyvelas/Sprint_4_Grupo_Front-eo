@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class DetallePedidoController extends BaseControllerImpl<DetallePedido, DetallePedidoServiceImpl>{
 
     @GetMapping("/search")
-    public ResponseEntity<?> search(@RequestParam int filtro) {
+    public ResponseEntity<?> search(@RequestParam int filtro, int subtotal, int subtotal_costo) {
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro, subtotal, subtotal_costo));
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
         }
@@ -21,9 +21,9 @@ public class DetallePedidoController extends BaseControllerImpl<DetallePedido, D
 
     //con paginacion
     @GetMapping("/searchPaged")
-    public ResponseEntity<?> search(@RequestParam int filtro, Pageable pageable) {
+    public ResponseEntity<?> search(@RequestParam int filtro, int subtotal, int subtotal_costo, Pageable pageable) {
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro, pageable));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro, subtotal, subtotal_costo, pageable));
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
         }

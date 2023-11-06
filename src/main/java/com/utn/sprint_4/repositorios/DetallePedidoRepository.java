@@ -16,20 +16,20 @@ public interface DetallePedidoRepository extends BaseRepository<DetallePedido, L
     Page<DetallePedido> findByCantidad(int cantidad, Pageable pageable);
 
 
-    @Query(value = "Select f FROM DetallePedido f WHERE f.cantidad =:filtro")
-    List<DetallePedido> search(@Param("filtro") int filtro);
+    @Query(value = "Select f FROM DetallePedido f WHERE f.cantidad =:filtro OR f.subtotal =:subtotal OR f.subtotal_costo =:subtotal_costo")
+    List<DetallePedido> search(@Param("filtro") int filtro, @Param("subtotal") int subtotal, @Param("subtotal_costo") int subtotal_costo);
 
-    @Query(value = "Select f FROM DetallePedido f WHERE f.cantidad =:filtro")
-    Page<DetallePedido> search(@Param("filtro") int filtro, Pageable pageable);
+    @Query(value = "Select f FROM DetallePedido f WHERE f.cantidad =:filtro OR f.subtotal =:subtotal OR f.subtotal_costo =:subtotal_costo")
+    Page<DetallePedido> search(@Param("filtro") int filtro,  @Param("subtotal") int subtotal, @Param("subtotal_costo") int subtotal_costo, Pageable pageable);
 
-    @Query(value = "Select * FROM DetallePedido WHERE f.cantidad =:filtro",
+    @Query(value = "Select * FROM DetallePedido WHERE detallePedido.cantidad =:filtro OR detallePedido.subtotal =:subtotal OR detallePedido.subtotal_costo =:subtotal_costo",
             nativeQuery = true
     )
-    List<DetallePedido> searchNativo(@Param("filtro")  int filtro);
+    List<DetallePedido> searchNativo(@Param("filtro")  int filtro,  @Param("subtotal") int subtotal, @Param("subtotal_costo") int subtotal_costo);
 
-    @Query(value = "Select * FROM DetallePedido WHERE f.cantidad =:filtro",
+    @Query(value = "Select * FROM DetallePedido WHERE detallePedido.cantidad =:filtro OR detallePedido.subtotal =:subtotal OR detallePedido.subtotal_costo =:subtotal_costo",
             countQuery = "SELECT count(*) FROM detallePedido",
             nativeQuery = true
     )
-    Page<DetallePedido> searchNativo(@Param("filtro") int filtro, Pageable pageable);
+    Page<DetallePedido> searchNativo(@Param("filtro") int filtro,  @Param("subtotal") int subtotal, @Param("subtotal_costo") int subtotal_costo, Pageable pageable);
 }

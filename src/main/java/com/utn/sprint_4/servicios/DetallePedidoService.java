@@ -7,8 +7,8 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 public interface DetallePedidoService extends BaseService<DetallePedido, Long>{
-    List<DetallePedido> search(int filtro) throws Exception;
+    List<DetallePedido> search(int filtro, int subtotal, int subtotal_costo) throws Exception;
 
     //con paginacion
-    Page<DetallePedido> search(int filtro, Pageable pageable) throws Exception;
+    Page<DetallePedido> search(int filtro, int subtotal, int subtotal_costo, Pageable pageable) throws Exception;
 }

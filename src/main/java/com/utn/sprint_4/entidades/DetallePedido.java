@@ -18,11 +18,11 @@ public class DetallePedido extends Base {
 
     @NotNull
     @Column(name = "subtotal", precision = 10, scale = 2)
-    private int subtotal;
+    private Integer subtotal;
 
     @NotNull
     @Column(name = "subtotal_costo", precision = 10, scale = 2)
-    private int subtotalCosto;
+    private Integer subtotal_costo;
 
 
 }
