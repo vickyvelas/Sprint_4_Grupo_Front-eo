@@ -1,24 +1,32 @@
 package com.utn.sprint_4.repositorios;
 
+import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
+import com.utn.sprint_4.enumeraciones.EstadoPedido;
+import com.utn.sprint_4.enumeraciones.FormaPago;
+import com.utn.sprint_4.enumeraciones.TipoEnvio;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Date;
 import java.util.List;
 
 @Repository
 public interface PedidoRepository extends BaseRepository<Pedido,Long> {
-    @Query(value = "SELECT * FROM pedido WHERE pedido.forma_pago LIKE %:filtro% ",
+    @Query(value = "SELECT * FROM pedido WHERE pedido.fechaPedido LIKE %:fechaPedido% OR pedido.horaEstimadaFinalizacion LIKE %:horaEstimadaFinalizacion% OR pedido.total LIKE %:total% OR pedido.totalCosto LIKE %:totalCosto% OR pedido.estado LIKE %:estado% OR pedido.tipoEnvio " +
+            "LIKE %:tipoEnvio% OR pedido.formaPago LIKE %:formaPago% OR pedido.domicilioEntrega LIKE %:domicilioEntrega% OR pedido.fechaAlta LIKE %:fechaAlta% OR pedido.fechaModificacion LIKE %:fechaModificacion% OR pedido.fechaBaja %:fechaBaja% ",
             nativeQuery = true)
-    List<Pedido> searchNativoFpago(@Param("filtro") String filtro);
+    List<Pedido> searchNativo(@Param("fechaPedido") Date fechaPedido, @Param("horaEstimadaFinalizacion") Date horaEstimadaFinalizacion, @Param("total") Number total, @Param("totalCosto") Number totalCosto, @Param("estado") EstadoPedido estado, @Param("tipoEnvio") TipoEnvio tipoEnvio,
+                              @Param("formaPago") FormaPago formaPago, @Param("domicilioEntrega") Domicilio domicilioEntrega, @Param("fechaAlta") Date fechaAlta, @Param("fechaModificacion") Date fechaModificacion, @Param("fechaBaja") Date fechaBaja);
 
-    @Query(value = "SELECT * FROM pedido WHERE pedido.forma_pago LIKE %:filtro% ",
-            countQuery = "SELECT count(*) FROM pedido",
+    @Query(value = "SELECT * FROM pedido WHERE pedido.fechaPedido LIKE %:fechaPedido% OR pedido.horaEstimadaFinalizacion LIKE %:horaEstimadaFinalizacion% OR pedido.total LIKE %:total% OR pedido.totalCosto LIKE %:totalCosto% OR pedido.estado LIKE %:estado% OR pedido.tipoEnvio " +
+            "LIKE %:tipoEnvio% OR pedido.formaPago LIKE %:formaPago% OR pedido.domicilioEntrega LIKE %:domicilioEntrega% OR pedido.fechaAlta LIKE %:fechaAlta% OR pedido.fechaModificacion LIKE %:fechaModificacion% OR pedido.fechaBaja %:fechaBaja%",
             nativeQuery = true)
-    Page<Pedido> searchNativoFpagoPageabe(@Param("filtro") String filtro, Pageable pageable);
+    Page<Pedido> searchNativo(@Param("fechaPedido") Date fechaPedido, @Param("horaEstimadaFinalizacion") Date horaEstimadaFinalizacion, @Param("total") Number total, @Param("totalCosto") Number totalCosto, @Param("estado") EstadoPedido estado, @Param("tipoEnvio") TipoEnvio tipoEnvio,
+                              @Param("formaPago") FormaPago formaPago, @Param("domicilioEntrega") Domicilio domicilioEntrega, @Param("fechaAlta") Date fechaAlta, @Param("fechaModificacion") Date fechaModificacion, @Param("fechaBaja") Date fechaBaja, Pageable pageable);
 
         @Query(value = "SELECT * FROM pedido WHERE pedido.Id LIKE %:filtro% ",
                 nativeQuery = true)

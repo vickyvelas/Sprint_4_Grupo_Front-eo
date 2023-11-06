@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 @Service
@@ -23,9 +24,9 @@ public class DomicilioServiceImpl extends BaseServiceImpl<Domicilio,Long> implem
     }
 
     @Override
-    public List<Domicilio> search(String filtro) throws Exception {
+    public List<Domicilio> search(String calle, Number numero, Number codigoPostal, String localidad, Number numeroDpto, Number pisoDpto, Date fechaAlta, Date fechaModificacion, Date fechaBaja) throws Exception {
         try {
-            List<Domicilio> domicilios = domicilioRepository.searchNativo(filtro);
+            List<Domicilio> domicilios = domicilioRepository.search(calle, numero, codigoPostal, localidad, numeroDpto, pisoDpto, fechaAlta, fechaModificacion, fechaBaja);
             return domicilios;
         } catch (Exception e){
             throw new Exception(e.getMessage());
@@ -33,9 +34,9 @@ public class DomicilioServiceImpl extends BaseServiceImpl<Domicilio,Long> implem
     }
 
     @Override
-    public Page<Domicilio> search(String filtro, Pageable pageable) throws Exception {
+    public Page<Domicilio> search(String calle, Number numero, Number codigoPostal, String localidad, Number numeroDpto, Number pisoDpto, Date fechaAlta, Date fechaModificacion, Date fechaBaja, Pageable pageable) throws Exception {
         try {
-            Page<Domicilio> domicilios = domicilioRepository.searchNativo(filtro, pageable);
+            Page<Domicilio> domicilios = domicilioRepository.searchNativo(calle, numero, codigoPostal, localidad, numeroDpto, pisoDpto, fechaAlta, fechaModificacion, fechaBaja, pageable);
             return domicilios;
         } catch (Exception e){
             throw new Exception(e.getMessage());

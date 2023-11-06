@@ -1,6 +1,10 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
+import com.utn.sprint_4.enumeraciones.EstadoPedido;
+import com.utn.sprint_4.enumeraciones.FormaPago;
+import com.utn.sprint_4.enumeraciones.TipoEnvio;
 import com.utn.sprint_4.repositorios.BaseRepository;
 import com.utn.sprint_4.repositorios.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 @Service
@@ -24,9 +29,9 @@ public class PedidoServiceImpl extends BaseServiceImpl<Pedido,Long> implements P
     }
 
     @Override
-    public List<Pedido> searchFpago(String filtro) throws Exception {
+    public List<Pedido> search(Date fechaPedido, Date horaEstimadaFinalizacion, Number total, Number totalCosto, EstadoPedido estado, TipoEnvio tipoEnvio, FormaPago formaPago, Domicilio domicilioEntrega, Date fechaAlta, Date fechaModifciacion, Date fechaBaja) throws Exception {
         try {
-            List<Pedido> pedidos = pedidoRepository.searchNativoFpago(filtro);
+            List<Pedido> pedidos = pedidoRepository.searchNativo(fechaPedido, horaEstimadaFinalizacion, total, totalCosto, estado, tipoEnvio, formaPago, domicilioEntrega, fechaAlta, fechaModifciacion, fechaBaja);
             return pedidos;
         } catch (Exception e){
             throw new Exception(e.getMessage());
@@ -34,9 +39,9 @@ public class PedidoServiceImpl extends BaseServiceImpl<Pedido,Long> implements P
     }
 
     @Override
-    public Page<Pedido> searchFpagoPageable(String filtro, Pageable pageable) throws Exception {
+    public Page<Pedido> search(Date fechaPedido, Date horaEstimadaFinalizacion, Number total, Number totalCosto, EstadoPedido estado, TipoEnvio tipoEnvio, FormaPago formaPago, Domicilio domicilioEntrega, Date fechaAlta, Date fechaModifciacion, Date fechaBaja, Pageable pageable) throws Exception {
         try {
-            Page<Pedido> pedidos = pedidoRepository.searchNativoFpagoPageabe(filtro, pageable);
+            Page<Pedido> pedidos = pedidoRepository.searchNativo(fechaPedido, horaEstimadaFinalizacion, total, totalCosto, estado, tipoEnvio, formaPago, domicilioEntrega, fechaAlta, fechaModifciacion, fechaBaja, pageable);
             return pedidos;
         } catch (Exception e){
             throw new Exception(e.getMessage());
