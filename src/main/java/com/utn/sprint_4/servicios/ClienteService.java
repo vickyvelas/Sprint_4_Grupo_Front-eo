@@ -9,8 +9,8 @@ import java.util.List;
 
 public interface ClienteService extends BaseService<Cliente, Long> {
 
-    List<Cliente> search(String filtro) throws Exception;
+    List<Cliente> search(String nombre,String apellido, String email,String telefono) throws Exception;
 
-    Page<Cliente> search(String filtro, Pageable pageable) throws Exception;
+    Page<Cliente> search(String nombre,String apellido, String email,String telefono, Pageable pageable) throws Exception;
 
 }

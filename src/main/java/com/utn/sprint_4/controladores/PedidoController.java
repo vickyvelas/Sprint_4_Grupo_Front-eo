@@ -1,11 +1,18 @@
 package com.utn.sprint_4.controladores;
 
+import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
+import com.utn.sprint_4.enumeraciones.EstadoPedido;
+import com.utn.sprint_4.enumeraciones.FormaPago;
+import com.utn.sprint_4.enumeraciones.TipoEnvio;
 import com.utn.sprint_4.servicios.PedidoServiceImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.sql.Date;
+
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -13,9 +20,9 @@ import org.springframework.web.bind.annotation.*;
 public class PedidoController extends BaseControllerImpl<Pedido, PedidoServiceImpl>{
 
     @GetMapping("/search")
-    public ResponseEntity<?> search(@RequestParam String filtro){
+    public ResponseEntity<?> search(Date fechaPedido, Date horaEstimadaFinalizacion, Number total, Number totalCosto, EstadoPedido estado, TipoEnvio tipoEnvio, FormaPago formaPago, Domicilio domicilioEntrega, Date fechaAlta, Date fechaModifciacion, Date fechaBaja){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchFpago(filtro));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(fechaPedido, horaEstimadaFinalizacion, total, totalCosto, estado, tipoEnvio, formaPago, domicilioEntrega, fechaAlta, fechaModifciacion, fechaBaja));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
@@ -23,9 +30,9 @@ public class PedidoController extends BaseControllerImpl<Pedido, PedidoServiceIm
     }
 
     @GetMapping("/searchPaged")
-    public ResponseEntity<?> search(@RequestParam String filtro, Pageable pageable){
+    public ResponseEntity<?> search(Date fechaPedido, Date horaEstimadaFinalizacion, Number total, Number totalCosto, EstadoPedido estado, TipoEnvio tipoEnvio, FormaPago formaPago, Domicilio domicilioEntrega, Date fechaAlta, Date fechaModifciacion, Date fechaBaja, Pageable pageable){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchFpagoPageable(filtro, pageable));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(fechaPedido, horaEstimadaFinalizacion, total, totalCosto, estado, tipoEnvio, formaPago, domicilioEntrega, fechaAlta, fechaModifciacion, fechaBaja, pageable));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));

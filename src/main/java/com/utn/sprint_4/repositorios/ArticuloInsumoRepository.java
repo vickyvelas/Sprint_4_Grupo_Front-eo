@@ -11,11 +11,11 @@ import java.util.List;
 
 @Repository
 public interface ArticuloInsumoRepository extends BaseRepository<ArticuloInsumo, Long>{
-    @Query(value = "SELECT * FROM articuloInsumo WHERE articuloInsumo.denominacion LIKE %:filtro% ",
+    @Query(value = "SELECT * FROM articulo_insumo a WHERE a.denominacion LIKE %:denominacion% OR a.precio_compra>=%:min% OR a.precio_compra<%:max% OR a.stock_minimo<=%:stockMenor% OR a.stock_actual<%:minStock% OR a.stock_actual>=%:maxStock%",
             nativeQuery = true)
-    List<ArticuloInsumo> searchNativo(@Param("filtro") String filtro);
-    @Query(value = "SELECT * FROM articuloInsumo WHERE articuloInsumo.denominacion LIKE %:filtro% ",
+    List<ArticuloInsumo> searchNativo(@Param("denominacion") String denominacion, @Param("min") Number min, @Param("max") Number max, @Param("stockMenor") Number stockMenor, @Param("minStock") Number minStock, @Param("maxStock") Number maxStock);
+    @Query(value = "SELECT * FROM articulo_insumo a WHERE a.denominacion LIKE %:denominacion% OR a.precio_compra>=%:min% OR a.precio_compra<%:max% OR a.stock_minimo<=%:stockMenor% OR a.stock_actual<%:minStock% OR a.stock_actual>=%:maxStock%",
             countQuery = "SELECT count(*) FROM articuloInsumo",
             nativeQuery = true)
-    Page<ArticuloInsumo> searchNativo(@Param("filtro") String filtro, Pageable pageable);
+    Page<ArticuloInsumo> searchNativo(@Param("denominacion") String denominacion, @Param("min") Number min, @Param("max") Number max, @Param("stockMenor") Number stockMenor, @Param("minStock") Number minStock, @Param("maxStock") Number maxStock, Pageable pageable);
 }
