@@ -18,13 +18,7 @@ import java.util.List;
 public class Cliente extends Base {
 
 
-    private String nombre;
 
-    private String apellido;
-
-    private String telefono;
-
-    private String email;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_usuario")

@@ -28,6 +28,7 @@ public class ClienteController extends BaseControllerImpl<Cliente, ClienteServic
             return ResponseEntity.status(HttpStatus.OK).body(servicio.search(nombre, apellido, email, telefono, pageable));
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
+
         }
     }
 
