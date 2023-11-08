@@ -73,7 +73,7 @@ public class Pedido extends Base {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
     @Builder.Default
-    @JoinColumn(name = "id_detallePedido")
+    @JoinColumn(name = "id_Pedido")
     private List<DetallePedido> DetallesPedidos = new ArrayList<>();
 
     public void AgregarDetallePedido(DetallePedido d){

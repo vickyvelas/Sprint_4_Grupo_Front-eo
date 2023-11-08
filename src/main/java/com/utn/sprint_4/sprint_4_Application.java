@@ -5,6 +5,7 @@ import com.utn.sprint_4.enumeraciones.EstadoPedido;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import com.utn.sprint_4.enumeraciones.TipoEnvio;
 import com.utn.sprint_4.repositorios.*;
+import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -35,7 +36,7 @@ public class sprint_4_Application {
         System.out.println("Hola, estoy andando bien");
     }
 
-/*
+
     @Bean
     CommandLineRunner init() {
         return args -> {
@@ -314,7 +315,7 @@ public class sprint_4_Application {
 
 
         };
-    }*/
+    }
 
 
 }

@@ -12,9 +12,8 @@ import java.util.List;
 @Repository
 public interface ClienteRepository extends BaseRepository<Cliente, Long>{
 
-    List<Cliente> findByNombreContainingOrApellidoContaining(String nombre, String apellido);
-
-    Page<Cliente> findByNombreContainingOrApellidoContaining(String nombre, String apellido, Pageable pageable);
+    /*List<Cliente> findByNombreContainingOrApellidoContaining(String nombre, String apellido);
+    Page<Cliente> findByNombreContainingOrApellidoContaining(String nombre, String apellido, Pageable pageable);*/
 
 
     @Query(value = "Select c FROM Cliente c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.email LIKE %:email% OR c.telefono LIKE %:telefono%")
@@ -23,7 +22,13 @@ public interface ClienteRepository extends BaseRepository<Cliente, Long>{
     @Query(value = "Select c FROM Cliente c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.email LIKE %:email% OR c.telefono LIKE %:telefono%")
     Page<Cliente> search(@Param("nombre")  String nombre,@Param("apellido")String apellido,@Param("email")String email,@Param("telefono")String telefono, Pageable pageable);
 
-    @Query(value = "Select * FROM Cliente WHERE cliente.nombre LIKE %:nombre% AND cliente.apellido LIKE %:apellido% AND cliente.email LIKE %:email% AND cliente.telefono LIKE %:telefono%",
+    //@Query(value = "Select * FROM cliente, pedido, detalle_pedido WHERE cliente.id LIKE %:id%  AND pedido.id_cliente LIKE %:id% ")
+    //List<Cliente> searchPedidos(@Param("id") Number id);
+
+    //@Query(value = "Select * FROM cliente, pedido, detalle_pedido WHERE cliente.id LIKE %:id%  AND pedido.id_cliente LIKE %:id%")
+    //Page<Cliente> searchPedidos(@Param("id") Number id, Pageable pageable);
+
+    @Query(value = "Select * FROM cliente WHERE cliente.nombre LIKE %:nombre% AND cliente.apellido LIKE %:apellido% AND cliente.email LIKE %:email% AND cliente.telefono LIKE %:telefono%",
             nativeQuery = true
     )
     List<Cliente> searchNativo(@Param("nombre")  String nombre,@Param("apellido")String apellido,@Param("email")String email,@Param("telefono")String telefono);

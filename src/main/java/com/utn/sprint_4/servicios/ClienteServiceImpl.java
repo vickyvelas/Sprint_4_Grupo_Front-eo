@@ -46,4 +46,24 @@ public class ClienteServiceImpl extends BaseServiceImpl<Cliente,Long> implements
             throw new Exception(e.getMessage());
         }
     }
+
+    /*@Override
+    public List<Cliente> searchPedidos(Long id) throws Exception {
+        try{
+            List<Cliente> clientes = clienteRepository.searchPedidos(id);
+            return clientes;
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    @Override
+    public Page<Cliente> searchPedidos(Long id, Pageable pageable) throws Exception {
+        try{
+            Page<Cliente> clientes = clienteRepository.searchPedidos(id, pageable);
+            return clientes;
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }*/
 }
