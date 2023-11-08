@@ -36,3 +36,6 @@ Una captura mostrando el correcto funcionamiento
 
 <img width="825" alt="Deploy Render" src="https://github.com/Facustriker/Sprint_4_Grupo_Front-eo/assets/141864931/f3b697c6-08e4-49a8-9d58-9941d1864dc6">
 
+## LINK de Rúbrica a considerar 
+https://docs.google.com/spreadsheets/d/18f4DFRqRIhjq2KF6ewnqBpTGrb44wiJk/edit#gid=1991840630
+
