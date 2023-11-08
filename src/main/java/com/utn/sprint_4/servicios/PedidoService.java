@@ -1,5 +1,6 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.entidades.Cliente;
 import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;
@@ -16,6 +17,10 @@ public interface PedidoService extends BaseService<Pedido,Long>{
     Page<Pedido> search(Date fechaPedido, Date horaEstimadaFinalizacion, Number total, Number totalCosto, EstadoPedido estado, TipoEnvio tipoEnvio, FormaPago formaPago, Domicilio domicilioEntrega, Date fechaAlta, Date fechaModifciacion, Date fechaBaja, Pageable pageable) throws Exception;
     List<Pedido> searchID(int filtro) throws Exception;
     Page<Pedido> searchIDPageable(int filtro, Pageable pageable) throws Exception;
+
+    List<Pedido> searchPedidos(Number id) throws Exception;
+
+    Page<Pedido> searchPedidos(Number id, Pageable pageable) throws Exception;
 
 
 }

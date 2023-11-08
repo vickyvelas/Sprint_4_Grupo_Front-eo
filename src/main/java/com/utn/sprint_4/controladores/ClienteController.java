@@ -33,23 +33,6 @@ public class ClienteController extends BaseControllerImpl<Cliente, ClienteServic
     }
 
 
-    /*@GetMapping("/searchPedidos")
-    public ResponseEntity<?> searchPedidos (Long id){
-        try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchPedidos(id));
-        } catch (Exception e){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
-        }
-    }
 
-    @GetMapping("/searchPagedPedidos")
-    public ResponseEntity<?> searchPedidos (Long id, Pageable pageable){
-        try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.searchPedidos(id, pageable));
-        } catch (Exception e){
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
-
-        }
-    }*/
 
 }

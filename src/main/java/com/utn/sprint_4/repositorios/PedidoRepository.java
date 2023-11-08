@@ -1,5 +1,6 @@
 package com.utn.sprint_4.repositorios;
 
+import com.utn.sprint_4.entidades.Cliente;
 import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;
@@ -28,7 +29,17 @@ public interface PedidoRepository extends BaseRepository<Pedido,Long> {
     Page<Pedido> searchNativo(@Param("fechaPedido") Date fechaPedido, @Param("horaEstimadaFinalizacion") Date horaEstimadaFinalizacion, @Param("total") Number total, @Param("totalCosto") Number totalCosto, @Param("estado") EstadoPedido estado, @Param("tipoEnvio") TipoEnvio tipoEnvio,
                               @Param("formaPago") FormaPago formaPago, @Param("domicilioEntrega") Domicilio domicilioEntrega, @Param("fechaAlta") Date fechaAlta, @Param("fechaModificacion") Date fechaModificacion, @Param("fechaBaja") Date fechaBaja, Pageable pageable);
 
-        @Query(value = "SELECT * FROM pedido WHERE pedido.Id LIKE %:filtro% ",
+    @Query(value = "Select * FROM pedido WHERE pedido.id_cliente  =:id",
+            nativeQuery = true)
+    List<Pedido> searchPedidos(@Param("id") Number id);
+
+    @Query(value = "Select * FROM pedido WHERE pedido.id_cliente  =:id",
+            countQuery = "SELECT count(*) FROM pedido",
+            nativeQuery = true)
+    Page<Pedido> searchPedidos(@Param("id") Number id, Pageable pageable);
+
+
+    @Query(value = "SELECT * FROM pedido WHERE pedido.Id LIKE %:filtro% ",
                 nativeQuery = true)
         List<Pedido> searchNativoID(@Param("filtro") int filtro);
 
