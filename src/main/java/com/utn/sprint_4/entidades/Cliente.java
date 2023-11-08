@@ -29,7 +29,7 @@ public class Cliente extends Base {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
     @Builder.Default
-    @JoinColumn(name = "id_domicilio")
+    @JoinColumn(name = "id_cliente")
     private List<Domicilio> domicilios = new ArrayList<>();
 
     @Column(name = "fecha_alta")
@@ -63,7 +63,7 @@ public class Cliente extends Base {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
     @Builder.Default
-    @JoinColumn(name = "id_pedido")
+    @JoinColumn(name = "id_cliente")
     private List<Pedido> pedidos = new ArrayList<>();
 
     public void AgregarPedidos(Pedido p){
