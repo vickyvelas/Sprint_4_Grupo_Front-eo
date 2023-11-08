@@ -18,39 +18,40 @@ import java.util.Date;
 public class Factura extends Base {
 
     @NotNull
-    @Column(name = "fecha_facturacion")
+    @Column(name = "fechaFacturacion")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaFacturacion;
 
-    @Column(name = "mp_payment_id")
+    @Column(name = "paymentid")
     private Long paymentid;
 
-    @Column(name = "mp_merchant_order_id")
+    @Column(name = "merchantorder")
     private Long merchantorder;
 
-    @Column(name = "mpPreferenceId")
-    private Long preferenceid;
+    @Column(name = "preferenceid")
+    private String preferenceid;
 
-    @Column(name = "mpPaymentType")
+    @Column(name = "paymenttype")
     private String paymenttype;
 
     @NotNull
-    private FormaPago formaPago;
+    @Column(name = "formapago")
+    private FormaPago formapago;
 
     @NotNull
-    @Column(name = "total_venta", precision = 10, scale = 2)
+    @Column(name = "totalventa", precision = 10, scale = 2)
     private int totalventa;
 
     @NotNull
-    @Column(name = "fecha_alta")
+    @Column(name = "fechaAlta")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaAlta;
 
-    @Column(name = "fecha_modificacion")
+    @Column(name = "fechaModificacion")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaModificacion;
 
-    @Column(name = "fecha_baja")
+    @Column(name = "fechaBaja")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 

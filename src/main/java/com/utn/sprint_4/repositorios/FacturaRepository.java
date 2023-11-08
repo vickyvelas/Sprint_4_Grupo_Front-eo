@@ -14,7 +14,7 @@ import java.util.List;
 @Repository
 public interface FacturaRepository extends BaseRepository<Factura, Long>{
 
-    @Query(value = "Select * FROM Factura WHERE Factura.paymenttype LIKE %:paymenttype% OR Factura.preferenceid LIKE %:preferenceid% OR Factura.paymentid LIKE %:paymentid% OR Factura.totalventa LIKE %:totalventa% OR Factura.formaPago LIKE %:formapago% OR Factura.merchantorder LIKE %:merchantorder% ",
+    @Query(value = "Select * FROM Factura WHERE Factura.paymenttype LIKE %:paymenttype% OR Factura.preferenceid LIKE %:preferenceid% OR Factura.paymentid LIKE %:paymentid% OR Factura.totalventa LIKE %:totalventa% OR Factura.formapago LIKE %:formapago% OR Factura.merchantorder LIKE %:merchantorder% ",
             nativeQuery = true
     )
     List<Factura> searchNativo(@Param("paymenttype") String paymenttype, @Param("preferenceid") String preferenceid, @Param("paymentid") Long paymentid, @Param("totalventa") BigDecimal totalventa, @Param("formapago") FormaPago formapago, @Param("merchantorder") Long merchantorder );
