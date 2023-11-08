@@ -15,7 +15,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-public class Cliente extends Base {
+public class Persona extends Base {
 
 
 

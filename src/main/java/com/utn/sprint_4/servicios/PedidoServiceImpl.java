@@ -1,6 +1,5 @@
 package com.utn.sprint_4.servicios;
 
-import com.utn.sprint_4.entidades.Cliente;
 import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;

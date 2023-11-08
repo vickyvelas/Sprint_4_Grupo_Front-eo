@@ -5,7 +5,6 @@ import com.utn.sprint_4.enumeraciones.EstadoPedido;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import com.utn.sprint_4.enumeraciones.TipoEnvio;
 import com.utn.sprint_4.repositorios.*;
-import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,7 +18,7 @@ import java.util.Date;
 public class sprint_4_Application {
 
     @Autowired
-    private ClienteRepository clienteRepository;
+    private PersonaRepository personaRepository;
     @Autowired
     private PedidoRepository pedidoRepository;
     @Autowired
@@ -63,7 +62,7 @@ public class sprint_4_Application {
                     .fechaModificacion(fecha3)
                     .build();
 
-            Cliente cliente = Cliente.builder()
+            Persona persona = Persona.builder()
                     .nombre("Juan")
                     .apellido("Marquez")
                     .telefono("2617223459")
@@ -98,8 +97,8 @@ public class sprint_4_Application {
                     .pisoDpto(1)
                     .build();
 
-            cliente.AgregarDomicilios(domicilio1);
-            cliente.AgregarDomicilios(domicilio2);
+            persona.AgregarDomicilios(domicilio1);
+            persona.AgregarDomicilios(domicilio2);
 
             DetallePedido detallePedido1 = DetallePedido.builder()
                     .cantidad(6)
@@ -294,10 +293,10 @@ public class sprint_4_Application {
             pedido1.AgregarDetallePedido(detallePedido1);
             pedido1.AgregarDetallePedido(detallePedido2);
             pedido2.AgregarDetallePedido(detallePedido3);
-            cliente.AgregarPedidos(pedido1);
-            cliente.AgregarPedidos(pedido2);
+            persona.AgregarPedidos(pedido1);
+            persona.AgregarPedidos(pedido2);
 
-            clienteRepository.save(cliente);
+            personaRepository.save(persona);
 
             pedidoRepository.save(pedido1);
             pedidoRepository.save(pedido2);

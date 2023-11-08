@@ -15,9 +15,9 @@ Este es el diagrama de clases utilizado para realizar la implementacion del proy
 La colección de PostMan a usarse junto con el proyecto se ha exportado en formato JSON y se puede descargar como .rar desde [aqui](https://github.com/Facustriker/Sprint_4_Grupo_Front-eo/raw/main/Contenido%20adicional/SPRINT%204.postman_collection.rar)
 
 ### ACLARACIONES AL MOMENTO DE CREAR OBJETOS DESDE POSTMAN
-1) Cada cliente creado viene con dos pedidos por defecto (con su respectiva factura, detalle producto, etc.)
+1) Cada persona creado viene con dos pedidos por defecto (con su respectiva factura, detalle producto, etc.)
 2) Si queremos crear una unidad de medida debemos asignar:
-                                                          a cada factura un ID distinto que se corresponda con el obtenido al crear los clientes
+                                                          a cada factura un ID distinto que se corresponda con el obtenido al crear los personas
                                                           un ID de articulos manufacturados que previamente debemos crear (este ID se puede repetir)
 Esto es solo si se quiere tener todas las tablas llenas de informacion, por supuesto que cada clase se puede instanciar individualmente
 
