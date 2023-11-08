@@ -36,6 +36,22 @@ public class Cliente extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaAlta;
 
+    @Column(name = "nombre")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date nombre;
+
+    @Column(name = "apellido")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date apellido;
+
+    @Column(name = "email")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date email;
+
+    @Column(name = "telefono")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date telefono;
+
     @Column(name = "fecha_modificacion")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaModificacion;

@@ -14,12 +14,12 @@ import java.util.List;
 @Repository
 public interface FacturaRepository extends BaseRepository<Factura, Long>{
 
-    @Query(value = "Select * FROM Factura WHERE Factura.mp_Payment_Type LIKE %:paymenttype% OR Factura.mp_Preference_Id LIKE %:prefereceid% OR Factura.mp_Payment_Id LIKE %:paymentid% OR Factura.total_Venta LIKE %:totalventa% OR Factura.forma_Pago LIKE %:formapago% OR Factura.mp_Merchant_Order_Id LIKE %:merchantorder% ",
+    @Query(value = "Select * FROM Factura WHERE Factura.paymenttype LIKE %:paymenttype% OR Factura.preferenceid LIKE %:preferenceid% OR Factura.paymentid LIKE %:paymentid% OR Factura.totalventa LIKE %:totalventa% OR Factura.formaPago LIKE %:formapago% OR Factura.merchantorder LIKE %:merchantorder% ",
             nativeQuery = true
     )
     List<Factura> searchNativo(@Param("paymenttype") String paymenttype, @Param("preferenceid") String preferenceid, @Param("paymentid") Long paymentid, @Param("totalventa") BigDecimal totalventa, @Param("formapago") FormaPago formapago, @Param("merchantorder") Long merchantorder );
 
-    @Query(value = "Select * FROM Factura WHERE Factura.mp_Payment_Type LIKE %:filtro% OR Factura.mp_Preference_Id LIKE %:filtro% OR Factura.mp_Payment_Id LIKE %:filtro% OR Factura.total_Venta LIKE %:filtro% OR Factura.forma_Pago LIKE %:filtro% OR Factura.mp_Merchant_Order_Id LIKE %:filtro%   ",
+    @Query(value = "Select * FROM Factura WHERE Factura.paymenttype LIKE %:paymenttype% OR Factura.preferenceid LIKE %:preferenceid% OR Factura.paymentid LIKE %:paymentid% OR Factura.totalventa LIKE %:totalventa% OR Factura.formaPago LIKE %:formapago% OR Factura.merchantorder LIKE %:merchantorder% ",
             countQuery = "SELECT count(*) FROM Factura",
             nativeQuery = true
     )

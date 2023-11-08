@@ -13,7 +13,7 @@ public interface FacturaService extends BaseService<Factura, Long>{
 
     List<Factura> search(String paymenttype, String preferenceid, Long paymentid, BigDecimal totalventa, FormaPago formapago,Long merchantorder) throws Exception;
 
-    Page<Factura> search(String paymenttype, String preferenceid, Long paymentid,BigDecimal totalventa, FormaPago formapago,Long merchantorder, Pageable pageable) throws Exception;
+    Page<Factura> search(String paymenttype, String preferenceid, Long paymentid, BigDecimal totalventa, FormaPago formapago,Long merchantorder, Pageable pageable) throws Exception;
 
 }
 

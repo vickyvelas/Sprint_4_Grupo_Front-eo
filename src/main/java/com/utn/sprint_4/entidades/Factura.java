@@ -23,23 +23,23 @@ public class Factura extends Base {
     private Date fechaFacturacion;
 
     @Column(name = "mp_payment_id")
-    private Long mpPaymentId;
+    private Long paymentid;
 
     @Column(name = "mp_merchant_order_id")
-    private Long mpMerchantOrderId;
+    private Long merchantorder;
 
     @Column(name = "mpPreferenceId")
-    private String mpPreferenceId;
+    private String preferenceid;
 
     @Column(name = "mpPaymentType")
-    private String mpPaymentType;
+    private String paymenttype;
 
     @NotNull
     private FormaPago formaPago;
 
     @NotNull
     @Column(name = "total_venta", precision = 10, scale = 2)
-    private int totalVenta;
+    private int totalventa;
 
     @NotNull
     @Column(name = "fecha_alta")
