@@ -103,19 +103,19 @@ public class sprint_4_Application {
             DetallePedido detallePedido1 = DetallePedido.builder()
                     .cantidad(6)
                     .subtotal(7000)
-                    .subtotalCosto(5000)
+                    .subtotal_costo(5000)
                     .build();
 
             DetallePedido detallePedido2 = DetallePedido.builder()
                     .cantidad(4)
                     .subtotal(3000)
-                    .subtotalCosto(1000)
+                    .subtotal_costo(1000)
                     .build();
 
             DetallePedido detallePedido3 = DetallePedido.builder()
                     .cantidad(12)
                     .subtotal(13000)
-                    .subtotalCosto(4500)
+                    .subtotal_costo(4500)
                     .build();
 
             RubroArticulo rubroArticulo = RubroArticulo.builder()
@@ -241,12 +241,12 @@ public class sprint_4_Application {
                     .fechaFacturacion(fecha2)
                     .fechaModificacion(fecha3)
                     .formaPago(FormaPago.EFECTIVO)
-                    .mpMerchantOrderId(285929394L)
-                    .mpPaymentId(3423523525L)
-                    .mpPaymentType("niIdea")
-                    .mpPreferenceId("MenosIdea")
-                    .totalVenta(3092939)
-                    .pedido(pedido1)
+                    .merchantorder(201933394L)
+                    .paymentid(3423523775L)
+                    .paymenttype("niIdea")
+                    .preferenceid(3423523775L)
+                    .totalventa(3099)
+                    .pedido(pedido2)
                     .build();
 
             Factura factura2 = Factura.builder()
@@ -254,12 +254,12 @@ public class sprint_4_Application {
                     .fechaFacturacion(fecha2)
                     .fechaModificacion(fecha3)
                     .formaPago(FormaPago.EFECTIVO)
-                    .mpMerchantOrderId(201933394L)
-                    .mpPaymentId(3423523775L)
-                    .mpPaymentType("niIdea")
-                    .mpPreferenceId("MenosIdea")
-                    .totalVenta(3099)
-                    .pedido(pedido2)
+                    .merchantorder(201933394L)
+                    .paymentid(3423523775L)
+                    .paymenttype("niIdea")
+                    .preferenceid(3423523775L)
+                    .totalventa(3099)
+                    .pedido(pedido1)
                     .build();
 
 
@@ -314,8 +314,7 @@ public class sprint_4_Application {
 
 
         };
-    }
+    }*/
 
-*/
-    
+
 }

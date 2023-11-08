@@ -38,19 +38,19 @@ public class Cliente extends Base {
 
     @Column(name = "nombre")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date nombre;
+    private String nombre;
 
     @Column(name = "apellido")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date apellido;
+    private String apellido;
 
     @Column(name = "email")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date email;
+    private String email;
 
     @Column(name = "telefono")
     @Temporal(TemporalType.TIMESTAMP)
-    private Date telefono;
+    private String telefono;
 
     @Column(name = "fecha_modificacion")
     @Temporal(TemporalType.TIMESTAMP)

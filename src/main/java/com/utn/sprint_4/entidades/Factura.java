@@ -29,7 +29,7 @@ public class Factura extends Base {
     private Long merchantorder;
 
     @Column(name = "mpPreferenceId")
-    private String preferenceid;
+    private Long preferenceid;
 
     @Column(name = "mpPaymentType")
     private String paymenttype;
