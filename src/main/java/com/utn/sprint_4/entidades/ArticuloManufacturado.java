@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.utn.sprint_4.enumeraciones.UnidadMedida;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -20,6 +21,10 @@ public class ArticuloManufacturado extends Base {
 
     @NotNull
     private String denominacion;
+
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private UnidadMedida unidadMedida;
 
     @NotNull
     @Column(length = 1000)
