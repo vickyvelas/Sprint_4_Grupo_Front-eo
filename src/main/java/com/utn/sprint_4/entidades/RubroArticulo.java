@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.utn.sprint_4.enumeraciones.Categoria;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -20,6 +21,10 @@ public class RubroArticulo extends Base {
     private String denominacion;
 
     @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    private Categoria categoria; //Rubro "padre"
+
+    @NotNull
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaAlta;
@@ -31,6 +36,7 @@ public class RubroArticulo extends Base {
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
+
 
 
 

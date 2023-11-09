@@ -1,9 +1,10 @@
 package com.utn.sprint_4.enumeraciones;
 
-public enum Categoria  {
+public enum Categoria {
     LACTEOS,
-    CARNE,
-    VERDURAS,
+    CARNES,
+    PESCADO,
     PANIFICADOS,
+    VERDURAS,
+    CONGELADOS
 }
-

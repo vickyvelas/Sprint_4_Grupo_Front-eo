@@ -16,6 +16,8 @@ public interface ArticuloManufacturadoRepository extends BaseRepository<Articulo
     @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:filtro% ",
             nativeQuery = true)
     List<ArticuloManufacturado> searchNativo(@Param("filtro") String filtro);
+
+    //me tendria que fijar con la fecha que el producto este dado de alta?
     
     @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:filtro% ",
             countQuery = "SELECT count(*) FROM Articulo_Manufacturado",
