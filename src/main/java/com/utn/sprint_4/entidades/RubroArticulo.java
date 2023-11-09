@@ -6,7 +6,6 @@ import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "rubro_articulo")
