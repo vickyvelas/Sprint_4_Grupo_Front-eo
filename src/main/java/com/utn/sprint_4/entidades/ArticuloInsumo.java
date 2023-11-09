@@ -63,4 +63,15 @@ public class ArticuloInsumo extends Base {
         detallesFactura.add(df);
     }
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @NotNull
+    @Builder.Default
+    @JoinColumn(name = "id_DetalleArtInsumo")
+    private List<DetalleArticuloManufacturado> detalleArticulosInsumos = new ArrayList<>();
+
+    public void AgregarDetalleArtInsumo(DetalleArticuloManufacturado dam){
+
+        detalleArticulosInsumos.add(dam);
+    }
+
 }

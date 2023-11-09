@@ -1,6 +1,5 @@
 package com.utn.sprint_4.entidades;
 
-import com.utn.sprint_4.enumeraciones.UnidadMedida;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;

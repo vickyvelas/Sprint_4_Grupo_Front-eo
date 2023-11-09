@@ -24,5 +24,9 @@ public class DetallePedido extends Base {
     @Column(name = "subtotal_costo", precision = 10, scale = 2)
     private Integer subtotal_costo;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "artManufacturado_id")
+    private ArticuloManufacturado articuloManufacturado;
+
 
 }
