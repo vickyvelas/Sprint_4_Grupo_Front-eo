@@ -54,7 +54,7 @@ public class Pedido extends Base {
     private FormaPago formaPago;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_domicilio_entrega")
+    @JoinColumn(name = "domicilioEntrega_id")
     private Domicilio domicilioEntrega;
 
     @NotNull
@@ -70,10 +70,12 @@ public class Pedido extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "persona_id")
+    private Persona persona;
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
-    @Builder.Default
-    @JoinColumn(name = "id_Pedido")
     private List<DetallePedido> DetallesPedidos = new ArrayList<>();
 
     public void AgregarDetallePedido(DetallePedido d){

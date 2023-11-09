@@ -16,8 +16,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
-public class RubroArticuloManufacturado {
-    public class RubroArticulo extends Base {
+public class RubroArticuloManufacturado extends Base{
 
         @NotNull
         private String denominacion;
@@ -40,9 +39,5 @@ public class RubroArticuloManufacturado {
         private Date fechaBaja;
 
 
-
-
     }
 
-
-}

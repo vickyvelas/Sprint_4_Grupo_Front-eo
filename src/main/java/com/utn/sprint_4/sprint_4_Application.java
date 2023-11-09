@@ -62,16 +62,6 @@ public class sprint_4_Application {
                     .fechaModificacion(fecha3)
                     .build();
 
-            Persona persona = Persona.builder()
-                    .nombre("Juan")
-                    .apellido("Marquez")
-                    .telefono("2617223459")
-                    .email("yoSoyDeBoca@gmail.com")
-                    .usuario(usuario)
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
-                    .build();
 
             Domicilio domicilio1 = Domicilio.builder()
                     .calle("Beltrán")
@@ -97,9 +87,6 @@ public class sprint_4_Application {
                     .pisoDpto(1)
                     .build();
 
-            persona.AgregarDomicilios(domicilio1);
-            persona.AgregarDomicilios(domicilio2);
-
             DetallePedido detallePedido1 = DetallePedido.builder()
                     .cantidad(6)
                     .subtotal(7000)
@@ -118,6 +105,60 @@ public class sprint_4_Application {
                     .subtotal_costo(4500)
                     .build();
 
+
+            Pedido pedido1 = Pedido.builder()
+                    .estado(EstadoPedido.PAGADO)
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .fechaPedido(fecha4)
+                    .formaPago(FormaPago.EFECTIVO)
+                    .horaEstimadaFinalizacion(hora)
+                    .tipoEnvio(TipoEnvio.TAKE_AWAY)
+                    .total(4000)
+                    .totalCosto(2000)
+                    .domicilioEntrega(domicilio1)
+                    .build();
+
+            Pedido pedido2 = Pedido.builder()
+                    .estado(EstadoPedido.COMPLETADO)
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .fechaPedido(fecha4)
+                    .formaPago(FormaPago.EFECTIVO)
+                    .horaEstimadaFinalizacion(hora)
+                    .tipoEnvio(TipoEnvio.TAKE_AWAY)
+                    .total(9000)
+                    .totalCosto(3260)
+                    .domicilioEntrega(domicilio2)
+                    .build();
+
+
+            Persona persona = Persona.builder()
+                    .nombre("Juan")
+                    .apellido("Marquez")
+                    .telefono("2617223459")
+                    .email("yoSoyDeBoca@gmail.com")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
+
+            persona.setUsuario(usuario);
+            persona.AgregarDomicilios(domicilio1);
+            persona.AgregarDomicilios(domicilio2);
+            persona.AgregarPedidos(pedido1);
+            persona.AgregarPedidos(pedido2);
+            domicilio1.AgregarPedidos(pedido1);
+            domicilio2.AgregarPedidos(pedido2);
+            pedido1.setPersona(persona);
+            pedido2.setPersona(persona);
+
+            personaRepository.save(persona);
+
+
+        /*
             RubroArticulo rubroArticulo = RubroArticulo.builder()
                     .denominacion("Carne")
                     .fechaAlta(fecha)
@@ -208,33 +249,7 @@ public class sprint_4_Application {
             articuloManufacturado1.AgregarDetalleArtManufac(detArtManu2);
             articuloManufacturado2.AgregarDetalleArtManufac(detArtManu3);
 
-            Pedido pedido1 = Pedido.builder()
-                    .estado(EstadoPedido.PAGADO)
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
-                    .fechaPedido(fecha4)
-                    .formaPago(FormaPago.EFECTIVO)
-                    .horaEstimadaFinalizacion(hora)
-                    .tipoEnvio(TipoEnvio.TAKE_AWAY)
-                    .total(4000)
-                    .totalCosto(2000)
-                    .domicilioEntrega(domicilio1)
-                    .build();
 
-            Pedido pedido2 = Pedido.builder()
-                    .estado(EstadoPedido.COMPLETADO)
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
-                    .fechaPedido(fecha4)
-                    .formaPago(FormaPago.EFECTIVO)
-                    .horaEstimadaFinalizacion(hora)
-                    .tipoEnvio(TipoEnvio.TAKE_AWAY)
-                    .total(9000)
-                    .totalCosto(3260)
-                    .domicilioEntrega(domicilio2)
-                    .build();
 
             Factura factura1 = Factura.builder()
                     .fechaAlta(fecha)
@@ -311,6 +326,9 @@ public class sprint_4_Application {
 
             facturaRepository.save(factura1);
             facturaRepository.save(factura2);
+
+*/
+
 
 
         };

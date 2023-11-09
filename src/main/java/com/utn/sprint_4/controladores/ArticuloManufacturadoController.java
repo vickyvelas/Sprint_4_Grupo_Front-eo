@@ -14,7 +14,7 @@ public class ArticuloManufacturadoController extends BaseControllerImpl<Articulo
     @GetMapping("/search")
     public ResponseEntity<?> search(@RequestParam String filtro){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.buscarProducto(filtro));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
@@ -24,7 +24,7 @@ public class ArticuloManufacturadoController extends BaseControllerImpl<Articulo
     @GetMapping("/searchPaged")
     public ResponseEntity<?> search(@RequestParam String filtro, Pageable pageable){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro, pageable));
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.buscarProducto(filtro, pageable));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));

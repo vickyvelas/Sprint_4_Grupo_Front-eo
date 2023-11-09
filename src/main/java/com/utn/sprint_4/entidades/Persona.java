@@ -17,20 +17,9 @@ import java.util.List;
 @Builder
 public class Persona extends Base {
 
-
-
-
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
-
-
-
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @NotNull
-    @Builder.Default
-    @JoinColumn(name = "id_cliente")
-    private List<Domicilio> domicilios = new ArrayList<>();
 
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
@@ -60,11 +49,13 @@ public class Persona extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @NotNull
+    @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
     @Builder.Default
-    @JoinColumn(name = "id_cliente")
     private List<Pedido> pedidos = new ArrayList<>();
+
+    @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
+    @Builder.Default
+    private List<Domicilio> domicilios = new ArrayList<>();
 
     public void AgregarPedidos(Pedido p){
         pedidos.add(p);
