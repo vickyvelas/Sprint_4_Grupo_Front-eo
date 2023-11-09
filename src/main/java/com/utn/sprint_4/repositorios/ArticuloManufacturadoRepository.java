@@ -11,6 +11,8 @@ import java.util.List;
 
 @Repository
 public interface ArticuloManufacturadoRepository extends BaseRepository<ArticuloManufacturado, Long>{
+
+
     @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:filtro% ",
             nativeQuery = true)
     List<ArticuloManufacturado> searchNativo(@Param("filtro") String filtro);

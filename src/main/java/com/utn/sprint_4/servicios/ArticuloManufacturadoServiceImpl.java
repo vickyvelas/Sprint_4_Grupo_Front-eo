@@ -20,7 +20,7 @@ public class ArticuloManufacturadoServiceImpl extends BaseServiceImpl<ArticuloMa
         this.articuloManufacturadoRepository = articuloManufacturadoRepository;
     }
     @Override
-    public List<ArticuloManufacturado> search(String filtro) throws Exception {
+    public List<ArticuloManufacturado> buscarProducto(String filtro) throws Exception {
         try {
             List<ArticuloManufacturado> articuloManufacturados = articuloManufacturadoRepository.searchNativo(filtro);
             return articuloManufacturados;
@@ -30,7 +30,7 @@ public class ArticuloManufacturadoServiceImpl extends BaseServiceImpl<ArticuloMa
     }
 
     @Override
-    public Page<ArticuloManufacturado> search(String filtro, Pageable pageable) throws Exception {
+    public Page<ArticuloManufacturado> buscarProducto(String filtro, Pageable pageable) throws Exception {
         try {
             Page<ArticuloManufacturado> articuloManufacturados = articuloManufacturadoRepository.searchNativo(filtro, pageable);
             return articuloManufacturados;
