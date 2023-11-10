@@ -17,5 +17,14 @@ public class DetalleArticuloManufacturado extends Base {
     @Column(name = "cantidad", precision = 10, scale = 2)
     private int cantidad;
 
+    //Relacion ArticuloManufacturado-1------n->DetalleArticuloManuf
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_ArticuloManufacturadd")
+    private ArticuloManufacturado articuloManufacturado;
+
+    //Relacion ArticuloInsumo<-1------n-DetalleArticuloManuf
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_ArticuloInsumo")
+    private ArticuloInsumo articuloInsumo;
 
 }

@@ -10,17 +10,13 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "persona")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Builder
 public class Persona extends Base {
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
 
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
@@ -54,11 +50,17 @@ public class Persona extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Rol rol;
 
+    //Relacion Persona -1-------1-> Usuario
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
 
+    //Relacion Persona -1-------n-> Pedido
     @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
     @Builder.Default
     private List<Pedido> pedidos = new ArrayList<>();
 
+    //Relacion Persona -1-----n->Domicilio
     @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
     @Builder.Default
     private List<Domicilio> domicilios = new ArrayList<>();

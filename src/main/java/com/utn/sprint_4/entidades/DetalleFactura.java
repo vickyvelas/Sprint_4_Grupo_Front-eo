@@ -20,12 +20,13 @@ public class DetalleFactura extends Base {
     @Column(name = "subtotal", precision = 10, scale = 2)
     private int subtotal;
 
-    @ManyToOne()
+    //Relacion DetalleFactura-1-------n->ArticuloManufacturado
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "id_articulo_manufacturado")
     private ArticuloManufacturado articuloManufacturado;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_Factura")
-    private Factura facturas;
+    private Factura factura;
 
 }

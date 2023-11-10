@@ -53,10 +53,6 @@ public class Pedido extends Base {
     @Enumerated(EnumType.STRING)
     private FormaPago formaPago;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "domicilioEntrega_id")
-    private Domicilio domicilioEntrega;
-
     @NotNull
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
@@ -70,10 +66,24 @@ public class Pedido extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
+    // Relacion Factura-1-------1->Pedido
+    @NotNull
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_pedido")
+    private Factura factura;
+
+    //Relacion Domiciolio -1-------n->Pedido
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilioEntrega_id")
+    private Domicilio domicilioEntrega;
+
+    //Relacion Persona -1-------n-> Pedido
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "persona_id")
     private Persona persona;
 
+    //Relacion Pedido-1------n->DetallePedido
     @OneToMany(mappedBy = "pedido",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
     @Builder.Default

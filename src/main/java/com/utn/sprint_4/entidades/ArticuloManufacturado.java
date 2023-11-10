@@ -52,14 +52,28 @@ public class ArticuloManufacturado extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    //Relacion DetallePedido -1-------1->ArticuloManufacturado
+    @OneToOne(cascade = CascadeType.ALL)
+    private DetallePedido detallePedido ;
+
+    //Detalle ArticuloManufacturado-1------n->detalleArticuloManufacturado
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER, mappedBy = "articuloManufacturado")
     @NotNull
     @Builder.Default
-    @JoinColumn(name = "id_DetalleArtManufac")
     private List<DetalleArticuloManufacturado> detalleArticulosManufacturados = new ArrayList<>();
+
 
     public void AgregarDetalleArtManufac(DetalleArticuloManufacturado dam){
         detalleArticulosManufacturados.add(dam);
+    }
+
+    //Detalle ArticuloManufacturado-1------n->detalleFactura
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @NotNull
+    @Builder.Default
+    private List<DetalleFactura> detalleFacturas = new ArrayList<>();
+    public void AgregarDetalleFactura(DetalleFactura df){
+        detalleFacturas.add(df);
     }
 
 }

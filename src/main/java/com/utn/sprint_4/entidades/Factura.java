@@ -6,7 +6,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "factura")
@@ -55,9 +57,14 @@ public class Factura extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
+    // Relacion Factura-1-------1->Pedido
     @NotNull
-    @OneToOne()
-    @JoinColumn(name = "id_pedido")
+    @OneToOne(cascade = CascadeType.ALL , fetch = FetchType.LAZY, mappedBy = "factura")
     private Pedido pedido;
+
+    //Relacion Factura 1-----n->DetalleFactura
+    @OneToMany(mappedBy = "factura",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @Builder.Default
+    private List<DetalleFactura> detalleFacturas = new ArrayList<>();
 
 }

@@ -51,10 +51,13 @@ public class Domicilio extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "persona_id")
     private Persona persona;
 
+
+    //Relacion Domiciolio -1-------n->Pedido
     @OneToMany(mappedBy = "domicilioEntrega",orphanRemoval = true)
     @Builder.Default
     private List<Pedido> Pedidos = new ArrayList<>();

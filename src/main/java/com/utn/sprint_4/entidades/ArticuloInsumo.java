@@ -49,18 +49,9 @@ public class ArticuloInsumo extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @NotNull
-    @Builder.Default
-    @JoinColumn(name = "id_detalleFactura")
-    private List<DetalleFactura> detallesFactura = new ArrayList<>();
-
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_Rubro_Articulo")
     private RubroArticulo rubroArticulo;
 
-    public void AgregarDetallesFactura(DetalleFactura df){
-        detallesFactura.add(df);
-    }
-
+   
 }
