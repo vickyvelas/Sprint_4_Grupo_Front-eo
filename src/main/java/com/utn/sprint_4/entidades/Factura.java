@@ -67,4 +67,8 @@ public class Factura extends Base {
     @Builder.Default
     private List<DetalleFactura> detalleFacturas = new ArrayList<>();
 
+    public void AgregarDetalleFacturas(DetalleFactura d){
+        detalleFacturas.add(d);
+    }
+
 }

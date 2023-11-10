@@ -53,5 +53,15 @@ public class ArticuloInsumo extends Base {
     @JoinColumn(name = "id_Rubro_Articulo")
     private RubroArticulo rubroArticulo;
 
+    //Relacion ArticuloInsumo-1------n->DetalleArticuloManufacturado
+    @OneToMany(mappedBy = "articuloInsumo",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @NotNull
+    @Builder.Default
+    private List<DetalleArticuloManufacturado> detalleArticulosManufacturados = new ArrayList<>();
+
+    public void AgregarDetalleArticuloManufacturado(DetalleArticuloManufacturado d){
+        detalleArticulosManufacturados.add(d);
+    }
+
    
 }

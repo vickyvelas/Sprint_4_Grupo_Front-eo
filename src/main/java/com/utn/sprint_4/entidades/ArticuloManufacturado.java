@@ -68,7 +68,7 @@ public class ArticuloManufacturado extends Base {
     }
 
     //Detalle ArticuloManufacturado-1------n->detalleFactura
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER, mappedBy = "articuloManufacturado")
     @NotNull
     @Builder.Default
     private List<DetalleFactura> detalleFacturas = new ArrayList<>();

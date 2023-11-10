@@ -18,12 +18,12 @@ public class DetalleArticuloManufacturado extends Base {
     private int cantidad;
 
     //Relacion ArticuloManufacturado-1------n->DetalleArticuloManuf
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_ArticuloManufacturadd")
     private ArticuloManufacturado articuloManufacturado;
 
     //Relacion ArticuloInsumo<-1------n-DetalleArticuloManuf
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_ArticuloInsumo")
     private ArticuloInsumo articuloInsumo;
 
