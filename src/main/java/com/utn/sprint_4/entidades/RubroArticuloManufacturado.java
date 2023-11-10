@@ -22,6 +22,10 @@ public class RubroArticuloManufacturado extends Base{
         private String denominacion;
 
         @NotNull
+        @Temporal(TemporalType.TIMESTAMP)
+        private CategoriaM categoriaM; //Rubro "padre"
+
+        @NotNull
         @Column(name = "fecha_alta")
         @Temporal(TemporalType.TIMESTAMP)
         private Date fechaAlta;

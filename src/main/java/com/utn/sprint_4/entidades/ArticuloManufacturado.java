@@ -22,13 +22,8 @@ public class ArticuloManufacturado extends Base {
     private String denominacion;
 
     @NotNull
-    @Enumerated(EnumType.STRING)
-    private UnidadMedida unidadMedida;
-
-    @NotNull
     @Column(length = 1000)
     private String descripcion;
-
 
     @NotNull
     @Column(name = "tiempo_estimado_cocina")

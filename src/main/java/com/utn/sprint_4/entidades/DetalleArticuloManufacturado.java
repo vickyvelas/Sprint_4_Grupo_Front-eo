@@ -17,13 +17,4 @@ public class DetalleArticuloManufacturado extends Base {
     @Column(name = "cantidad", precision = 10, scale = 2)
     private int cantidad;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "artManufacturado_id")
-    private ArticuloManufacturado articuloManufacturado;
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "artManufacturado_id")
-    private ArticuloInsumo articuloInsumo;
-
-
 }
