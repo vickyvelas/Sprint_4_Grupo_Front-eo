@@ -54,6 +54,22 @@ public class sprint_4_Application {
             Date fecha4 = formatoFecha.parse(fechaString4);
             Date hora = formatoHora.parse(horaString);
 
+
+            RubroArticulo rubroArticulo = RubroArticulo.builder()
+                    .denominacion("Carne")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
+
+            RubroArticulo rubroArticulo2 = RubroArticulo.builder()
+                    .denominacion("Verdura")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
+
+
             DetalleArticuloManufacturado detArtManu1 = DetalleArticuloManufacturado.builder()
                     .cantidad(4)
                     .build();
@@ -313,81 +329,19 @@ public class sprint_4_Application {
             detArtManu2.setArticuloInsumo(artIns2);
             detArtManu3.setArticuloInsumo(artIns3);
 
+            artIns1.setRubroArticulo(rubroArticulo);
+            artIns2.setRubroArticulo(rubroArticulo);
+            artIns3.setRubroArticulo(rubroArticulo);
+            artIns1.setRubroArticulo(rubroArticulo2);
+            artIns2.setRubroArticulo(rubroArticulo2);
+            artIns3.setRubroArticulo(rubroArticulo2);
+
 
 
             personaRepository.save(persona);
 
 
-        /*
-            RubroArticulo rubroArticulo = RubroArticulo.builder()
-                    .denominacion("Carne")
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
-                    .build();
 
-            RubroArticulo rubroArticulo2 = RubroArticulo.builder()
-                    .denominacion("Verdura")
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
-                    .build();
-
-
-
-            UnidadMedida unidadMedida = UnidadMedida.builder()
-                    .abreviatura("kg")
-                    .denominacion("kilogramo")
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
-                    .build();
-
-
-            unidadMedida.AgregarArticulosInsumo(artIns1);
-            unidadMedida.AgregarArticulosInsumo(artIns2);
-
-
-
-
-
-            articuloManufacturado1.AgregarDetalleArtManufac(detArtManu1);
-            articuloManufacturado1.AgregarDetalleArtManufac(detArtManu2);
-            articuloManufacturado2.AgregarDetalleArtManufac(detArtManu3);
-
-
-
-
-
-            artIns1.AgregarDetallesFactura(detalleFactura1);
-            artIns1.AgregarDetallesFactura(detalleFactura2);
-            artIns2.AgregarDetallesFactura(detalleFactura3);
-
-
-
-            pedido1.AgregarDetallePedido(detallePedido1);
-            pedido1.AgregarDetallePedido(detallePedido2);
-            pedido2.AgregarDetallePedido(detallePedido3);
-            persona.AgregarPedidos(pedido1);
-            persona.AgregarPedidos(pedido2);
-
-            personaRepository.save(persona);
-
-            pedidoRepository.save(pedido1);
-            pedidoRepository.save(pedido2);
-
-            articuloManufacturadoRepository.save(articuloManufacturado1);
-            articuloManufacturadoRepository.save(articuloManufacturado2);
-
-            unidadMedidaRepository.save(unidadMedida);
-
-            rubroArticuloRepository.save(rubroArticulo);
-            rubroArticuloRepository.save(rubroArticulo2);
-
-            facturaRepository.save(factura1);
-            facturaRepository.save(factura2);
-
-*/
 
 
 
