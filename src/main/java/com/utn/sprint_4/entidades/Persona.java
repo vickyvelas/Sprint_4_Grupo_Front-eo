@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.utn.sprint_4.enumeraciones.Rol;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -48,6 +49,11 @@ public class Persona extends Base {
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
+
+    @Column(name = "rol")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Rol rol;
+
 
     @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
     @Builder.Default

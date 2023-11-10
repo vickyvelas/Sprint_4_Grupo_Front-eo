@@ -37,8 +37,5 @@ public class Usuario extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    @Column(name = "rol")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Rol rol;
 
 }
