@@ -8,9 +8,9 @@ import java.util.List;
 
 public interface PersonaService extends BaseService<Persona, Long> {
 
-    List<Persona> search(String nombre, String apellido, String email, String telefono) throws Exception;
+    List<Persona> search(String nombre, String apellido, String telefono) throws Exception;
 
-    Page<Persona> search(String nombre, String apellido, String email, String telefono, Pageable pageable) throws Exception;
+    Page<Persona> search(String nombre, String apellido, String telefono, Pageable pageable) throws Exception;
 
 
 

@@ -23,11 +23,11 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona,Long> implements
     }
 
     @Override
-    public List<Persona> search(String nombre, String apellido, String email, String telefono) throws Exception {
+    public List<Persona> search(String nombre, String apellido, String telefono) throws Exception {
         try{
             //   List<Persona> personas= personaRepository.findByNombreContainingOrApellidoContaining(filtro, filtro);
             //   List<Persona> personas = personaRepository.search(filtro);
-            List<Persona> personas = personaRepository.searchNativo(nombre, apellido, email, telefono);
+            List<Persona> personas = personaRepository.searchNativo(nombre, apellido, telefono);
             return personas;
         }catch (Exception e){
             throw new Exception(e.getMessage());
@@ -35,11 +35,11 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona,Long> implements
     }
 
     @Override
-    public Page<Persona> search(String nombre, String apellido, String email, String telefono, Pageable pageable) throws Exception {
+    public Page<Persona> search(String nombre, String apellido, String telefono, Pageable pageable) throws Exception {
         try{
             //   Page<Persona> clientes= personaRepository.findByNombreContainingOrApellidoContaining(filtro, filtro, pageable);
             //   Page<Persona> clientes = personaRepository.search(filtro, pageable);
-            Page<Persona> clientes = personaRepository.searchNativo(nombre, apellido, email, telefono, pageable);
+            Page<Persona> clientes = personaRepository.searchNativo(nombre, apellido, telefono, pageable);
             return clientes;
         }catch (Exception e){
             throw new Exception(e.getMessage());

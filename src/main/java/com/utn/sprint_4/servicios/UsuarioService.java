@@ -1,5 +1,6 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.entidades.Persona;
 import com.utn.sprint_4.entidades.Usuario;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -7,7 +8,5 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 public interface UsuarioService extends BaseService<Usuario, Long> {
-    List<Usuario> search(String filtro) throws Exception;
-
-    Page<Usuario> search(String filtro, Pageable pageable) throws Exception;
+    Persona login(String email, String password) throws Exception;
 }

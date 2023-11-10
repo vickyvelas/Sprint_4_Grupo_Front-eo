@@ -1,5 +1,6 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.entidades.Persona;
 import com.utn.sprint_4.entidades.Usuario;
 import com.utn.sprint_4.repositorios.BaseRepository;
 import com.utn.sprint_4.repositorios.UsuarioRepository;
@@ -21,23 +22,15 @@ public class UsuarioServiceImpl extends BaseServiceImpl<Usuario, Long> implement
         this.usuarioRepository = usuarioRepository;
     }
 
+    //METODO PARA LOGIN HISTORIA 1 (TE BUSCA UN USUARIO POR USERNAME Y CONTRASEÑA)
     @Override
-    public List<Usuario> search(String filtro) throws Exception {
-        try {
-            List<Usuario> usuarios = usuarioRepository.searchNativo(filtro);
-            return usuarios;
-        } catch (Exception e) {
+    public Persona login(String email, String password) throws Exception{
+        try{
+            Persona persona = usuarioRepository.login(email, password);
+            return persona;
+        } catch (Exception e){
             throw new Exception(e.getMessage());
         }
     }
 
-    @Override
-    public Page<Usuario> search(String filtro, Pageable pageable) throws Exception {
-        try {
-            Page<Usuario> usuarios = usuarioRepository.searchNativo(filtro, pageable);
-            return usuarios;
-        } catch (Exception e) {
-            throw new Exception(e.getMessage());
-        }
-    }
 }

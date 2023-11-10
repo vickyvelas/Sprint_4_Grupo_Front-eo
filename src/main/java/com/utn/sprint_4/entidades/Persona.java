@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.utn.sprint_4.enumeraciones.Rol;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
@@ -30,10 +31,6 @@ public class Persona extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private String apellido;
 
-    @Column(name = "email")
-    @Temporal(TemporalType.TIMESTAMP)
-    private String email;
-
     @Column(name = "telefono")
     @Temporal(TemporalType.TIMESTAMP)
     private String telefono;
@@ -57,11 +54,13 @@ public class Persona extends Base {
 
     //Relacion Persona -1-------n-> Pedido
     @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
+    @JsonManagedReference
     @Builder.Default
     private List<Pedido> pedidos = new ArrayList<>();
 
     //Relacion Persona -1-----n->Domicilio
     @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
+    @JsonManagedReference
     @Builder.Default
     private List<Domicilio> domicilios = new ArrayList<>();
 

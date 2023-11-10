@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -59,6 +60,7 @@ public class ArticuloManufacturado extends Base {
     //Detalle ArticuloManufacturado-1------n->detalleArticuloManufacturado
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER, mappedBy = "articuloManufacturado")
     @NotNull
+    @JsonManagedReference
     @Builder.Default
     private List<DetalleArticuloManufacturado> detalleArticulosManufacturados = new ArrayList<>();
 
@@ -70,6 +72,7 @@ public class ArticuloManufacturado extends Base {
     //Detalle ArticuloManufacturado-1------n->detalleFactura
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER, mappedBy = "articuloManufacturado")
     @NotNull
+    @JsonManagedReference
     @Builder.Default
     private List<DetalleFactura> detalleFacturas = new ArrayList<>();
     public void AgregarDetalleFactura(DetalleFactura df){

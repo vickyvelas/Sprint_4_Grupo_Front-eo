@@ -1,6 +1,7 @@
 package com.utn.sprint_4.entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import jakarta.persistence.*;
 import lombok.*;
@@ -64,6 +65,7 @@ public class Factura extends Base {
 
     //Relacion Factura 1-----n->DetalleFactura
     @OneToMany(mappedBy = "factura",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @JsonManagedReference
     @Builder.Default
     private List<DetalleFactura> detalleFacturas = new ArrayList<>();
 

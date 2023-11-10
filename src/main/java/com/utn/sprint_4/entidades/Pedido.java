@@ -1,6 +1,8 @@
 package com.utn.sprint_4.entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import com.utn.sprint_4.enumeraciones.TipoEnvio;
@@ -74,18 +76,21 @@ public class Pedido extends Base {
 
     //Relacion Domiciolio -1-------n->Pedido
     @ManyToOne(cascade = CascadeType.ALL)
+    @JsonBackReference
     @JoinColumn(name = "domicilioEntrega_id")
     private Domicilio domicilioEntrega;
 
     //Relacion Persona -1-------n-> Pedido
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
     @JoinColumn(name = "persona_id")
     private Persona persona;
 
     //Relacion Pedido-1------n->DetallePedido
     @OneToMany(mappedBy = "pedido",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
+    @JsonManagedReference
     @Builder.Default
     private List<DetallePedido> DetallesPedidos = new ArrayList<>();
 

@@ -12,27 +12,26 @@ import java.util.List;
 @Repository
 public interface PersonaRepository extends BaseRepository<Persona, Long>{
 
-    /*List<Persona> findByNombreContainingOrApellidoContaining(String nombre, String apellido);
-    Page<Persona> findByNombreContainingOrApellidoContaining(String nombre, String apellido, Pageable pageable);*/
 
 
-    @Query(value = "Select c FROM Persona c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.email LIKE %:email% OR c.telefono LIKE %:telefono%")
-    List<Persona> search(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("email")String email, @Param("telefono")String telefono);
 
-    @Query(value = "Select c FROM Persona c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.email LIKE %:email% OR c.telefono LIKE %:telefono%")
-    Page<Persona> search(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("email")String email, @Param("telefono")String telefono, Pageable pageable);
+    @Query(value = "Select c FROM Persona c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.telefono LIKE %:telefono%")
+    List<Persona> search(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono);
+
+    @Query(value = "Select c FROM Persona c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.telefono LIKE %:telefono%")
+    Page<Persona> search(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono, Pageable pageable);
 
 
-    @Query(value = "Select * FROM cliente WHERE cliente.nombre LIKE %:nombre% AND cliente.apellido LIKE %:apellido% AND cliente.email LIKE %:email% AND cliente.telefono LIKE %:telefono%",
+    @Query(value = "Select * FROM cliente WHERE cliente.nombre LIKE %:nombre% AND cliente.apellido LIKE %:apellido% AND cliente.telefono LIKE %:telefono%",
             nativeQuery = true
     )
-    List<Persona> searchNativo(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("email")String email, @Param("telefono")String telefono);
+    List<Persona> searchNativo(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono);
 
-    @Query(value = "Select * FROM Persona WHERE cliente.nombre LIKE %:nombre% OR cliente.apellido LIKE %:apellido% OR cliente.email LIKE %:email% OR cliente.telefono LIKE %:telefono%",
+    @Query(value = "Select * FROM Persona WHERE cliente.nombre LIKE %:nombre% OR cliente.apellido LIKE %:apellido% OR cliente.telefono LIKE %:telefono%",
             countQuery = "SELECT count(*) FROM cliente",
             nativeQuery = true
     )
-    Page<Persona> searchNativo(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("email")String email, @Param("telefono")String telefono, Pageable pageable);
+    Page<Persona> searchNativo(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono, Pageable pageable);
 
 
 }

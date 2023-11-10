@@ -1,5 +1,7 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -53,12 +55,14 @@ public class Domicilio extends Base {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonBackReference
     @JoinColumn(name = "persona_id")
     private Persona persona;
 
 
     //Relacion Domiciolio -1-------n->Pedido
     @OneToMany(mappedBy = "domicilioEntrega",orphanRemoval = true)
+    @JsonManagedReference
     @Builder.Default
     private List<Pedido> Pedidos = new ArrayList<>();
 

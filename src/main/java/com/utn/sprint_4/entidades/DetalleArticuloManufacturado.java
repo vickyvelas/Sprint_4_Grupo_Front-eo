@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -19,11 +20,13 @@ public class DetalleArticuloManufacturado extends Base {
 
     //Relacion ArticuloManufacturado-1------n->DetalleArticuloManuf
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonBackReference
     @JoinColumn(name = "id_ArticuloManufacturado")
     private ArticuloManufacturado articuloManufacturado;
 
     //Relacion ArticuloInsumo<-1------n-DetalleArticuloManuf
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonBackReference
     @JoinColumn(name = "id_ArticuloInsumo")
     private ArticuloInsumo articuloInsumo;
 
