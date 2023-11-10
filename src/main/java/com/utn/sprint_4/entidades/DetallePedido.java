@@ -31,6 +31,6 @@ public class DetallePedido extends Base {
 
     //Relacion DetallePedido -1-------1->ArticuloManufacturado
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_ArticuloManufacturado")
+    @JoinColumn(name = "articuloManufacturado_id")
     private ArticuloManufacturado articuloManufacturado;
 }

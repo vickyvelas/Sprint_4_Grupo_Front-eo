@@ -50,7 +50,7 @@ public class ArticuloInsumo extends Base {
     private Date fechaBaja;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_Rubro_Articulo")
+    @JoinColumn(name = "rubroArticulo_id")
     private RubroArticulo rubroArticulo;
 
     //Relacion ArticuloInsumo-1------n->DetalleArticuloManufacturado

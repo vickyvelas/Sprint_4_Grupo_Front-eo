@@ -69,7 +69,7 @@ public class Pedido extends Base {
     // Relacion Factura-1-------1->Pedido
     @NotNull
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_pedido")
+    @JoinColumn(name = "factura_id")
     private Factura factura;
 
     //Relacion Domiciolio -1-------n->Pedido

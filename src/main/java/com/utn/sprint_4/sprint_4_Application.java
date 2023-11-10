@@ -54,6 +54,22 @@ public class sprint_4_Application {
             Date fecha4 = formatoFecha.parse(fechaString4);
             Date hora = formatoHora.parse(horaString);
 
+/*
+            RubroArticuloManufacturado rubroArticuloManufacturado = RubroArticuloManufacturado.builder()
+                    .denominacion("Bebidas")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
+
+            RubroArticuloManufacturado rubroArticuloManufacturado2 = RubroArticuloManufacturado.builder()
+                    .denominacion("Comida Rapida")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
+
+            */
 
             RubroArticulo rubroArticulo = RubroArticulo.builder()
                     .denominacion("Carne")
@@ -286,6 +302,8 @@ public class sprint_4_Application {
             persona.AgregarDomicilios(domicilio2);
             persona.AgregarPedidos(pedido1);
             persona.AgregarPedidos(pedido2);
+            domicilio1.setPersona(persona);
+            domicilio2.setPersona(persona);
             domicilio1.AgregarPedidos(pedido1);
             domicilio2.AgregarPedidos(pedido2);
             pedido1.setPersona(persona);
@@ -293,6 +311,9 @@ public class sprint_4_Application {
             pedido1.AgregarDetallePedido(detallePedido1);
             pedido1.AgregarDetallePedido(detallePedido2);
             pedido2.AgregarDetallePedido(detallePedido3);
+            detallePedido1.setPedido(pedido1);
+            detallePedido2.setPedido(pedido1);
+            detallePedido3.setPedido(pedido2);
             detallePedido1.setArticuloManufacturado(articuloManufacturado1);
             detallePedido2.setArticuloManufacturado(articuloManufacturado2);
             detallePedido3.setArticuloManufacturado(articuloManufacturado3);
@@ -312,6 +333,14 @@ public class sprint_4_Application {
             articuloManufacturado1.AgregarDetalleFactura(detalleFactura1);
             articuloManufacturado2.AgregarDetalleFactura(detalleFactura2);
             articuloManufacturado3.AgregarDetalleFactura(detalleFactura3);
+            /*
+            articuloManufacturado1.setRubroArticuloManufacturado(rubroArticuloManufacturado2);
+            articuloManufacturado2.setRubroArticuloManufacturado(rubroArticuloManufacturado2);
+            articuloManufacturado3.setRubroArticuloManufacturado(rubroArticuloManufacturado2);
+            rubroArticuloManufacturado2.AgregararticulosManufacturados(articuloManufacturado1);
+            rubroArticuloManufacturado2.AgregararticulosManufacturados(articuloManufacturado2);
+            rubroArticuloManufacturado2.AgregararticulosManufacturados(articuloManufacturado3);
+            */
             detalleFactura1.setArticuloManufacturado(articuloManufacturado1);
             detalleFactura2.setArticuloManufacturado(articuloManufacturado2);
             detalleFactura3.setArticuloManufacturado(articuloManufacturado3);
@@ -339,9 +368,6 @@ public class sprint_4_Application {
 
 
             personaRepository.save(persona);
-
-
-
 
 
 
