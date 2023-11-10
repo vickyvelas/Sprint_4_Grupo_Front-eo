@@ -1,5 +1,6 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.dtos.BusquedaProductosDTO;
 import com.utn.sprint_4.entidades.ArticuloManufacturado;
 import com.utn.sprint_4.repositorios.ArticuloManufacturadoRepository;
 import com.utn.sprint_4.repositorios.BaseRepository;
@@ -38,4 +39,6 @@ public class ArticuloManufacturadoServiceImpl extends BaseServiceImpl<ArticuloMa
             throw new Exception(e.getMessage());
         }
     }
+
+
 }

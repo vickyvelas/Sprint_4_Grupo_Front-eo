@@ -1,7 +1,5 @@
 package com.utn.sprint_4.entidades;
 
-import com.utn.sprint_4.enumeraciones.Categoria;
-import com.utn.sprint_4.enumeraciones.CategoriaM;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -20,10 +18,6 @@ public class RubroArticuloManufacturado extends Base{
 
         @NotNull
         private String denominacion;
-
-        @NotNull
-        @Temporal(TemporalType.TIMESTAMP)
-        private CategoriaM categoriaM; //Rubro "padre"
 
         @NotNull
         @Column(name = "fecha_alta")
