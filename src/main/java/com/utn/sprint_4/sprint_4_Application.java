@@ -154,6 +154,10 @@ public class sprint_4_Application {
             domicilio2.AgregarPedidos(pedido2);
             pedido1.setPersona(persona);
             pedido2.setPersona(persona);
+            pedido1.AgregarDetallePedido(detallePedido1);
+            pedido1.AgregarDetallePedido(detallePedido2);
+            pedido2.AgregarDetallePedido(detallePedido3);
+
 
             personaRepository.save(persona);
 
