@@ -1,5 +1,7 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,6 +19,7 @@ import java.util.List;
 @Setter
 @ToString
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class ArticuloManufacturado extends Base {
 
     @NotNull
@@ -53,30 +56,15 @@ public class ArticuloManufacturado extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    //Relacion DetallePedido -1-------1->ArticuloManufacturado
-    @OneToOne(cascade = CascadeType.ALL)
-    private DetallePedido detallePedido ;
 
-    //Detalle ArticuloManufacturado-1------n->detalleArticuloManufacturado
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER, mappedBy = "articuloManufacturado")
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
-    @JsonManagedReference
     @Builder.Default
+    @JoinColumn(name = "articuloManufacturado_id")
     private List<DetalleArticuloManufacturado> detalleArticulosManufacturados = new ArrayList<>();
-
 
     public void AgregarDetalleArtManufac(DetalleArticuloManufacturado dam){
         detalleArticulosManufacturados.add(dam);
-    }
-
-    //Detalle ArticuloManufacturado-1------n->detalleFactura
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER, mappedBy = "articuloManufacturado")
-    @NotNull
-    @JsonManagedReference
-    @Builder.Default
-    private List<DetalleFactura> detalleFacturas = new ArrayList<>();
-    public void AgregarDetalleFactura(DetalleFactura df){
-        detalleFacturas.add(df);
     }
 
 

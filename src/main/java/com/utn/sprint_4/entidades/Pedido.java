@@ -1,8 +1,7 @@
 package com.utn.sprint_4.entidades;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.*;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import com.utn.sprint_4.enumeraciones.TipoEnvio;
@@ -21,6 +20,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Pedido extends Base {
 
     @NotNull
@@ -68,30 +68,16 @@ public class Pedido extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    // Relacion Factura-1-------1->Pedido
     @NotNull
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "factura_id")
     private Factura factura;
 
-    //Relacion Domiciolio -1-------n->Pedido
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JsonBackReference
-    @JoinColumn(name = "domicilioEntrega_id")
-    private Domicilio domicilioEntrega;
-
-    //Relacion Persona -1-------n-> Pedido
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonBackReference
-    @JoinColumn(name = "persona_id")
-    private Persona persona;
-
     //Relacion Pedido-1------n->DetallePedido
-    @OneToMany(mappedBy = "pedido",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
-    @JsonManagedReference
     @Builder.Default
+    @JoinColumn(name = "pedido_id")
     private List<DetallePedido> DetallesPedidos = new ArrayList<>();
 
     public void AgregarDetallePedido(DetallePedido d){

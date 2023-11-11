@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.utn.sprint_4.enumeraciones.Rol;
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,6 +15,7 @@ import java.util.Date;
 @Setter
 @Table(name = "usuario")
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Usuario extends Base {
 
     @NotNull

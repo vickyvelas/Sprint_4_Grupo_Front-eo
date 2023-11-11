@@ -13,6 +13,18 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "api/v1/personas")
 public class PersonaController extends BaseControllerImpl<Persona, PersonaServiceImpl>{
 
+
+    @GetMapping("/login")
+    public ResponseEntity<?> login(String email, String password){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.login(email, password));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\"" + e.getMessage() + "\"}"));
+
+        }
+    }
+
+
     @GetMapping("/search")
     public ResponseEntity<?> search (String nombre, String apellido, String telefono){
         try {

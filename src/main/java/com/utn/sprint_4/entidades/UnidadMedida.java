@@ -1,5 +1,7 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,6 +18,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class UnidadMedida extends Base {
 
     @NotNull
@@ -39,15 +42,5 @@ public class UnidadMedida extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @NotNull
-    @JsonManagedReference
-    @Builder.Default
-    @JoinColumn(name = "id_articulos_Insumo")
-    private List<ArticuloInsumo> articulosInsumo = new ArrayList<>();
-
-    public void AgregarArticulosInsumo(ArticuloInsumo a){
-        articulosInsumo.add(a);
-    }
 
 }

@@ -13,7 +13,9 @@ import java.util.List;
 public interface PersonaRepository extends BaseRepository<Persona, Long>{
 
 
-
+    @Query(value = "Select PERSONA.* FROM PERSONA AS p INNER JOIN USUARIO AS u ON p.id = u.id WHERE u.email LIKE %:email% AND u.password LIKE %:password%",
+            nativeQuery = true)
+    Persona login(@Param("email") String email, @Param("password") String password);
 
     @Query(value = "Select c FROM Persona c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.telefono LIKE %:telefono%")
     List<Persona> search(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono);

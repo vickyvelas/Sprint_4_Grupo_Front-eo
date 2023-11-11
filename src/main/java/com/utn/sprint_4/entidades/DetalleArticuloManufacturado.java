@@ -1,6 +1,8 @@
 package com.utn.sprint_4.entidades;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -12,22 +14,16 @@ import org.antlr.v4.runtime.misc.NotNull;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class DetalleArticuloManufacturado extends Base {
 
     @NotNull
     @Column(name = "cantidad", precision = 10, scale = 2)
     private int cantidad;
 
-    //Relacion ArticuloManufacturado-1------n->DetalleArticuloManuf
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
-    @JoinColumn(name = "id_ArticuloManufacturado")
-    private ArticuloManufacturado articuloManufacturado;
 
-    //Relacion ArticuloInsumo<-1------n-DetalleArticuloManuf
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JsonBackReference
-    @JoinColumn(name = "id_ArticuloInsumo")
+    @JoinColumn(name = "ArticuloInsumo_id")
     private ArticuloInsumo articuloInsumo;
 
 }

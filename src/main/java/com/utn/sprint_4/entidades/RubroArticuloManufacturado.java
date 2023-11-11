@@ -18,6 +18,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class RubroArticuloManufacturado extends Base{
 
         @NotNull

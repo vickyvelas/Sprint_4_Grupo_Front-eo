@@ -1,6 +1,8 @@
 package com.utn.sprint_4.entidades;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -17,6 +19,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class ArticuloInsumo extends Base {
 
     @NotNull
@@ -52,20 +55,13 @@ public class ArticuloInsumo extends Base {
     private Date fechaBaja;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JsonBackReference
     @JoinColumn(name = "rubroArticulo_id")
     private RubroArticulo rubroArticulo;
 
-    //Relacion ArticuloInsumo-1------n->DetalleArticuloManufacturado
-    @OneToMany(mappedBy = "articuloInsumo",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    @NotNull
-    @JsonManagedReference
-    @Builder.Default
-    private List<DetalleArticuloManufacturado> detalleArticulosManufacturados = new ArrayList<>();
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "unidadDeMedida_id")
+    private UnidadMedida unidadMedida;
 
-    public void AgregarDetalleArticuloManufacturado(DetalleArticuloManufacturado d){
-        detalleArticulosManufacturados.add(d);
-    }
 
    
 }

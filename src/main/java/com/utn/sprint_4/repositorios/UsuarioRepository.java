@@ -1,5 +1,6 @@
 package com.utn.sprint_4.repositorios;
 
+import com.utn.sprint_4.dtos.DTOLogin;
 import com.utn.sprint_4.entidades.Persona;
 import com.utn.sprint_4.entidades.Usuario;
 import org.springframework.data.domain.Page;
@@ -14,9 +15,7 @@ import java.util.List;
 @Repository
 public interface UsuarioRepository extends BaseRepository<Usuario, Long>{
 
-    @Query(value = "Select * FROM Usuario AND Persona WHERE Usuario.email LIKE %:email% AND Usuario.password LIKE %:password%",
-            nativeQuery = true)
-    Persona login(@Param("email") String email, @Param("password") String password);
+
 }
 
 

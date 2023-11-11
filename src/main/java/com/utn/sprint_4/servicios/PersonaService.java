@@ -1,5 +1,6 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.dtos.DTOLogin;
 import com.utn.sprint_4.entidades.Persona;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,6 +13,6 @@ public interface PersonaService extends BaseService<Persona, Long> {
 
     Page<Persona> search(String nombre, String apellido, String telefono, Pageable pageable) throws Exception;
 
-
+    DTOLogin login(String email, String password) throws Exception;
 
 }

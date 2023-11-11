@@ -1,6 +1,9 @@
 package com.utn.sprint_4.entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import jakarta.persistence.*;
@@ -18,6 +21,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Factura extends Base {
 
     @NotNull
@@ -58,15 +62,10 @@ public class Factura extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    // Relacion Factura-1-------1->Pedido
-    @NotNull
-    @OneToOne(cascade = CascadeType.ALL , fetch = FetchType.LAZY, mappedBy = "factura")
-    private Pedido pedido;
 
-    //Relacion Factura 1-----n->DetalleFactura
-    @OneToMany(mappedBy = "factura",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    @JsonManagedReference
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @Builder.Default
+    @JoinColumn(name = "factura_id")
     private List<DetalleFactura> detalleFacturas = new ArrayList<>();
 
     public void AgregarDetalleFacturas(DetalleFactura d){

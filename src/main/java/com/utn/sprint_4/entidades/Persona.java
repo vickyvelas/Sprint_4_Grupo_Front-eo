@@ -1,5 +1,8 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.utn.sprint_4.enumeraciones.Rol;
 import jakarta.persistence.*;
@@ -17,6 +20,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Persona extends Base {
 
     @Column(name = "fecha_alta")
@@ -53,15 +57,15 @@ public class Persona extends Base {
     private Usuario usuario;
 
     //Relacion Persona -1-------n-> Pedido
-    @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
-    @JsonManagedReference
+    @OneToMany(cascade = CascadeType.ALL)
     @Builder.Default
+    @JoinColumn(name = "persona_id")
     private List<Pedido> pedidos = new ArrayList<>();
 
     //Relacion Persona -1-----n->Domicilio
-    @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
-    @JsonManagedReference
+    @OneToMany(cascade = CascadeType.ALL)
     @Builder.Default
+    @JoinColumn(name = "persona_id")
     private List<Domicilio> domicilios = new ArrayList<>();
 
     public void AgregarPedidos(Pedido p){

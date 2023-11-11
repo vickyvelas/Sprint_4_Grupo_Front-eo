@@ -19,16 +19,6 @@ public class sprint_4_Application {
 
     @Autowired
     private PersonaRepository personaRepository;
-    @Autowired
-    private PedidoRepository pedidoRepository;
-    @Autowired
-    private FacturaRepository facturaRepository;
-    @Autowired
-    private ArticuloManufacturadoRepository articuloManufacturadoRepository;
-    @Autowired
-    private UnidadMedidaRepository unidadMedidaRepository;
-    @Autowired
-    private RubroArticuloRepository rubroArticuloRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(sprint_4_Application.class, args);
@@ -70,6 +60,22 @@ public class sprint_4_Application {
                     .build();
 
             */
+
+            UnidadMedida unidadMedida = UnidadMedida.builder()
+                    .denominacion("gramo")
+                    .abreviatura("Gr")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
+
+            UnidadMedida unidadMedida2 = UnidadMedida.builder()
+                    .denominacion("litro")
+                    .abreviatura("Lt")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
 
             RubroArticulo rubroArticulo = RubroArticulo.builder()
                     .denominacion("Carne")
@@ -271,7 +277,6 @@ public class sprint_4_Application {
                     .tipoEnvio(TipoEnvio.TAKE_AWAY)
                     .total(4000)
                     .totalCosto(2000)
-                    .domicilioEntrega(domicilio1)
                     .build();
 
             Pedido pedido2 = Pedido.builder()
@@ -285,7 +290,6 @@ public class sprint_4_Application {
                     .tipoEnvio(TipoEnvio.TAKE_AWAY)
                     .total(9000)
                     .totalCosto(3260)
-                    .domicilioEntrega(domicilio2)
                     .build();
 
 
@@ -303,37 +307,37 @@ public class sprint_4_Application {
             persona.AgregarDomicilios(domicilio2);
             persona.AgregarPedidos(pedido1);
             persona.AgregarPedidos(pedido2);
-            domicilio1.setPersona(persona);
-            domicilio2.setPersona(persona);
+            //domicilio1.setPersona(persona);
+            //domicilio2.setPersona(persona);
             domicilio1.AgregarPedidos(pedido1);
             domicilio2.AgregarPedidos(pedido2);
-            pedido1.setPersona(persona);
-            pedido2.setPersona(persona);
+            //pedido1.setPersona(persona);
+            //pedido2.setPersona(persona);
             pedido1.AgregarDetallePedido(detallePedido1);
             pedido1.AgregarDetallePedido(detallePedido2);
             pedido2.AgregarDetallePedido(detallePedido3);
-            detallePedido1.setPedido(pedido1);
-            detallePedido2.setPedido(pedido1);
-            detallePedido3.setPedido(pedido2);
+            //detallePedido1.setPedido(pedido1);
+            //detallePedido2.setPedido(pedido1);
+            //detallePedido3.setPedido(pedido2);
             detallePedido1.setArticuloManufacturado(articuloManufacturado1);
             detallePedido2.setArticuloManufacturado(articuloManufacturado2);
             detallePedido3.setArticuloManufacturado(articuloManufacturado3);
-            articuloManufacturado1.setDetallePedido(detallePedido1);
-            articuloManufacturado2.setDetallePedido(detallePedido2);
-            articuloManufacturado3.setDetallePedido(detallePedido3);
-            factura1.setPedido(pedido1);
-            factura2.setPedido(pedido2);
+            //articuloManufacturado1.setDetallePedido(detallePedido1);
+            //articuloManufacturado2.setDetallePedido(detallePedido2);
+            //articuloManufacturado3.setDetallePedido(detallePedido3);
+            //factura1.setPedido(pedido1);
+            //factura2.setPedido(pedido2);
             pedido1.setFactura(factura1);
             pedido2.setFactura(factura2);
             factura1.AgregarDetalleFacturas(detalleFactura1);
             factura1.AgregarDetalleFacturas(detalleFactura2);
             factura2.AgregarDetalleFacturas(detalleFactura3);
-            detalleFactura1.setFactura(factura1);
-            detalleFactura2.setFactura(factura1);
-            detalleFactura3.setFactura(factura2);
-            articuloManufacturado1.AgregarDetalleFactura(detalleFactura1);
-            articuloManufacturado2.AgregarDetalleFactura(detalleFactura2);
-            articuloManufacturado3.AgregarDetalleFactura(detalleFactura3);
+            //detalleFactura1.setFactura(factura1);
+            //detalleFactura2.setFactura(factura1);
+            //detalleFactura3.setFactura(factura2);
+            //articuloManufacturado1.AgregarDetalleFactura(detalleFactura1);
+            //articuloManufacturado2.AgregarDetalleFactura(detalleFactura2);
+            //articuloManufacturado3.AgregarDetalleFactura(detalleFactura3);
             /*
             articuloManufacturado1.setRubroArticuloManufacturado(rubroArticuloManufacturado2);
             articuloManufacturado2.setRubroArticuloManufacturado(rubroArticuloManufacturado2);
@@ -348,13 +352,13 @@ public class sprint_4_Application {
             articuloManufacturado1.AgregarDetalleArtManufac(detArtManu1);
             articuloManufacturado2.AgregarDetalleArtManufac(detArtManu2);
             articuloManufacturado3.AgregarDetalleArtManufac(detArtManu3);
-            detArtManu1.setArticuloManufacturado(articuloManufacturado1);
-            detArtManu2.setArticuloManufacturado(articuloManufacturado2);
-            detArtManu3.setArticuloManufacturado(articuloManufacturado3);
+            //detArtManu1.setArticuloManufacturado(articuloManufacturado1);
+            //detArtManu2.setArticuloManufacturado(articuloManufacturado2);
+            //detArtManu3.setArticuloManufacturado(articuloManufacturado3);
 
-            artIns1.AgregarDetalleArticuloManufacturado(detArtManu1);
-            artIns2.AgregarDetalleArticuloManufacturado(detArtManu2);
-            artIns3.AgregarDetalleArticuloManufacturado(detArtManu3);
+            //artIns1.AgregarDetalleArticuloManufacturado(detArtManu1);
+            //artIns2.AgregarDetalleArticuloManufacturado(detArtManu2);
+            //artIns3.AgregarDetalleArticuloManufacturado(detArtManu3);
             detArtManu1.setArticuloInsumo(artIns1);
             detArtManu2.setArticuloInsumo(artIns2);
             detArtManu3.setArticuloInsumo(artIns3);
@@ -365,6 +369,9 @@ public class sprint_4_Application {
             artIns1.setRubroArticulo(rubroArticulo2);
             artIns2.setRubroArticulo(rubroArticulo2);
             artIns3.setRubroArticulo(rubroArticulo2);
+            artIns1.setUnidadMedida(unidadMedida);
+            artIns2.setUnidadMedida(unidadMedida);
+            artIns3.setUnidadMedida(unidadMedida);
 
 
 
