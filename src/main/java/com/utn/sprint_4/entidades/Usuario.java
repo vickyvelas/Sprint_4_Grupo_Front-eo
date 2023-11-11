@@ -23,7 +23,7 @@ public class Usuario extends Base {
     private String auth0Id;
 
     @NotNull
-    @Column(name = "username", nullable = false)
+    @Column(name = "username", unique = true, nullable = false)
     private String username;
 
     @Column(name = "email")
