@@ -64,6 +64,7 @@ public class ArticuloManufacturado extends Base {
     private List<DetalleArticuloManufacturado> detalleArticulosManufacturados = new ArrayList<>();
 
     public void AgregarDetalleArtManufac(DetalleArticuloManufacturado dam){
+
         detalleArticulosManufacturados.add(dam);
     }
 
