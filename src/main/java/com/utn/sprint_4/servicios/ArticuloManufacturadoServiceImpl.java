@@ -1,5 +1,6 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.dtos.BusquedaProductosDTO;
 import com.utn.sprint_4.dtos.DTORankingProductos;
 import com.utn.sprint_4.entidades.ArticuloManufacturado;
 import com.utn.sprint_4.repositorios.ArticuloManufacturadoRepository;
@@ -22,6 +23,25 @@ public class ArticuloManufacturadoServiceImpl extends BaseServiceImpl<ArticuloMa
         this.articuloManufacturadoRepository = articuloManufacturadoRepository;
     }
 
+
+    @Override
+    public List<BusquedaProductosDTO> findByDenominacion(String denominacion) throws Exception {
+        try {
+            List<ArticuloManufacturado> articuloManufacturados = articuloManufacturadoRepository.findByDenominacion(denominacion);
+            List<BusquedaProductosDTO> productosDTOS  = new ArrayList<>();
+            BusquedaProductosDTO auxDto = new BusquedaProductosDTO();
+            for (ArticuloManufacturado articuloManufacturado : articuloManufacturados){
+                auxDto.setDenominacion(articuloManufacturado.getDenominacion());
+                auxDto.setDescripcion(articuloManufacturado.getDescripcion());
+                auxDto.setPrecioVenta(articuloManufacturado.getPrecioVenta());
+                auxDto.setUrlImagen(articuloManufacturado.getUrlImagen());
+                productosDTOS.add(auxDto);
+            }
+            return productosDTOS;
+        } catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
 
     @Override
     public List<DTORankingProductos> findBy() throws Exception {
