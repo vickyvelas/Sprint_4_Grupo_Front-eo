@@ -1,7 +1,8 @@
 package com.utn.sprint_4.servicios;
 
 import com.utn.sprint_4.dtos.BusquedaProductosDTO;
-import com.utn.sprint_4.dtos.DTORankingProductos;
+import com.utn.sprint_4.dtos.RankingProductosDTO;
+import com.utn.sprint_4.dtos.RankingProductosFiltroDTO;
 import com.utn.sprint_4.entidades.ArticuloManufacturado;
 import com.utn.sprint_4.repositorios.ArticuloManufacturadoRepository;
 import com.utn.sprint_4.repositorios.BaseRepository;
@@ -44,10 +45,17 @@ public class ArticuloManufacturadoServiceImpl extends BaseServiceImpl<ArticuloMa
     }
 
     @Override
-    public List<DTORankingProductos> findBy() throws Exception {
+    public List<RankingProductosDTO> rankingProductos(RankingProductosFiltroDTO rankingProductosFiltroDTO) throws Exception {
         try {
-            List<DTORankingProductos> articulosMasVendidos = articuloManufacturadoRepository.findBy();
-            return articulosMasVendidos;
+            List<ArticuloManufacturado> articulosMasVendidos = articuloManufacturadoRepository.rankingProductos(rankingProductosFiltroDTO.getFechaInicio(), rankingProductosFiltroDTO.getFechaFin());
+            List<RankingProductosDTO> rankingDTO = new ArrayList<>();
+            RankingProductosDTO dtoAux = new RankingProductosDTO();
+            for (ArticuloManufacturado articulos: articulosMasVendidos){
+                dtoAux.setDenominacion(articulos.getDenominacion());
+                dtoAux.setDescripcion(articulos.getDescripcion());
+                rankingDTO.add(dtoAux);
+            }
+            return rankingDTO;
         } catch (Exception e){
             throw new Exception(e.getMessage());
         }

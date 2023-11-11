@@ -31,7 +31,7 @@ public interface PersonaRepository extends BaseRepository<Persona, Long>{
     Page<Persona> search(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono, Pageable pageable);
 
 
-    @Query(value = "Select * FROM cliente WHERE cliente.nombre LIKE %:nombre% AND cliente.apellido LIKE %:apellido% AND cliente.telefono LIKE %:telefono%",
+    @Query(value = "Select * FROM Persona WHERE Persona.nombre LIKE %:nombre% AND Persona.apellido LIKE %:apellido% AND Persona.telefono LIKE %:telefono%",
             nativeQuery = true
     )
     List<Persona> searchNativo(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono);

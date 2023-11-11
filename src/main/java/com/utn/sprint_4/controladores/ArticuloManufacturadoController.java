@@ -1,5 +1,6 @@
 package com.utn.sprint_4.controladores;
 
+import com.utn.sprint_4.dtos.RankingProductosFiltroDTO;
 import com.utn.sprint_4.entidades.ArticuloManufacturado;
 import com.utn.sprint_4.servicios.ArticuloManufacturadoServiceImpl;
 import org.springframework.data.domain.Pageable;
@@ -14,9 +15,9 @@ public class ArticuloManufacturadoController extends BaseControllerImpl<Articulo
 
 
     @GetMapping("/productosMasVendidos")
-    public ResponseEntity<?> findBy(){
+    public ResponseEntity<?> rankingProductos(RankingProductosFiltroDTO rankingProductosFiltroDTO){
         try{
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.findBy());
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.rankingProductos(rankingProductosFiltroDTO));
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
