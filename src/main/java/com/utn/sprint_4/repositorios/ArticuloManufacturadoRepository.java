@@ -13,16 +13,20 @@ import java.util.List;
 @Repository
 public interface ArticuloManufacturadoRepository extends BaseRepository<ArticuloManufacturado, Long>{
 
-    List<DTORankingProductos> findBy();
 
-    @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:filtro% ",
+    @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:denominacion% ",
             nativeQuery = true)
-    List<ArticuloManufacturado> searchNativo(@Param("filtro") String filtro);
+    List<ArticuloManufacturado> searchNativo(@Param("denominacion") String denominacion);
+    List<ArticuloManufacturado> findByDenominacion(@Param("denominacion") String denominacion);
 
-    //me tendria que fijar con la fecha que el producto este dado de alta?
+
     
     @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:filtro% ",
             countQuery = "SELECT count(*) FROM Articulo_Manufacturado",
             nativeQuery = true)
     Page<ArticuloManufacturado> searchNativo(@Param("filtro") String filtro, Pageable pageable);
+
+    List<DTORankingProductos> findBy();
+
+
 }
