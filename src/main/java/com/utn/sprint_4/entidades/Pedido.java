@@ -73,6 +73,10 @@ public class Pedido extends Base {
     @JoinColumn(name = "factura_id")
     private Factura factura;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilio_id")
+    private Domicilio domicilio;
+
     //Relacion Pedido-1------n->DetallePedido
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull

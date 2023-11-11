@@ -56,15 +56,4 @@ public class Domicilio extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-
-    //Relacion Domiciolio -1-------n->Pedido
-    @OneToMany(orphanRemoval = true)
-    @Builder.Default
-    @JoinColumn(name = "domicilio_id")
-    private List<Pedido> Pedidos = new ArrayList<>();
-
-    public void AgregarPedidos(Pedido p){
-        Pedidos.add(p);
-    }
-
 }

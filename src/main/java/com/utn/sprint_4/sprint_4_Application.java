@@ -309,13 +309,15 @@ public class sprint_4_Application {
             persona.AgregarPedidos(pedido2);
             //domicilio1.setPersona(persona);
             //domicilio2.setPersona(persona);
-            domicilio1.AgregarPedidos(pedido1);
-            domicilio2.AgregarPedidos(pedido2);
+            //domicilio1.AgregarPedidos(pedido1);
+            //domicilio2.AgregarPedidos(pedido2);
             //pedido1.setPersona(persona);
             //pedido2.setPersona(persona);
             pedido1.AgregarDetallePedido(detallePedido1);
             pedido1.AgregarDetallePedido(detallePedido2);
             pedido2.AgregarDetallePedido(detallePedido3);
+            pedido1.setDomicilio(domicilio1);
+            pedido2.setDomicilio(domicilio2);
             //detallePedido1.setPedido(pedido1);
             //detallePedido2.setPedido(pedido1);
             //detallePedido3.setPedido(pedido2);
