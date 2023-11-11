@@ -346,12 +346,15 @@ public class sprint_4_Application {
             rubroArticuloManufacturado2.AgregararticulosManufacturados(articuloManufacturado2);
             rubroArticuloManufacturado2.AgregararticulosManufacturados(articuloManufacturado3);
             */
-            detalleFactura1.setArticuloManufacturado(articuloManufacturado1);
-            detalleFactura2.setArticuloManufacturado(articuloManufacturado2);
-            detalleFactura3.setArticuloManufacturado(articuloManufacturado3);
+            //detalleFactura1.setArticuloManufacturado(articuloManufacturado1);
+            //detalleFactura2.setArticuloManufacturado(articuloManufacturado2);
+            //detalleFactura3.setArticuloManufacturado(articuloManufacturado3);
             articuloManufacturado1.AgregarDetalleArtManufac(detArtManu1);
             articuloManufacturado2.AgregarDetalleArtManufac(detArtManu2);
             articuloManufacturado3.AgregarDetalleArtManufac(detArtManu3);
+            articuloManufacturado1.AgregarDetalleFacturas(detalleFactura1);
+            articuloManufacturado2.AgregarDetalleFacturas(detalleFactura2);
+            articuloManufacturado3.AgregarDetalleFacturas(detalleFactura3);
             //detArtManu1.setArticuloManufacturado(articuloManufacturado1);
             //detArtManu2.setArticuloManufacturado(articuloManufacturado2);
             //detArtManu3.setArticuloManufacturado(articuloManufacturado3);

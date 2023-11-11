@@ -25,9 +25,4 @@ public class DetalleFactura extends Base {
     private int subtotal;
 
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_articulo_manufacturado")
-    private ArticuloManufacturado articuloManufacturado;
-
-
 }

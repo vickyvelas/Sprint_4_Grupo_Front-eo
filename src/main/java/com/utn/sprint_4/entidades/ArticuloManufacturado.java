@@ -68,6 +68,17 @@ public class ArticuloManufacturado extends Base {
     }
 
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @NotNull
+    @Builder.Default
+    @JoinColumn(name = "articuloManufacturado_id")
+    private List<DetalleFactura> detalleFacturas = new ArrayList<>();
+
+    public void AgregarDetalleFacturas(DetalleFactura df){
+        detalleFacturas.add(df);
+    }
+
+
      /*
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "rubroArticuloManufacturado_id")
