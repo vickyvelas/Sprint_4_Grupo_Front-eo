@@ -14,4 +14,5 @@ public interface ArticuloManufacturadoService extends BaseService<ArticuloManufa
     List<ArticuloManufacturado> buscarProducto(String filtro) throws Exception;
     Page<ArticuloManufacturado> buscarProducto(String filtro, Pageable pageable) throws Exception;
 
+
 }

@@ -20,4 +20,6 @@ public class BusquedaProductosDTO {
         this.urlImagen = urlImagen;
     }
 
+
+
 }
