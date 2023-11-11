@@ -1,5 +1,6 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.dtos.PersonaDTO;
 import com.utn.sprint_4.entidades.Persona;
 import com.utn.sprint_4.repositorios.BaseRepository;
 import com.utn.sprint_4.repositorios.PersonaRepository;
@@ -52,6 +53,19 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona,Long> implements
         try{
             Persona personas = personaRepository.prueba();
             return personas;
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    @Override
+    public PersonaDTO search(String user, String pass) throws Exception {
+        try{
+            //   List<Persona> personas= personaRepository.findByNombreContainingOrApellidoContaining(filtro, filtro);
+            //   List<Persona> personas = personaRepository.search(filtro);
+            Persona persona = personaRepository.searchNativo(user, pass);
+            PersonaDTO personaDTO = new PersonaDTO(persona.getNombre(), persona.getApellido());
+            return personaDTO;
         }catch (Exception e){
             throw new Exception(e.getMessage());
         }

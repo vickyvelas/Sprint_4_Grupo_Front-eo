@@ -3,6 +3,7 @@ package com.utn.sprint_4;
 import com.utn.sprint_4.entidades.*;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;
 import com.utn.sprint_4.enumeraciones.FormaPago;
+import com.utn.sprint_4.enumeraciones.Rol;
 import com.utn.sprint_4.enumeraciones.TipoEnvio;
 import com.utn.sprint_4.repositorios.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -300,6 +301,7 @@ public class sprint_4_Application {
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
+                    .rol(Rol.CLIENTE)
                     .build();
 
             persona.setUsuario(usuario);

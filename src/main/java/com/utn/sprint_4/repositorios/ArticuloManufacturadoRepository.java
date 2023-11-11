@@ -13,6 +13,7 @@ import java.util.List;
 @Repository
 public interface ArticuloManufacturadoRepository extends BaseRepository<ArticuloManufacturado, Long>{
 
+    List<DTORankingProductos> findBy();
 
     @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:denominacion% ",
             nativeQuery = true)
@@ -26,7 +27,6 @@ public interface ArticuloManufacturadoRepository extends BaseRepository<Articulo
             nativeQuery = true)
     Page<ArticuloManufacturado> searchNativo(@Param("filtro") String filtro, Pageable pageable);
 
-    List<DTORankingProductos> findBy();
 
 
 }

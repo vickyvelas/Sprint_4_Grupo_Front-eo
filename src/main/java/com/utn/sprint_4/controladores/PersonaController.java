@@ -44,7 +44,14 @@ public class PersonaController extends BaseControllerImpl<Persona, PersonaServic
         }
     }
 
-
+    @PostMapping("/login")
+    public ResponseEntity<?> search (String user, String pass){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(user, pass));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
+        }
+    }
 
 
 }
