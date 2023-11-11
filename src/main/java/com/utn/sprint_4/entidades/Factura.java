@@ -1,12 +1,18 @@
 package com.utn.sprint_4.entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "factura")
@@ -15,6 +21,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Factura extends Base {
 
     @NotNull
@@ -55,9 +62,14 @@ public class Factura extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    @NotNull
-    @OneToOne()
-    @JoinColumn(name = "id_pedido")
-    private Pedido pedido;
+
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @Builder.Default
+    @JoinColumn(name = "factura_id")
+    private List<DetalleFactura> detalleFacturas = new ArrayList<>();
+
+    public void AgregarDetalleFacturas(DetalleFactura d){
+        detalleFacturas.add(d);
+    }
 
 }

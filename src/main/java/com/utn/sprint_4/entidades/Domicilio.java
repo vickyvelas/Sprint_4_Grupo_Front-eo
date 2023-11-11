@@ -1,5 +1,9 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -15,6 +19,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Domicilio extends Base {
 
     @NotNull
@@ -50,17 +55,5 @@ public class Domicilio extends Base {
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "persona_id")
-    private Persona persona;
-
-    @OneToMany(mappedBy = "domicilioEntrega",orphanRemoval = true)
-    @Builder.Default
-    private List<Pedido> Pedidos = new ArrayList<>();
-
-    public void AgregarPedidos(Pedido p){
-        Pedidos.add(p);
-    }
 
 }

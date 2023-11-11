@@ -1,6 +1,7 @@
 package com.utn.sprint_4.entidades;
 
 
+import com.fasterxml.jackson.annotation.*;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import com.utn.sprint_4.enumeraciones.TipoEnvio;
@@ -19,6 +20,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Pedido extends Base {
 
     @NotNull
@@ -53,10 +55,6 @@ public class Pedido extends Base {
     @Enumerated(EnumType.STRING)
     private FormaPago formaPago;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "domicilioEntrega_id")
-    private Domicilio domicilioEntrega;
-
     @NotNull
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
@@ -70,13 +68,20 @@ public class Pedido extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "persona_id")
-    private Persona persona;
+    @NotNull
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "factura_id")
+    private Factura factura;
 
-    @OneToMany(mappedBy = "pedido",cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilio_id")
+    private Domicilio domicilio;
+
+    //Relacion Pedido-1------n->DetallePedido
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
     @Builder.Default
+    @JoinColumn(name = "pedido_id")
     private List<DetallePedido> DetallesPedidos = new ArrayList<>();
 
     public void AgregarDetallePedido(DetallePedido d){

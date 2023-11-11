@@ -1,3 +1,5 @@
+/*
+
 package com.utn.sprint_4.entidades;
 
 import jakarta.persistence.*;
@@ -5,7 +7,9 @@ import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "rubro_articulo_manufacturado")
@@ -14,6 +18,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class RubroArticuloManufacturado extends Base{
 
         @NotNull
@@ -32,6 +37,15 @@ public class RubroArticuloManufacturado extends Base{
         @Temporal(TemporalType.TIMESTAMP)
         private Date fechaBaja;
 
+        @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY, mappedBy = "rubroArticuloManufacturado")
+        @Builder.Default
+        private List<ArticuloManufacturado> articulosManufacturados = new ArrayList<>();
+        public void AgregararticulosManufacturados(ArticuloManufacturado am){
+                articulosManufacturados.add(am);
+        }
+
+
 
     }
 
+*/

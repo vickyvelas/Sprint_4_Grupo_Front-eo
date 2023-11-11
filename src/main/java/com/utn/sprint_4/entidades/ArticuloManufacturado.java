@@ -1,5 +1,8 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -16,6 +19,7 @@ import java.util.List;
 @Setter
 @ToString
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class ArticuloManufacturado extends Base {
 
     @NotNull
@@ -52,14 +56,34 @@ public class ArticuloManufacturado extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
+
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull
     @Builder.Default
-    @JoinColumn(name = "id_DetalleArtManufac")
+    @JoinColumn(name = "articuloManufacturado_id")
     private List<DetalleArticuloManufacturado> detalleArticulosManufacturados = new ArrayList<>();
 
     public void AgregarDetalleArtManufac(DetalleArticuloManufacturado dam){
         detalleArticulosManufacturados.add(dam);
     }
+
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @NotNull
+    @Builder.Default
+    @JoinColumn(name = "articuloManufacturado_id")
+    private List<DetalleFactura> detalleFacturas = new ArrayList<>();
+
+    public void AgregarDetalleFacturas(DetalleFactura df){
+        detalleFacturas.add(df);
+    }
+
+
+     /*
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "rubroArticuloManufacturado_id")
+    private RubroArticuloManufacturado rubroArticuloManufacturado;
+*/
+
 
 }

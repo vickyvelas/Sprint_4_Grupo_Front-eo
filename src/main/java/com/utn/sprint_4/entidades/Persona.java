@@ -1,5 +1,10 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.utn.sprint_4.enumeraciones.Rol;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -9,17 +14,14 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "persona")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Persona extends Base {
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
 
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
@@ -33,10 +35,6 @@ public class Persona extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private String apellido;
 
-    @Column(name = "email")
-    @Temporal(TemporalType.TIMESTAMP)
-    private String email;
-
     @Column(name = "telefono")
     @Temporal(TemporalType.TIMESTAMP)
     private String telefono;
@@ -49,12 +47,25 @@ public class Persona extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
 
-    @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
+    @Column(name = "rol")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Rol rol;
+
+    //Relacion Persona -1-------1-> Usuario
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
+
+    //Relacion Persona -1-------n-> Pedido
+    @OneToMany(cascade = CascadeType.ALL)
     @Builder.Default
+    @JoinColumn(name = "persona_id")
     private List<Pedido> pedidos = new ArrayList<>();
 
-    @OneToMany(mappedBy = "persona",cascade = CascadeType.PERSIST)
+    //Relacion Persona -1-----n->Domicilio
+    @OneToMany(cascade = CascadeType.ALL)
     @Builder.Default
+    @JoinColumn(name = "persona_id")
     private List<Domicilio> domicilios = new ArrayList<>();
 
     public void AgregarPedidos(Pedido p){

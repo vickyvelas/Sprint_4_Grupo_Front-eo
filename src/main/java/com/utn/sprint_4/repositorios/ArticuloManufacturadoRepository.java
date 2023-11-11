@@ -1,6 +1,5 @@
 package com.utn.sprint_4.repositorios;
 
-import com.utn.sprint_4.dtos.BusquedaProductosDTO;
 import com.utn.sprint_4.entidades.ArticuloManufacturado;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,7 +23,4 @@ public interface ArticuloManufacturadoRepository extends BaseRepository<Articulo
             countQuery = "SELECT count(*) FROM Articulo_Manufacturado",
             nativeQuery = true)
     Page<ArticuloManufacturado> searchNativo(@Param("filtro") String filtro, Pageable pageable);
-
-
-
 }

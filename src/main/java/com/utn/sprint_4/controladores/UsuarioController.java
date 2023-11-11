@@ -12,25 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "api/v1/usuarios")
 public class UsuarioController extends BaseControllerImpl<Usuario, UsuarioServiceImpl> {
 
-    @GetMapping("/search")
-    public ResponseEntity<?> search(@RequestParam String filtro) {
-        try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro));
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\"" + e.getMessage() + "\"}"));
 
-        }
-    }
-
-    @GetMapping("/searchPaged")
-    public ResponseEntity<?> search(@RequestParam String filtro, Pageable pageable) {
-        try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.search(filtro, pageable));
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\"" + e.getMessage() + "\"}"));
-
-        }
-    }
 }
 
 

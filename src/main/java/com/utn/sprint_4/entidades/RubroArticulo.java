@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
@@ -13,6 +14,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class RubroArticulo extends Base {
 
     @NotNull
@@ -30,8 +32,6 @@ public class RubroArticulo extends Base {
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaBaja;
-
-
 
 
 }
