@@ -1,6 +1,5 @@
 package com.utn.sprint_4.servicios;
 
-import com.utn.sprint_4.dtos.DTOLogin;
 import com.utn.sprint_4.entidades.Persona;
 import com.utn.sprint_4.repositorios.BaseRepository;
 import com.utn.sprint_4.repositorios.PersonaRepository;
@@ -48,18 +47,14 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona,Long> implements
     }
 
 
-    //METODO PARA LOGIN HISTORIA 1 (TE BUSCA UN USUARIO POR USERNAME Y CONTRASEÑA Y TE TRAE SUS DATOS)
     @Override
-    public DTOLogin login(String email, String password) throws Exception{
+    public Persona prueba() throws Exception {
         try{
-            Persona persona = personaRepository.login(email, password);
-            DTOLogin personaDTO = new DTOLogin(persona.getNombre(), persona.getApellido(), persona.getTelefono(), persona.getRol());
-            return personaDTO;
-        } catch (Exception e){
+            Persona personas = personaRepository.prueba();
+            return personas;
+        }catch (Exception e){
             throw new Exception(e.getMessage());
         }
     }
-
-
 
 }

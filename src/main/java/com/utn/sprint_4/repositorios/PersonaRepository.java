@@ -12,10 +12,17 @@ import java.util.List;
 @Repository
 public interface PersonaRepository extends BaseRepository<Persona, Long>{
 
+    //--------------IGNORAR-------------------------
+    @Query(value = "Select * FROM Persona", nativeQuery = true)
+    Persona prueba();
+    /*SELECT PERSONA .nombre, PERSONA .apellido, PERSONA .telefono, PERSONA .rol FROM PERSONA LEFT JOIN USUARIO ON PERSONA.ID_USUARIO = USUARIO.ID WHERE USUARIO.email LIKE '%yoSoyDeBoca@gmail.com%' AND USUARIO.password LIKE '%1234ABCD?%'*/
 
-    @Query(value = "Select PERSONA.* FROM PERSONA AS p INNER JOIN USUARIO AS u ON p.id = u.id WHERE u.email LIKE %:email% AND u.password LIKE %:password%",
-            nativeQuery = true)
-    Persona login(@Param("email") String email, @Param("password") String password);
+
+
+
+
+
+
 
     @Query(value = "Select c FROM Persona c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.telefono LIKE %:telefono%")
     List<Persona> search(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono);

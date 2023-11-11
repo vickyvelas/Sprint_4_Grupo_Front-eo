@@ -374,7 +374,6 @@ public class sprint_4_Application {
             artIns3.setUnidadMedida(unidadMedida);
 
 
-
             personaRepository.save(persona);
 
 

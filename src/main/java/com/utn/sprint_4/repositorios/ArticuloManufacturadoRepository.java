@@ -1,5 +1,6 @@
 package com.utn.sprint_4.repositorios;
 
+import com.utn.sprint_4.dtos.DTORankingProductos;
 import com.utn.sprint_4.entidades.ArticuloManufacturado;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,6 +12,12 @@ import java.util.List;
 
 @Repository
 public interface ArticuloManufacturadoRepository extends BaseRepository<ArticuloManufacturado, Long>{
+
+
+    List<DTORankingProductos> findBy();
+
+
+
 
 
     @Query(value = "SELECT * FROM Articulo_Manufacturado WHERE Articulo_Manufacturado.denominacion LIKE %:filtro% ",
