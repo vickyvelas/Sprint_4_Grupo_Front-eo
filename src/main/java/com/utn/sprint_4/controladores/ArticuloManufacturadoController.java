@@ -23,7 +23,16 @@ public class ArticuloManufacturadoController extends BaseControllerImpl<Articulo
         }
     }
 
+     @GetMapping("/productos")
+    public ResponseEntity<?> findByDenominacion(String denominacion){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.findByDenominacion(denominacion));
 
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
+        }
+    }
+    
     @GetMapping("/search")
     public ResponseEntity<?> search(@RequestParam String filtro){
         try{
