@@ -1,5 +1,6 @@
 package com.utn.sprint_4.controladores;
 
+import com.utn.sprint_4.dtos.ModificarEmpleadoDTO;
 import com.utn.sprint_4.entidades.Persona;
 import com.utn.sprint_4.servicios.PersonaServiceImpl;
 import org.springframework.data.domain.Pageable;

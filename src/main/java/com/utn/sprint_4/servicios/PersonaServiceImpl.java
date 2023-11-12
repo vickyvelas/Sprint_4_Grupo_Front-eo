@@ -1,5 +1,6 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.dtos.ModificarEmpleadoDTO;
 import com.utn.sprint_4.dtos.PersonaDTO;
 import com.utn.sprint_4.dtos.RankingPersonasDTO;
 import com.utn.sprint_4.entidades.DetallePedido;
@@ -92,6 +93,18 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona,Long> implements
             throw new Exception(e.getMessage());
         }
     }
+
+    @Override
+    public List<Persona> buscarPorLegajo(String legajo) throws Exception {
+        try{
+            List<Persona> personas = personaRepository.buscarPorLegajo(legajo);
+            return personas;
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+
     //Modificar Empleado como Administrador
     @Override
     public Persona modificarEmpleadoA(ModificarEmpleadoDTO modificarEmpleadoDTO) throws Exception {

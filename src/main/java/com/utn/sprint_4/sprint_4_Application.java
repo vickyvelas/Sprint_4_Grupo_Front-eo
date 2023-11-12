@@ -298,10 +298,11 @@ public class sprint_4_Application {
                     .telefono("2617223459")
                     .email("yoSoyDeBoca@gmail.com")
                     .password("1234ABCD?")
+                    .legajo("48755")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
-                    .rol(Rol.CLIENTE)
+                    .rol(Rol.COCINERO)
                     .build();
 
             persona.setUsuario(usuario);
