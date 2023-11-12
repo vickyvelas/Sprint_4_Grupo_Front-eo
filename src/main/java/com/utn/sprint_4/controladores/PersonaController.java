@@ -52,6 +52,31 @@ public class PersonaController extends BaseControllerImpl<Persona, PersonaServic
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
         }
     }
+    @PostMapping("/modificarEmpleadoA")
+    public ResponseEntity<?> modificarEmpleadoA (@RequestBody ModificarEmpleadoDTO modificarEmpleadoDTO){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.modificarEmpleadoA(modificarEmpleadoDTO));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
+        }
+    }
 
+    @GetMapping("/ListaEmpleadosAdm")
+    public ResponseEntity<?> ListaEmpleadosAdm(ModificarEmpleadoDTO modificarEmpleadoDTO){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.ListaEmpleadosAdm(modificarEmpleadoDTO));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
+        }
+    }
+
+    @GetMapping("/buscarPorLegajo")
+    public ResponseEntity<?> buscarPorLegajo (String legajo){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.buscarPorLegajo(legajo));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
+        }
+    }
 
 }
