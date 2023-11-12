@@ -23,5 +23,6 @@ public interface PedidoService extends BaseService<Pedido,Long>{
 
     Page<Pedido> searchPedidos(Number id, Pageable pageable) throws Exception;
 
+    List<ListaPedidosClienteDTO> listaPedidosCliente(ListaPedidosClienteFiltroDTO listaPedidosClienteFiltroDTO) throws Exception;
 
 }
