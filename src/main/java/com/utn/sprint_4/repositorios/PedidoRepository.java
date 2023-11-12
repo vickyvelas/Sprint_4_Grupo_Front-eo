@@ -28,11 +28,11 @@ public interface PedidoRepository extends BaseRepository<Pedido,Long> {
     Page<Pedido> searchNativo(@Param("fechaPedido") Date fechaPedido, @Param("horaEstimadaFinalizacion") Date horaEstimadaFinalizacion, @Param("total") Number total, @Param("totalCosto") Number totalCosto, @Param("estado") EstadoPedido estado, @Param("tipoEnvio") TipoEnvio tipoEnvio,
                               @Param("formaPago") FormaPago formaPago, @Param("domicilioEntrega") Domicilio domicilioEntrega, @Param("fechaAlta") Date fechaAlta, @Param("fechaModificacion") Date fechaModificacion, @Param("fechaBaja") Date fechaBaja, Pageable pageable);
 
-    @Query(value = "Select * FROM pedido WHERE pedido.id_cliente  =:id",
+    @Query(value = "Select * FROM pedido WHERE pedido.persona_id  =:id",
             nativeQuery = true)
     List<Pedido> searchPedidos(@Param("id") Number id);
 
-    @Query(value = "Select * FROM pedido WHERE pedido.id_cliente  =:id",
+    @Query(value = "Select * FROM pedido WHERE pedido.persona_id  =:id",
             countQuery = "SELECT count(*) FROM pedido",
             nativeQuery = true)
     Page<Pedido> searchPedidos(@Param("id") Number id, Pageable pageable);

@@ -267,6 +267,7 @@ public class sprint_4_Application {
 
             Pedido pedido1 = Pedido.builder()
                     .estado(EstadoPedido.PAGADO)
+                    .nroPedido("876324")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
@@ -280,6 +281,7 @@ public class sprint_4_Application {
 
             Pedido pedido2 = Pedido.builder()
                     .estado(EstadoPedido.COMPLETADO)
+                    .nroPedido("978345")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
