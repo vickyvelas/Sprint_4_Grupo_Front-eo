@@ -4,6 +4,7 @@ import com.utn.sprint_4.dtos.BusquedaProductosDTO;
 import com.utn.sprint_4.dtos.RankingProductosDTO;
 import com.utn.sprint_4.dtos.RankingProductosFiltroDTO;
 import com.utn.sprint_4.entidades.ArticuloManufacturado;
+import com.utn.sprint_4.entidades.DetalleFactura;
 import com.utn.sprint_4.repositorios.ArticuloManufacturadoRepository;
 import com.utn.sprint_4.repositorios.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,14 +50,23 @@ public class ArticuloManufacturadoServiceImpl extends BaseServiceImpl<ArticuloMa
         try {
             List<ArticuloManufacturado> articulosMasVendidos = articuloManufacturadoRepository.rankingProductos(rankingProductosFiltroDTO.getFechaInicio(), rankingProductosFiltroDTO.getFechaFin());
             List<RankingProductosDTO> rankingDTO = new ArrayList<>();
-            RankingProductosDTO dtoAux = new RankingProductosDTO();
-            for (ArticuloManufacturado articulos: articulosMasVendidos){
+
+            for (ArticuloManufacturado articulos : articulosMasVendidos) {
+                RankingProductosDTO dtoAux = new RankingProductosDTO();
                 dtoAux.setDenominacion(articulos.getDenominacion());
                 dtoAux.setDescripcion(articulos.getDescripcion());
-                rankingDTO.add(dtoAux);
+
+                for (DetalleFactura detalles : articulos.getDetalleFacturas()) {
+                    dtoAux.setCantidad(detalles.getCantidad());
+                }
+
+                // Lo agrega a la lista solo si la cantidad es mayor o igual a 5
+                if (dtoAux.getCantidad() >= 5) {
+                    rankingDTO.add(dtoAux);
+                }
             }
             return rankingDTO;
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
     }

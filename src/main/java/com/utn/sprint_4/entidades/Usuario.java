@@ -27,14 +27,6 @@ public class Usuario extends Base {
     @Column(name = "username", unique = true, nullable = false)
     private String username;
 
-    @Column(name = "email")
-    @Temporal(TemporalType.TIMESTAMP)
-    private String email;
-
-    @NotNull
-    @Column(name = "password", nullable = false)
-    private String password;
-
     @NotNull
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)

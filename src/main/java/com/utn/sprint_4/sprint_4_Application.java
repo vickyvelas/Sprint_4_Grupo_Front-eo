@@ -39,10 +39,10 @@ public class sprint_4_Application {
             String fechaString4 = "2023-07-11";
             String horaString = "21:05:03";
 
-            Date fecha = formatoFecha.parse(fechaString);
-            Date fecha2 = formatoFecha.parse(fechaString2);
-            Date fecha3 = formatoFecha.parse(fechaString3);
-            Date fecha4 = formatoFecha.parse(fechaString4);
+            Date fecha = formatoFecha.parse(fechaString); //2023-09-13
+            Date fecha2 = formatoFecha.parse(fechaString2); //2023-05-19
+            Date fecha3 = formatoFecha.parse(fechaString3); //2023-03-21
+            Date fecha4 = formatoFecha.parse(fechaString4); //2023-07-11
             Date hora = formatoHora.parse(horaString);
 
 /*
@@ -193,8 +193,8 @@ public class sprint_4_Application {
                     .costo(2000)
                     .denominacion("Pizza")
                     .descripcion("Pizza con jamón")
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
+                    .fechaAlta(fecha2)
+                    .fechaBaja(fecha)
                     .fechaModificacion(fecha3)
                     .precioVenta(15000)
                     .tiempoEstimadoCocina(30)
@@ -205,9 +205,9 @@ public class sprint_4_Application {
                     .costo(5000)
                     .denominacion("Hamburguesa")
                     .descripcion("Grand Tasty")
-                    .fechaAlta(fecha)
+                    .fechaAlta(fecha3)
                     .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
+                    .fechaModificacion(fecha)
                     .precioVenta(12000)
                     .tiempoEstimadoCocina(45)
                     .urlImagen("http://www.burguerCopada.com")
@@ -216,8 +216,6 @@ public class sprint_4_Application {
             Usuario usuario = Usuario.builder()
                     .auth0Id("User01")
                     .username("Facustriker")
-                    .email("yoSoyDeBoca@gmail.com")
-                    .password("1234ABCD?")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
@@ -298,6 +296,8 @@ public class sprint_4_Application {
                     .nombre("Juan")
                     .apellido("Marquez")
                     .telefono("2617223459")
+                    .email("yoSoyDeBoca@gmail.com")
+                    .password("1234ABCD?")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)

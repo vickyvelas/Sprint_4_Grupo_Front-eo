@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class RankingProductosDTO {
 
-    String Denominacion;
-    String Descripcion;
+    String denominacion;
+    String descripcion;
+    Integer cantidad;
 }

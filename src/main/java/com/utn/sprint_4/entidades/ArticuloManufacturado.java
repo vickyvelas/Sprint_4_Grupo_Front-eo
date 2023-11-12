@@ -84,11 +84,5 @@ public class ArticuloManufacturado extends Base {
     }
 
 
-     /*
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "rubroArticuloManufacturado_id")
-    private RubroArticuloManufacturado rubroArticuloManufacturado;
-*/
-
 
 }

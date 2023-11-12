@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -14,16 +16,14 @@ import org.springframework.web.bind.annotation.*;
 public class PersonaController extends BaseControllerImpl<Persona, PersonaServiceImpl>{
 
 
-    @GetMapping("/prueba")
-    public ResponseEntity<?> prueba(){
+    @GetMapping("/rankingPersonas")
+    public ResponseEntity<?> rankingPersonas (Date fechaInicio, Date fechaFin){
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.prueba());
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\"" + e.getMessage() + "\"}"));
-
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.rankingPersonas(fechaInicio, fechaFin));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
         }
     }
-
 
     @GetMapping("/search")
     public ResponseEntity<?> search (String nombre, String apellido, String telefono){

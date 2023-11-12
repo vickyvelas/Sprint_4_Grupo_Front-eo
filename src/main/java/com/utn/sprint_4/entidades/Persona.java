@@ -3,8 +3,8 @@ package com.utn.sprint_4.entidades;
 import com.fasterxml.jackson.annotation.*;
 import com.utn.sprint_4.enumeraciones.Rol;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -20,11 +20,6 @@ import java.util.List;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Persona extends Base {
 
-    @Column(name = "fecha_alta")
-    @Temporal(TemporalType.TIMESTAMP)
-    @JsonFormat(pattern = "yyyy/MM/dd")
-    private Date fechaAlta;
-
     @Column(name = "nombre")
     @Temporal(TemporalType.TIMESTAMP)
     private String nombre;
@@ -33,9 +28,26 @@ public class Persona extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private String apellido;
 
+    @Column(name = "rol")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Rol rol;
+
+    @Column(name = "email")
+    @Temporal(TemporalType.TIMESTAMP)
+    private String email;
+
+    @NotNull
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @Column(name = "telefono")
     @Temporal(TemporalType.TIMESTAMP)
     private String telefono;
+
+    @Column(name = "fecha_alta")
+    @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
+    private Date fechaAlta;
 
     @Column(name = "fecha_modificacion")
     @Temporal(TemporalType.TIMESTAMP)
@@ -46,10 +58,6 @@ public class Persona extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaBaja;
-
-    @Column(name = "rol")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Rol rol;
 
     //Relacion Persona -1-------1-> Usuario
     @OneToOne(cascade = CascadeType.ALL)

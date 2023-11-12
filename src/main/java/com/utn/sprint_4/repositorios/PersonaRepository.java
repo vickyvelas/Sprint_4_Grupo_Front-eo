@@ -1,5 +1,6 @@
 package com.utn.sprint_4.repositorios;
 
+import com.utn.sprint_4.dtos.RankingPersonasDTO;
 import com.utn.sprint_4.entidades.Persona;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -7,21 +8,25 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
 public interface PersonaRepository extends BaseRepository<Persona, Long>{
 
-    //--------------IGNORAR-------------------------
-    @Query(value = "Select * FROM Persona", nativeQuery = true)
-    Persona prueba();
-    /*SELECT PERSONA .nombre, PERSONA .apellido, PERSONA .telefono, PERSONA .rol FROM PERSONA LEFT JOIN USUARIO ON PERSONA.ID_USUARIO = USUARIO.ID WHERE USUARIO.email LIKE '%yoSoyDeBoca@gmail.com%' AND USUARIO.password LIKE '%1234ABCD?%'*/
+
+    /*
+    SELECT COUNT(Persona .id), SUM(Factura.totalVenta)
+    FROM Persona LEFT JOIN Pedido ON Pedido.persona_id = Persona.id LEFT JOIN Factura ON Pedido.factura_id = Factura.id
+    WHERE Factura.fecha_Facturacion BETWEEN "%2023-01-01 00:00:00%" AND "%2023-12-01 00:00:00%" GROUP BY Persona.id
+    */
 
 
 
-
-
-
+    @Query(value = "SELECT DISTINCT persona.* FROM persona " +
+            "LEFT JOIN pedido ON pedido.persona_id = persona.id " +
+            "WHERE pedido.fecha_alta BETWEEN :fechaInicio AND :fechaFin", nativeQuery = true)
+    List<Persona> rankingPersonas(@Param("fechaInicio") Date fechaInicio, @Param("fechaFin")Date fechaFin);
 
 
     @Query(value = "Select c FROM Persona c WHERE c.nombre LIKE %:nombre% OR c.apellido LIKE %:apellido% OR c.telefono LIKE %:telefono%")
@@ -36,13 +41,13 @@ public interface PersonaRepository extends BaseRepository<Persona, Long>{
     )
     List<Persona> searchNativo(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono);
 
-    @Query(value = "Select * FROM Persona WHERE cliente.nombre LIKE %:nombre% OR cliente.apellido LIKE %:apellido% OR cliente.telefono LIKE %:telefono%",
-            countQuery = "SELECT count(*) FROM cliente",
+    @Query(value = "Select * FROM Persona WHERE Persona.nombre LIKE %:nombre% OR Persona.apellido LIKE %:apellido% OR Persona.telefono LIKE %:telefono%",
+            countQuery = "SELECT count(*) FROM Persona",
             nativeQuery = true
     )
     Page<Persona> searchNativo(@Param("nombre")  String nombre, @Param("apellido")String apellido, @Param("telefono")String telefono, Pageable pageable);
 
-    @Query(value = "SELECT * FROM PERSONA  WHERE PERSONA.ID_USUARIO=(SELECT ID FROM USUARIO WHERE USUARIO.USERNAME LIKE %:user% AND USUARIO.PASSWORD LIKE %:pass%)",
+    @Query(value = "SELECT * FROM PERSONA  WHERE PERSONA.ID_USUARIO=(SELECT ID FROM USUARIO WHERE USUARIO.USERNAME LIKE %:user% AND USUARIO.auth0Id LIKE %:pass%)",
             nativeQuery = true
     )
     Persona searchNativo(@Param("user") String user, @Param("pass") String pass);
