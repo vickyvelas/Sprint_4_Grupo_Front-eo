@@ -19,5 +19,10 @@ public interface PersonaService extends BaseService<Persona, Long> {
 
     Page<Persona> search(String nombre, String apellido, String telefono, Pageable pageable) throws Exception;
 
+    public Persona modificarEmpleadoA(ModificarEmpleadoDTO modificarEmpleadoDTO) throws Exception;
+
+    List<ModificarEmpleadoDTO> ListaEmpleadosAdm(ModificarEmpleadoDTO modificarEmpleadoDTO) throws Exception;
+
+    List<Persona> buscarPorLegajo(String legajo) throws Exception;
 
 }
