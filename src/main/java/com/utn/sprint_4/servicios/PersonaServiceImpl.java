@@ -92,5 +92,45 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona,Long> implements
             throw new Exception(e.getMessage());
         }
     }
+    //Modificar Empleado como Administrador
+    @Override
+    public Persona modificarEmpleadoA(ModificarEmpleadoDTO modificarEmpleadoDTO) throws Exception {
+        try{
+            List<Persona> persona = personaRepository.buscarPorLegajo(modificarEmpleadoDTO.getLegajo());
+            if (persona.isEmpty()) throw new Exception("no se encontro el empleado");
+            Persona entityUpdate = new Persona();
+            entityUpdate.setApellido(modificarEmpleadoDTO.getApellidoDTO());
+            entityUpdate.setRol(modificarEmpleadoDTO.getRolDTO());
+            entityUpdate.setNombre(modificarEmpleadoDTO.getNombreDTO());
+            entityUpdate.setTelefono(modificarEmpleadoDTO.getTelefonoDTO());
+            entityUpdate.setLegajo(modificarEmpleadoDTO.getLegajo());
+            personaRepository.save(entityUpdate);
+            return entityUpdate;
+        }
+        catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    // Ver lista de Empleados como Administrador
+    @Override
+    public List<ModificarEmpleadoDTO> ListaEmpleadosAdm(ModificarEmpleadoDTO modificarEmpleadoDTO) throws Exception {
+        try{
+            List<Persona> personas = personaRepository.ListaEmpleadosAdm();
+            List<ModificarEmpleadoDTO> empleadosDTO = new ArrayList<>();
+            for (Persona persona: personas) {
+                ModificarEmpleadoDTO auxDTO = new ModificarEmpleadoDTO();
+                auxDTO.setNombre(persona.getNombre());
+                auxDTO.setApellido(persona.getApellido());
+                auxDTO.setTelefono(persona.getTelefono());
+                auxDTO.setLegajo(persona.getLegajo());
+                auxDTO.setRol(persona.getRol());
+                empleadosDTO.add(auxDTO);
+            }
+            return  empleadosDTO;
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
 
 }
