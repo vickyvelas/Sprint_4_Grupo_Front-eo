@@ -88,4 +88,23 @@ public class PedidoServiceImpl extends BaseServiceImpl<Pedido,Long> implements P
             throw new Exception(e.getMessage());
         }
     }
+
+     //Lista Pedidos Cliente
+    @Override
+    public List<ListaPedidosClienteDTO> listaPedidosCliente(ListaPedidosClienteFiltroDTO listaPedidosClienteFiltroDTO) throws Exception {
+        try{
+            List<Pedido> pedidos = pedidoRepository.listaPedidosCliente(listaPedidosClienteFiltroDTO.getLegajo());
+            List<ListaPedidosClienteDTO> listaPedidosDTO = new ArrayList<>();
+            for (Pedido pedido: pedidos) {
+                ListaPedidosClienteDTO auxDTO = new ListaPedidosClienteDTO();
+                auxDTO.setFechaPedido(pedido.getFechaPedido());
+                auxDTO.setNroPedido(pedido.getNroPedido());
+                auxDTO.setTotal(pedido.getTotal());
+                listaPedidosDTO.add(auxDTO);
+            }
+            return  listaPedidosDTO;
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
 }
