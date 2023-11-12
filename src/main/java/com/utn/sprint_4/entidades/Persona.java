@@ -44,6 +44,10 @@ public class Persona extends Base {
     @Temporal(TemporalType.TIMESTAMP)
     private String telefono;
 
+    @NotNull
+    @Column(name = "legajo", nullable = false)
+    private String legajo;
+
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
     @JsonFormat(pattern = "yyyy/MM/dd")
