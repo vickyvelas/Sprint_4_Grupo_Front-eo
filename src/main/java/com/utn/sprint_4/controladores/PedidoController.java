@@ -78,6 +78,17 @@ public class PedidoController extends BaseControllerImpl<Pedido, PedidoServiceIm
         }
     }
 
+//Lista Pedidos Cliente
+
+    @GetMapping("/listaPedidosCliente")
+    public ResponseEntity<?> listaPedidosCliente(ListaPedidosClienteFiltroDTO listaPedidosClienteFiltroDTO){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.listaPedidosCliente(listaPedidosClienteFiltroDTO));
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
+        }
+    }
 
 
 }
