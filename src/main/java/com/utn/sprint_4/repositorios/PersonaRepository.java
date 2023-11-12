@@ -52,6 +52,22 @@ public interface PersonaRepository extends BaseRepository<Persona, Long>{
     )
     Persona searchNativo(@Param("user") String user, @Param("pass") String pass);
 
+        //Modificar Empleado COmo Administrador
+    @Query(value = "Select * FROM Persona WHERE Persona.legajo LIKE %:legajo% ",
+            nativeQuery = true
+    )
+    List<Persona> modificarEmpleadoA(@Param("legajo")  String legajo);
+
+    //Listado de Empleados Administrador
+    @Query(value = "SELECT * FROM Persona WHERE Persona.rol = 2 OR Persona.rol = 3 ",
+            nativeQuery = true
+    )
+    List<Persona> ListaEmpleadosAdm();
+
+    //Busacar persona por legajo
+    @Query(value = "Select c FROM Persona c WHERE c.legajo LIKE %:legajo% ")
+    List<Persona> buscarPorLegajo(@Param("legajo")  String legajo);
+
 
 }
 
