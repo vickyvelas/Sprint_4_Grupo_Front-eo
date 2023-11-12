@@ -1,5 +1,7 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.dtos.ListaPedidosClienteDTO;
+import com.utn.sprint_4.dtos.ListaPedidosClienteFiltroDTO;
 import com.utn.sprint_4.dtos.RankingPersonasDTO;
 import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
@@ -14,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
