@@ -45,7 +45,7 @@ public class Persona extends Base {
     private String telefono;
 
     @NotNull
-    @Column(name = "legajo", nullable = false)
+    @Column(name = "legajo", nullable = false, unique = true)
     private String legajo;
 
     @Column(name = "fecha_alta")

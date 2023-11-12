@@ -302,7 +302,7 @@ public class sprint_4_Application {
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
-                    .rol(Rol.COCINERO)
+                    .rol(Rol.CLIENTE)
                     .build();
 
             persona.setUsuario(usuario);
