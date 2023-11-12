@@ -47,5 +47,11 @@ public interface PedidoRepository extends BaseRepository<Pedido,Long> {
                 nativeQuery = true)
         Page<Pedido> searchNativoIDPageable(@Param("filtro") int filtro, Pageable pageable);
 
+//ListaPedidosCliente
+    @Query(value = "SELECT DISTINCT pedido.* FROM pedido " +
+            "LEFT JOIN persona WHERE persona.legajo LIKE %:legajo% "
+            , nativeQuery = true)
+    List<Pedido> listaPedidosCliente(@Param("legajo") String legajo);
+
 
 }
