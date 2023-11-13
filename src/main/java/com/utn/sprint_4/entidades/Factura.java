@@ -62,6 +62,10 @@ public class Factura extends Base {
     @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaBaja;
 
+    //Relacion Factura -1-------1-> NotaCredito
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "notaCredito_id")
+    private NotaCredito notaCredito;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @Builder.Default

@@ -80,11 +80,21 @@ public class Persona extends Base {
     @JoinColumn(name = "persona_id")
     private List<Domicilio> domicilios = new ArrayList<>();
 
+    //Relacion Persona -1-----n->NotasCredito
+    @OneToMany(cascade = CascadeType.ALL)
+    @Builder.Default
+    @JoinColumn(name = "persona_id")
+    private List<NotaCredito> notasCredito = new ArrayList<>();
+
     public void AgregarPedidos(Pedido p){
         pedidos.add(p);
     }
 
     public void AgregarDomicilios(Domicilio d){
         domicilios.add(d);
+    }
+
+    public void AgregarNotasCredito(NotaCredito n){
+        notasCredito.add(n);
     }
 }

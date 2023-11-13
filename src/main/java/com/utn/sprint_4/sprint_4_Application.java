@@ -62,6 +62,17 @@ public class sprint_4_Application {
 
             */
 
+
+            NotaCredito nota1 = NotaCredito.builder()
+                    .montoTotal(7000)
+                    .motivoAnulacion("Cancelado por cliente")
+                    .build();
+
+            NotaCredito nota2 = NotaCredito.builder()
+                    .montoTotal(13000)
+                    .motivoAnulacion("Cancelado por cliente")
+                    .build();
+
             UnidadMedida unidadMedida = UnidadMedida.builder()
                     .denominacion("gramo")
                     .abreviatura("Gr")
@@ -130,6 +141,7 @@ public class sprint_4_Application {
                     .paymenttype("niIdea")
                     .preferenceid("3423523775")
                     .totalventa(3099)
+                    .notaCredito(nota1)
                     .build();
 
             Factura factura2 = Factura.builder()
@@ -142,6 +154,7 @@ public class sprint_4_Application {
                     .paymenttype("niIdea")
                     .preferenceid("3423523775")
                     .totalventa(3099)
+                    .notaCredito(nota2)
                     .build();
 
             ArticuloInsumo artIns1 = ArticuloInsumo.builder()
@@ -293,7 +306,6 @@ public class sprint_4_Application {
                     .totalCosto(3260)
                     .build();
 
-
             Persona persona = Persona.builder()
                     .nombre("Juan")
                     .apellido("Marquez")
@@ -312,6 +324,8 @@ public class sprint_4_Application {
             persona.AgregarDomicilios(domicilio2);
             persona.AgregarPedidos(pedido1);
             persona.AgregarPedidos(pedido2);
+            persona.AgregarNotasCredito(nota1);
+            persona.AgregarNotasCredito(nota2);
             //domicilio1.setPersona(persona);
             //domicilio2.setPersona(persona);
             //domicilio1.AgregarPedidos(pedido1);
