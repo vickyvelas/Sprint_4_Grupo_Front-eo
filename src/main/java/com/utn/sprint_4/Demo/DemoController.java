@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class DemoController {
 
-    @PostMapping(value = "demo")
+    @PostMapping(value = "/demo")
     public String welcome(){
         return "Bienvenido! Has entrado desde un endpoint seguro";
     }
