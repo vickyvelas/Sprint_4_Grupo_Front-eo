@@ -1,19 +1,26 @@
 package com.utn.sprint_4.Demo;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.RequiredArgsConstructor;
+
 @RestController
-@RequestMapping("/api/v2")
+@RequestMapping("/api/v1")
 @RequiredArgsConstructor
 public class DemoController {
 
-    @PostMapping(value = "demo")
-    public String welcome(){
-        return "Bienvenido! Has entrado desde un endpoint seguro";
+    @PostMapping(value = "demoUser")
+    public String welcome()
+    {
+        return "Hola, te has autenticado con exito";
     }
 
+    @PostMapping(value = "demoAdmin")
+    public String welcomeAdmin()
+    {
+        return "Hola, te has autenticado con exito";
+    }
 
 }
