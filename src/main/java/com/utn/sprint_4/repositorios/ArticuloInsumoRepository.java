@@ -11,6 +11,14 @@ import java.util.List;
 
 @Repository
 public interface ArticuloInsumoRepository extends BaseRepository<ArticuloInsumo, Long>{
+
+
+    @Query(value = "SELECT * FROM articulo_insumo", nativeQuery = true)
+    List<ArticuloInsumo> controlStockInsuficiente();
+
+    @Query(value = "SELECT * FROM articulo_insumo", nativeQuery = true)
+    List<ArticuloInsumo> controlStockBajo();
+
     @Query(value = "SELECT * FROM articulo_insumo a WHERE a.denominacion LIKE %:denominacion% OR a.precio_compra>=%:min% OR a.precio_compra<%:max% OR a.stock_minimo<=%:stockMenor% OR a.stock_actual<%:minStock% OR a.stock_actual>=%:maxStock%",
             nativeQuery = true)
     List<ArticuloInsumo> searchNativo(@Param("denominacion") String denominacion, @Param("min") Number min, @Param("max") Number max, @Param("stockMenor") Number stockMenor, @Param("minStock") Number minStock, @Param("maxStock") Number maxStock);

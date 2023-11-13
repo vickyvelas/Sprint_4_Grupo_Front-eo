@@ -11,6 +11,28 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin(origins =  "*")
 @RequestMapping(path = "api/v1/ArticuloInsumo")
 public class ArticuloInsumoController extends BaseControllerImpl<ArticuloInsumo, ArticuloInsumoServiceImpl>{
+
+    @GetMapping("/stockInsuficiente")
+    public ResponseEntity<?> controlStockInsuficiente(){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.controlStockInsuficiente());
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
+        }
+    }
+
+    @GetMapping("/stockBajo")
+    public ResponseEntity<?> controlStockBajo(){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.controlStockBajo());
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
+        }
+    }
+
+
     @GetMapping("/search")
     public ResponseEntity<?> search( String denominacion, Number min, Number max, Number stockMenor, Number minStock, Number maxStock){
         try{
