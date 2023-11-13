@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -28,47 +29,30 @@ public class SecurityConfig {
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
     private final AuthenticationProvider authProvider;
 
-
     @Bean
-    public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web) -> web.ignoring().requestMatchers(new AntPathRequestMatcher("http://localhost:8080/h2-console"));
-    }
-
-
-    public void configure(WebSecurity web) throws Exception {
-        web
-                .ignoring()
-                .requestMatchers("/h2-console/**");
-    }
-
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
+    {
         return http
-                .csrf(csrf -> csrf
-                        .ignoringRequestMatchers(toH2Console())
-                        .disable())
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authRequest ->
                         authRequest
+
                                 .requestMatchers(new AntPathRequestMatcher("/auth/**")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/api/v1/**")).permitAll()
+                                .requestMatchers(PathRequest.toH2Console()).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/api/v1/demoAdmin/**")).hasAuthority("ADMIN")
                                 .requestMatchers(new AntPathRequestMatcher("/api/v1/demoUser/**")).hasAuthority("USER")
-                                .requestMatchers(toH2Console()).permitAll()
-                                .requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
-                                .anyRequest().authenticated()
                 )
-                .formLogin((login) -> login
-                        .loginPage("/login/**")
-                        .permitAll()
-                )
-                .logout((logout) -> logout
-                        .permitAll()
-                )
-                .sessionManagement(sessionManager ->
+                .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable)) //H2
+                .sessionManagement(sessionManager->
                         sessionManager
-                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                )
                 .authenticationProvider(authProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
 
+
     }
+
 }
