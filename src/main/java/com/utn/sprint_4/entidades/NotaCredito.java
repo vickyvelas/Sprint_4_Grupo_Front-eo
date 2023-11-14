@@ -1,8 +1,7 @@
 package com.utn.sprint_4.entidades;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -18,4 +17,14 @@ public class NotaCredito extends Base{
     private int montoTotal;
 
     private String motivoAnulacion;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "persona_id")
+    private Persona persona;
+
+    //Relacion Factura -1-------1-> NotaCredito
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "factura_id")
+    private Factura factura;
+
 }

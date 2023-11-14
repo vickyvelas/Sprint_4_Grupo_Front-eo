@@ -45,17 +45,6 @@ public class sprint_4_Application {
             Date fecha4 = formatoFecha.parse(fechaString4); //2023-07-11
             Date hora = formatoHora.parse(horaString);
 
-
-            NotaCredito nota1 = NotaCredito.builder()
-                    .montoTotal(7000)
-                    .motivoAnulacion("Cancelado por cliente")
-                    .build();
-
-            NotaCredito nota2 = NotaCredito.builder()
-                    .montoTotal(13000)
-                    .motivoAnulacion("Cancelado por cliente")
-                    .build();
-
             UnidadMedida unidadMedida = UnidadMedida.builder()
                     .denominacion("gramo")
                     .abreviatura("Gr")
@@ -137,7 +126,6 @@ public class sprint_4_Application {
                     .paymenttype("niIdea")
                     .preferenceid("3423523775")
                     .totalventa(3099)
-                    .notaCredito(nota1)
                     .build();
 
             Factura factura2 = Factura.builder()
@@ -150,7 +138,6 @@ public class sprint_4_Application {
                     .paymenttype("niIdea")
                     .preferenceid("3423523775")
                     .totalventa(3099)
-                    .notaCredito(nota2)
                     .build();
 
             ArticuloInsumo artIns1 = ArticuloInsumo.builder()
@@ -318,13 +305,25 @@ public class sprint_4_Application {
                     .rol(Rol.CLIENTE)
                     .build();
 
+            NotaCredito nota1 = NotaCredito.builder()
+                    .montoTotal(7000)
+                    .motivoAnulacion("Cancelado por cliente")
+                    .factura(factura1)
+                    .persona(persona)
+                    .build();
+
+            NotaCredito nota2 = NotaCredito.builder()
+                    .montoTotal(13000)
+                    .motivoAnulacion("Cancelado por cliente")
+                    .factura(factura2)
+                    .persona(persona)
+                    .build();
+
             persona.setUsuario(usuario);
             persona.AgregarDomicilios(domicilio1);
             persona.AgregarDomicilios(domicilio2);
             persona.AgregarPedidos(pedido1);
             persona.AgregarPedidos(pedido2);
-            persona.AgregarNotasCredito(nota1);
-            persona.AgregarNotasCredito(nota2);
             //domicilio1.setPersona(persona);
             //domicilio2.setPersona(persona);
             //domicilio1.AgregarPedidos(pedido1);
