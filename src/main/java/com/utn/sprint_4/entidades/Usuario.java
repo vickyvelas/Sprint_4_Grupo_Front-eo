@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.utn.sprint_4.enumeraciones.Rol;
 import jakarta.persistence.*;
@@ -26,25 +27,20 @@ public class Usuario extends Base {
     @Column(name = "username", unique = true, nullable = false)
     private String username;
 
-    @Column(name = "email")
-    @Temporal(TemporalType.TIMESTAMP)
-    private String email;
-
-    @NotNull
-    @Column(name = "password", nullable = false)
-    private String password;
-
     @NotNull
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaAlta;
 
     @Column(name = "fecha_modificacion")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaModificacion;
 
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaBaja;
 
 

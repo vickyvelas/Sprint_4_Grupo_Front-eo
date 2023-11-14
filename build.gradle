@@ -29,12 +29,37 @@ dependencies {
 	implementation 'org.hibernate.orm:hibernate-envers:6.1.7.Final'
 	// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version:'2.1.0'
+	implementation 'org.springframework.boot:spring-boot-starter'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	// https://mvnrepository.com/artifact/com.auth0/java-jwt
+	implementation group: 'com.auth0', name: 'java-jwt', version: '2.0.1'
+	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-jwt
+	implementation group: 'org.springframework.security', name: 'spring-security-jwt', version: '1.1.1.RELEASE'
+	// https://mvnrepository.com/artifact/org.springframework.security/spring-security-test
+	testImplementation group: 'org.springframework.security', name: 'spring-security-test', version: '6.1.5'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+
+
+
+
+
+
+
+}
+
+
+tasks.named('bootBuildImage') {
+	builder = 'paketobuildpacks/builder-jammy-base:latest'
 }
 
 tasks.named('test') {

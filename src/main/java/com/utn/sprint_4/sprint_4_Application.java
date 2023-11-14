@@ -39,28 +39,22 @@ public class sprint_4_Application {
             String fechaString4 = "2023-07-11";
             String horaString = "21:05:03";
 
-            Date fecha = formatoFecha.parse(fechaString);
-            Date fecha2 = formatoFecha.parse(fechaString2);
-            Date fecha3 = formatoFecha.parse(fechaString3);
-            Date fecha4 = formatoFecha.parse(fechaString4);
+            Date fecha = formatoFecha.parse(fechaString); //2023-09-13
+            Date fecha2 = formatoFecha.parse(fechaString2); //2023-05-19
+            Date fecha3 = formatoFecha.parse(fechaString3); //2023-03-21
+            Date fecha4 = formatoFecha.parse(fechaString4); //2023-07-11
             Date hora = formatoHora.parse(horaString);
 
-/*
-            RubroArticuloManufacturado rubroArticuloManufacturado = RubroArticuloManufacturado.builder()
-                    .denominacion("Bebidas")
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
+
+            NotaCredito nota1 = NotaCredito.builder()
+                    .montoTotal(7000)
+                    .motivoAnulacion("Cancelado por cliente")
                     .build();
 
-            RubroArticuloManufacturado rubroArticuloManufacturado2 = RubroArticuloManufacturado.builder()
-                    .denominacion("Comida Rapida")
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
+            NotaCredito nota2 = NotaCredito.builder()
+                    .montoTotal(13000)
+                    .motivoAnulacion("Cancelado por cliente")
                     .build();
-
-            */
 
             UnidadMedida unidadMedida = UnidadMedida.builder()
                     .denominacion("gramo")
@@ -130,6 +124,7 @@ public class sprint_4_Application {
                     .paymenttype("niIdea")
                     .preferenceid("3423523775")
                     .totalventa(3099)
+                    .notaCredito(nota1)
                     .build();
 
             Factura factura2 = Factura.builder()
@@ -142,6 +137,7 @@ public class sprint_4_Application {
                     .paymenttype("niIdea")
                     .preferenceid("3423523775")
                     .totalventa(3099)
+                    .notaCredito(nota2)
                     .build();
 
             ArticuloInsumo artIns1 = ArticuloInsumo.builder()
@@ -193,8 +189,8 @@ public class sprint_4_Application {
                     .costo(2000)
                     .denominacion("Pizza")
                     .descripcion("Pizza con jamón")
-                    .fechaAlta(fecha)
-                    .fechaBaja(fecha2)
+                    .fechaAlta(fecha2)
+                    .fechaBaja(fecha)
                     .fechaModificacion(fecha3)
                     .precioVenta(15000)
                     .tiempoEstimadoCocina(30)
@@ -205,9 +201,9 @@ public class sprint_4_Application {
                     .costo(5000)
                     .denominacion("Hamburguesa")
                     .descripcion("Grand Tasty")
-                    .fechaAlta(fecha)
+                    .fechaAlta(fecha3)
                     .fechaBaja(fecha2)
-                    .fechaModificacion(fecha3)
+                    .fechaModificacion(fecha)
                     .precioVenta(12000)
                     .tiempoEstimadoCocina(45)
                     .urlImagen("http://www.burguerCopada.com")
@@ -216,8 +212,6 @@ public class sprint_4_Application {
             Usuario usuario = Usuario.builder()
                     .auth0Id("User01")
                     .username("Facustriker")
-                    .email("yoSoyDeBoca@gmail.com")
-                    .password("1234ABCD?")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
@@ -269,6 +263,7 @@ public class sprint_4_Application {
 
             Pedido pedido1 = Pedido.builder()
                     .estado(EstadoPedido.PAGADO)
+                    .nroPedido("876324")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
@@ -282,6 +277,7 @@ public class sprint_4_Application {
 
             Pedido pedido2 = Pedido.builder()
                     .estado(EstadoPedido.COMPLETADO)
+                    .nroPedido("978345")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
@@ -293,11 +289,13 @@ public class sprint_4_Application {
                     .totalCosto(3260)
                     .build();
 
-
             Persona persona = Persona.builder()
                     .nombre("Juan")
                     .apellido("Marquez")
                     .telefono("2617223459")
+                    .email("yoSoyDeBoca@gmail.com")
+                    .password("1234ABCD?")
+                    .legajo("48755")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
@@ -309,6 +307,8 @@ public class sprint_4_Application {
             persona.AgregarDomicilios(domicilio2);
             persona.AgregarPedidos(pedido1);
             persona.AgregarPedidos(pedido2);
+            persona.AgregarNotasCredito(nota1);
+            persona.AgregarNotasCredito(nota2);
             //domicilio1.setPersona(persona);
             //domicilio2.setPersona(persona);
             //domicilio1.AgregarPedidos(pedido1);
@@ -342,14 +342,8 @@ public class sprint_4_Application {
             //articuloManufacturado1.AgregarDetalleFactura(detalleFactura1);
             //articuloManufacturado2.AgregarDetalleFactura(detalleFactura2);
             //articuloManufacturado3.AgregarDetalleFactura(detalleFactura3);
-            /*
-            articuloManufacturado1.setRubroArticuloManufacturado(rubroArticuloManufacturado2);
-            articuloManufacturado2.setRubroArticuloManufacturado(rubroArticuloManufacturado2);
-            articuloManufacturado3.setRubroArticuloManufacturado(rubroArticuloManufacturado2);
-            rubroArticuloManufacturado2.AgregararticulosManufacturados(articuloManufacturado1);
-            rubroArticuloManufacturado2.AgregararticulosManufacturados(articuloManufacturado2);
-            rubroArticuloManufacturado2.AgregararticulosManufacturados(articuloManufacturado3);
-            */
+
+
             //detalleFactura1.setArticuloManufacturado(articuloManufacturado1);
             //detalleFactura2.setArticuloManufacturado(articuloManufacturado2);
             //detalleFactura3.setArticuloManufacturado(articuloManufacturado3);

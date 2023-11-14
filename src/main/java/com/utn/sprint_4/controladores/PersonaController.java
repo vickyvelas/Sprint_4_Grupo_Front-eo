@@ -1,11 +1,14 @@
 package com.utn.sprint_4.controladores;
 
+import com.utn.sprint_4.dtos.ModificarEmpleadoDTO;
 import com.utn.sprint_4.entidades.Persona;
 import com.utn.sprint_4.servicios.PersonaServiceImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
 
 
 @RestController
@@ -14,16 +17,14 @@ import org.springframework.web.bind.annotation.*;
 public class PersonaController extends BaseControllerImpl<Persona, PersonaServiceImpl>{
 
 
-    @GetMapping("/prueba")
-    public ResponseEntity<?> prueba(){
+    @GetMapping("/rankingPersonas")
+    public ResponseEntity<?> rankingPersonas (Date fechaInicio, Date fechaFin){
         try {
-            return ResponseEntity.status(HttpStatus.OK).body(servicio.prueba());
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\"" + e.getMessage() + "\"}"));
-
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.rankingPersonas(fechaInicio, fechaFin));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
         }
     }
-
 
     @GetMapping("/search")
     public ResponseEntity<?> search (String nombre, String apellido, String telefono){
@@ -52,6 +53,31 @@ public class PersonaController extends BaseControllerImpl<Persona, PersonaServic
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
         }
     }
+    @PostMapping("/modificarEmpleadoA")
+    public ResponseEntity<?> modificarEmpleadoA (@RequestBody ModificarEmpleadoDTO modificarEmpleadoDTO){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.modificarEmpleadoA(modificarEmpleadoDTO));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
+        }
+    }
 
+    @GetMapping("/ListaEmpleadosAdm")
+    public ResponseEntity<?> ListaEmpleadosAdm(ModificarEmpleadoDTO modificarEmpleadoDTO){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.ListaEmpleadosAdm(modificarEmpleadoDTO));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
+        }
+    }
+
+    @GetMapping("/buscarPorLegajo")
+    public ResponseEntity<?> buscarPorLegajo (String legajo){
+        try {
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.buscarPorLegajo(legajo));
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\":\""+e.getMessage()+"\"}"));
+        }
+    }
 
 }

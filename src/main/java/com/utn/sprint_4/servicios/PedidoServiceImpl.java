@@ -1,5 +1,8 @@
 package com.utn.sprint_4.servicios;
 
+import com.utn.sprint_4.dtos.ListaPedidosClienteDTO;
+import com.utn.sprint_4.dtos.ListaPedidosClienteFiltroDTO;
+import com.utn.sprint_4.dtos.RankingPersonasDTO;
 import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;
@@ -13,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -83,6 +87,25 @@ public class PedidoServiceImpl extends BaseServiceImpl<Pedido,Long> implements P
         try{
             Page<Pedido> pedidos = pedidoRepository.searchPedidos(id, pageable);
             return pedidos;
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
+     //Lista Pedidos Cliente
+    @Override
+    public List<ListaPedidosClienteDTO> listaPedidosCliente(ListaPedidosClienteFiltroDTO listaPedidosClienteFiltroDTO) throws Exception {
+        try{
+            List<Pedido> pedidos = pedidoRepository.listaPedidosCliente(listaPedidosClienteFiltroDTO.getLegajo());
+            List<ListaPedidosClienteDTO> listaPedidosDTO = new ArrayList<>();
+            for (Pedido pedido: pedidos) {
+                ListaPedidosClienteDTO auxDTO = new ListaPedidosClienteDTO();
+                auxDTO.setFechaPedido(pedido.getFechaPedido());
+                auxDTO.setNroPedido(pedido.getNroPedido());
+                auxDTO.setTotal(pedido.getTotal());
+                listaPedidosDTO.add(auxDTO);
+            }
+            return  listaPedidosDTO;
         }catch (Exception e){
             throw new Exception(e.getMessage());
         }

@@ -29,7 +29,7 @@ public class DetallePedido extends Base {
     private Integer subtotal_costo;
 
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "articuloManufacturado_id")
     private ArticuloManufacturado articuloManufacturado;
 }

@@ -1,5 +1,6 @@
 package com.utn.sprint_4.entidades;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -46,14 +47,17 @@ public class ArticuloManufacturado extends Base {
     @NotNull
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaAlta;
 
     @Column(name = "fecha_modificacion")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaModificacion;
 
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaBaja;
 
 
@@ -79,12 +83,6 @@ public class ArticuloManufacturado extends Base {
         detalleFacturas.add(df);
     }
 
-
-     /*
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "rubroArticuloManufacturado_id")
-    private RubroArticuloManufacturado rubroArticuloManufacturado;
-*/
 
 
 }

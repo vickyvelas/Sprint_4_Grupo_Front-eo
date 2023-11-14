@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "0cb7e53a-d228-4958-b8be-d9c88ab92887",
-		"name": "SPRINT 4",
+		"_postman_id": "78ce0c01-7b7a-4d2d-98ec-8ee37832a330",
+		"name": "SPRINT 4 LOCAL",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30253405"
+		"_exporter_id": "30177056"
 	},
 	"item": [
 		{
-			"name": "Cliente",
+			"name": "Persona LISTO",
 			"item": [
 				{
 					"name": "CREATE",
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Alfredro\",\r\n    \"apellido\":\"Alcoraz\",\r\n    \"telefono\": 2617438823,\r\n    \"email\": \"alfredito@gmail.com\",\r\n    \"usuario\": {\r\n            \"auth0Id\": \"User01\",\r\n            \"username\": \"Alfredito\",\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n    \"domicilios\": [\r\n            {\r\n                \"calle\": \"San Martin\",\r\n                \"numero\": 287,\r\n                \"codigoPostal\": 5533,\r\n                \"localidad\": \"Guaymallen\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 4,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n            {\r\n                \"calle\": \"Tucuman\",\r\n                \"numero\": 543,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        ],\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"pedidos\": [\r\n            {\r\n                \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                \"total\": 9000,\r\n                \"totalCosto\": 3000,\r\n                \"estado\": \"PAGADO\",\r\n                \"tipoEnvio\": \"TAKE_AWAY\",\r\n                \"formaPago\": \"EFECTIVO\",\r\n                \"domicilioEntrega\": {\r\n                \"calle\": \"San Martin\",\r\n                \"numero\": 287,\r\n                \"codigoPostal\": 5533,\r\n                \"localidad\": \"Guaymallen\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 4,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                \"detallesPedidos\": [\r\n                    {\r\n                        \"cantidad\": 3,\r\n                        \"subtotal\": 2000,\r\n                        \"subtotalCosto\": 1000\r\n                    },\r\n                    {\r\n                        \"cantidad\": 7,\r\n                        \"subtotal\": 5000,\r\n                        \"subtotalCosto\": 2500\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                \"total\": 12000,\r\n                \"totalCosto\": 6260,\r\n                \"estado\": \"COMPLETADO\",\r\n                \"tipoEnvio\": \"TAKE_AWAY\",\r\n                \"formaPago\": \"EFECTIVO\",\r\n                \"domicilioEntrega\": {\r\n                \"calle\": \"Tucuman\",\r\n                \"numero\": 543,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                \"detallesPedidos\": [\r\n                    {\r\n                        \"cantidad\": 15,\r\n                        \"subtotal\": 16000,\r\n                        \"subtotalCosto\": 7500\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }",
+							"raw": "    {\r\n        \"nombre\": \"Pablo\",\r\n        \"apellido\": \"Gonzales\",\r\n        \"rol\": \"CLIENTE\",\r\n        \"email\": \"dolares@gmail.com\",\r\n        \"password\": \"ABC123?\",\r\n        \"telefono\": \"2619882376\",\r\n        \"legajo\": \"42755\",\r\n        \"fechaAlta\": \"2023/03/13\",\r\n        \"fechaModificacion\": \"2023/04/21\",\r\n        \"fechaBaja\": \"2023/07/19\",\r\n        \"usuario\": {\r\n            \"auth0Id\": \"User02\",\r\n            \"username\": \"Pablo44\",\r\n            \"fechaAlta\": \"2023/04/13\",\r\n            \"fechaModificacion\": \"2023/05/21\",\r\n            \"fechaBaja\": \"2023/08/19\"\r\n        },\r\n        \"pedidos\": [\r\n            {\r\n                \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                \"total\": 4000,\r\n                \"nroPedido\": \"459821\",\r\n                \"totalCosto\": 2000,\r\n                \"estado\": \"PAGADO\",\r\n                \"tipoEnvio\": \"TAKE_AWAY\",\r\n                \"formaPago\": \"EFECTIVO\",\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\",\r\n                \"factura\": {\r\n                    \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                    \"paymentid\": 3423523775,\r\n                    \"merchantorder\": 201933394,\r\n                    \"preferenceid\": \"3423523775\",\r\n                    \"paymenttype\": \"niIdea\",\r\n                    \"formapago\": \"EFECTIVO\",\r\n                    \"totalventa\": 3099,\r\n                    \"fechaAlta\": \"2023/09/13\",\r\n                    \"fechaModificacion\": \"2023/03/21\",\r\n                    \"fechaBaja\": null,\r\n                    \"notaCredito\": {\r\n                        \"montoTotal\": 7000,\r\n                        \"motivoAnulacion\": \"Cancelado por cliente\"\r\n                    },\r\n                    \"detalleFacturas\": [\r\n                        {\r\n                            \"cantidad\": 3,\r\n                            \"subtotal\": 4000\r\n                        },\r\n                        {\r\n                            \"cantidad\": 4,\r\n                            \"subtotal\": 5000\r\n                        }\r\n                    ]\r\n                },\r\n                \"domicilio\": {\r\n                    \"calle\": \"Beltrán\",\r\n                    \"numero\": 342,\r\n                    \"codigoPostal\": 5500,\r\n                    \"localidad\": \"Godoy Cruz\",\r\n                    \"numeroDpto\": 3,\r\n                    \"pisoDpto\": 2,\r\n                    \"fechaAlta\": \"2023/09/13\",\r\n                    \"fechaModificacion\": \"2023/03/21\",\r\n                    \"fechaBaja\": \"2023/05/19\"\r\n                },\r\n                \"detallesPedidos\": [\r\n                    {\r\n                        \"cantidad\": 6,\r\n                        \"subtotal\": 7000,\r\n                        \"subtotal_costo\": 5000,\r\n                        \"articuloManufacturado\": {\r\n                            \"denominacion\": \"Hamburguesa\",\r\n                            \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                            \"tiempoEstimadoCocina\": 20,\r\n                            \"precioVenta\": 13000,\r\n                            \"costo\": 3922,\r\n                            \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                            \"fechaAlta\": \"2023/09/13\",\r\n                            \"fechaModificacion\": \"2023/03/21\",\r\n                            \"fechaBaja\": \"2023/05/19\",\r\n                            \"detalleArticulosManufacturados\": [\r\n                                {\r\n                                    \"cantidad\": 4,\r\n                                    \"articuloInsumo\": {\r\n                                        \"denominacion\": \"Carne molida\",\r\n                                        \"urlImagen\": \"http://imagengod.com\",\r\n                                        \"precioCompra\": 50000,\r\n                                        \"stockActual\": 200,\r\n                                        \"stockMinimo\": 100,\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\",\r\n                                        \"rubroArticulo\": {\r\n                                            \"denominacion\": \"Verdura\",\r\n                                            \"fechaAlta\": \"2023/09/13\",\r\n                                            \"fechaModificacion\": \"2023/03/21\",\r\n                                            \"fechaBaja\": \"2023/05/19\"\r\n                                        },\r\n                                        \"unidadMedida\": {\r\n                                            \"denominacion\": \"gramo\",\r\n                                            \"abreviatura\": \"Gr\",\r\n                                            \"fechaAlta\": \"2023/09/13\",\r\n                                            \"fechaModificacion\": \"2023/03/21\",\r\n                                            \"fechaBaja\": \"2023/05/19\"\r\n                                        }\r\n                                    }\r\n                                }\r\n                            ],\r\n                            \"detalleFacturas\": [\r\n                                {\r\n                                    \"cantidad\": 3,\r\n                                    \"subtotal\": 4000\r\n                                }\r\n                            ]\r\n                        }\r\n                    },\r\n                    {\r\n                        \"cantidad\": 4,\r\n                        \"subtotal\": 3000,\r\n                        \"subtotal_costo\": 1000,\r\n                        \"articuloManufacturado\": {\r\n                            \"denominacion\": \"Pizza\",\r\n                            \"descripcion\": \"Pizza con jamón\",\r\n                            \"tiempoEstimadoCocina\": 30,\r\n                            \"precioVenta\": 15000,\r\n                            \"costo\": 2000,\r\n                            \"urlImagen\": \"http//mmmmPizzita.com\",\r\n                            \"fechaAlta\": \"2023/05/19\",\r\n                            \"fechaModificacion\": \"2023/03/21\",\r\n                            \"fechaBaja\": \"2023/09/13\",\r\n                            \"detalleArticulosManufacturados\": [\r\n                                {\r\n                                    \"cantidad\": 5,\r\n                                    \"articuloInsumo\": {\r\n                                        \"denominacion\": \"Tomate\",\r\n                                        \"urlImagen\": \"httpp//imagengodtomatito.com\",\r\n                                        \"precioCompra\": 25000,\r\n                                        \"stockActual\": 200,\r\n                                        \"stockMinimo\": 100,\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\",\r\n                                        \"rubroArticulo\": {\r\n                                            \"denominacion\": \"Verdura\",\r\n                                            \"fechaAlta\": \"2023/09/13\",\r\n                                            \"fechaModificacion\": \"2023/03/21\",\r\n                                            \"fechaBaja\": \"2023/05/19\"\r\n                                        },\r\n                                        \"unidadMedida\": {\r\n                                            \"denominacion\": \"gramo\",\r\n                                            \"abreviatura\": \"Gr\",\r\n                                            \"fechaAlta\": \"2023/09/13\",\r\n                                            \"fechaModificacion\": \"2023/03/21\",\r\n                                            \"fechaBaja\": \"2023/05/19\"\r\n                                        }\r\n                                    }\r\n                                }\r\n                            ],\r\n                            \"detalleFacturas\": [\r\n                                {\r\n                                    \"cantidad\": 4,\r\n                                    \"subtotal\": 5000\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                \"total\": 9000,\r\n                \"nroPedido\": \"953421\",\r\n                \"totalCosto\": 3260,\r\n                \"estado\": \"COMPLETADO\",\r\n                \"tipoEnvio\": \"TAKE_AWAY\",\r\n                \"formaPago\": \"EFECTIVO\",\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\",\r\n                \"factura\": {\r\n                    \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                    \"paymentid\": 3423523775,\r\n                    \"merchantorder\": 201933394,\r\n                    \"preferenceid\": \"3423523775\",\r\n                    \"paymenttype\": \"niIdea\",\r\n                    \"formapago\": \"EFECTIVO\",\r\n                    \"totalventa\": 3099,\r\n                    \"fechaAlta\": \"2023/09/13\",\r\n                    \"fechaModificacion\": \"2023/03/21\",\r\n                    \"fechaBaja\": null,\r\n                    \"notaCredito\": {\r\n                        \"montoTotal\": 13000,\r\n                        \"motivoAnulacion\": \"Cancelado por cliente\"\r\n                    },\r\n                    \"detalleFacturas\": [\r\n                        {\r\n                            \"cantidad\": 7,\r\n                            \"subtotal\": 12000\r\n                        }\r\n                    ]\r\n                },\r\n                \"domicilio\": {\r\n                    \"calle\": \"Belgrano\",\r\n                    \"numero\": 302,\r\n                    \"codigoPostal\": 5519,\r\n                    \"localidad\": \"Capital\",\r\n                    \"numeroDpto\": 4,\r\n                    \"pisoDpto\": 1,\r\n                    \"fechaAlta\": \"2023/09/13\",\r\n                    \"fechaModificacion\": \"2023/03/21\",\r\n                    \"fechaBaja\": \"2023/05/19\"\r\n                },\r\n                \"detallesPedidos\": [\r\n                    {\r\n                        \"cantidad\": 12,\r\n                        \"subtotal\": 13000,\r\n                        \"subtotal_costo\": 4500,\r\n                        \"articuloManufacturado\": {\r\n                            \"denominacion\": \"Hamburguesa\",\r\n                            \"descripcion\": \"Grand Tasty\",\r\n                            \"tiempoEstimadoCocina\": 45,\r\n                            \"precioVenta\": 12000,\r\n                            \"costo\": 5000,\r\n                            \"urlImagen\": \"http://www.burguerCopada.com\",\r\n                            \"fechaAlta\": \"2023/03/21\",\r\n                            \"fechaModificacion\": \"2023/09/13\",\r\n                            \"fechaBaja\": \"2023/05/19\",\r\n                            \"detalleArticulosManufacturados\": [\r\n                                {\r\n                                    \"cantidad\": 9,\r\n                                    \"articuloInsumo\": {\r\n                                        \"denominacion\": \"Lechuga\",\r\n                                        \"urlImagen\": \"http://www.lalechugadelabuena.com\",\r\n                                        \"precioCompra\": 12000,\r\n                                        \"stockActual\": 200,\r\n                                        \"stockMinimo\": 100,\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\",\r\n                                        \"rubroArticulo\": {\r\n                                            \"denominacion\": \"Verdura\",\r\n                                            \"fechaAlta\": \"2023/09/13\",\r\n                                            \"fechaModificacion\": \"2023/03/21\",\r\n                                            \"fechaBaja\": \"2023/05/19\"\r\n                                        },\r\n                                        \"unidadMedida\": {\r\n                                            \"denominacion\": \"gramo\",\r\n                                            \"abreviatura\": \"Gr\",\r\n                                            \"fechaAlta\": \"2023/09/13\",\r\n                                            \"fechaModificacion\": \"2023/03/21\",\r\n                                            \"fechaBaja\": \"2023/05/19\"\r\n                                        }\r\n                                    }\r\n                                }\r\n                            ],\r\n                            \"detalleFacturas\": [\r\n                                {\r\n                                    \"cantidad\": 7,\r\n                                    \"subtotal\": 12000\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                ]\r\n            }\r\n        ],\r\n        \"domicilios\": [\r\n            {\r\n                \"calle\": \"Beltrán\",\r\n                \"numero\": 342,\r\n                \"codigoPostal\": 5500,\r\n                \"localidad\": \"Godoy Cruz\",\r\n                \"numeroDpto\": 3,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\"\r\n            },\r\n            {\r\n                \"calle\": \"Belgrano\",\r\n                \"numero\": 302,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 4,\r\n                \"pisoDpto\": 1,\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\"\r\n            }\r\n        ],\r\n        \"notasCredito\": [\r\n            {\r\n                \"montoTotal\": 7000,\r\n                \"motivoAnulacion\": \"Cancelado por cliente\"\r\n            },\r\n            {\r\n                \"montoTotal\": 13000,\r\n                \"motivoAnulacion\": \"Cancelado por cliente\"\r\n            }\r\n        ]\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,17 +24,16 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"clientes"
+								"personas"
 							]
 						}
 					},
@@ -47,7 +46,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Martin\",\r\n    \"apellido\": \"Gimenez\",\r\n    \"telefono\": \"2619327765\",\r\n    \"email\": \"martincito747@gmail.com\",\r\n    \"usuario\": {\r\n        \"id\": 3,\r\n        \"auth0Id\": \"UserVerified\",\r\n        \"username\": \"Martincho\",\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n    },\r\n    \"domicilios\": [\r\n        {\r\n            \"id\": 7,\r\n            \"calle\": \"San Martin\",\r\n            \"numero\": 287,\r\n            \"codigoPostal\": 5533,\r\n            \"localidad\": \"Guaymallen\",\r\n            \"numeroDpto\": 2,\r\n            \"pisoDpto\": 4,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        {\r\n            \"id\": 8,\r\n            \"calle\": \"Tucuman\",\r\n            \"numero\": 543,\r\n            \"codigoPostal\": 5519,\r\n            \"localidad\": \"Capital\",\r\n            \"numeroDpto\": 2,\r\n            \"pisoDpto\": 2,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        }\r\n    ],\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"pedidos\": [\r\n        {\r\n            \"id\": 5,\r\n            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n            \"total\": 9000,\r\n            \"totalCosto\": 3000,\r\n            \"estado\": \"PAGADO\",\r\n            \"tipoEnvio\": \"TAKE_AWAY\",\r\n            \"formaPago\": \"EFECTIVO\",\r\n            \"domicilioEntrega\": {\r\n                \"id\": 9,\r\n                \"calle\": \"San Martin\",\r\n                \"numero\": 287,\r\n                \"codigoPostal\": 5533,\r\n                \"localidad\": \"Guaymallen\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 4,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesPedidos\": [\r\n                {\r\n                    \"id\": 7,\r\n                    \"cantidad\": 3,\r\n                    \"subtotal\": 2000,\r\n                    \"subtotalCosto\": 1000\r\n                },\r\n                {\r\n                    \"id\": 8,\r\n                    \"cantidad\": 7,\r\n                    \"subtotal\": 5000,\r\n                    \"subtotalCosto\": 2500\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n            \"total\": 12000,\r\n            \"totalCosto\": 6260,\r\n            \"estado\": \"COMPLETADO\",\r\n            \"tipoEnvio\": \"TAKE_AWAY\",\r\n            \"formaPago\": \"EFECTIVO\",\r\n            \"domicilioEntrega\": {\r\n                \"id\": 10,\r\n                \"calle\": \"Tucuman\",\r\n                \"numero\": 543,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 2,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            },\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesPedidos\": [\r\n                {\r\n                    \"id\": 9,\r\n                    \"cantidad\": 15,\r\n                    \"subtotal\": 16000,\r\n                    \"subtotalCosto\": 7500\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"nombre\": \"Federico\",\r\n    \"apellido\": \"Hernandez\",\r\n    \"rol\": \"DELIVERY\",\r\n    \"email\": \"parcero@gmail.com\",\r\n    \"password\": \"111AAA?\",\r\n    \"telefono\": \"2618996612\",\r\n    \"legajo\": \"42755\",\r\n    \"fechaAlta\": \"2023/03/13\",\r\n    \"fechaModificacion\": \"2023/04/21\",\r\n    \"fechaBaja\": \"2023/07/19\",\r\n    \"usuario\": {\r\n        \"id\": 2,\r\n        \"auth0Id\": \"User02\",\r\n        \"username\": \"Pablo44\",\r\n        \"fechaAlta\": \"2023/04/13\",\r\n        \"fechaModificacion\": \"2023/05/21\",\r\n        \"fechaBaja\": \"2023/08/19\"\r\n    },\r\n    \"pedidos\": [\r\n        {\r\n            \"id\": 4,\r\n            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n            \"total\": 4000,\r\n            \"nroPedido\": \"459821\",\r\n            \"totalCosto\": 2000,\r\n            \"estado\": \"PAGADO\",\r\n            \"tipoEnvio\": \"TAKE_AWAY\",\r\n            \"formaPago\": \"EFECTIVO\",\r\n            \"fechaAlta\": \"2023/09/13\",\r\n            \"fechaModificacion\": \"2023/03/21\",\r\n            \"fechaBaja\": \"2023/05/19\",\r\n            \"factura\": {\r\n                \"id\": 4,\r\n                \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                \"paymentid\": 3423523775,\r\n                \"merchantorder\": 201933394,\r\n                \"preferenceid\": \"3423523775\",\r\n                \"paymenttype\": \"niIdea\",\r\n                \"formapago\": \"EFECTIVO\",\r\n                \"totalventa\": 3099,\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": null,\r\n                \"notaCredito\": {\r\n                    \"id\": 7,\r\n                    \"montoTotal\": 7000,\r\n                    \"motivoAnulacion\": \"Cancelado por cliente\"\r\n                },\r\n                \"detalleFacturas\": [\r\n                    {\r\n                        \"id\": 8,\r\n                        \"cantidad\": 3,\r\n                        \"subtotal\": 4000\r\n                    },\r\n                    {\r\n                        \"id\": 9,\r\n                        \"cantidad\": 4,\r\n                        \"subtotal\": 5000\r\n                    }\r\n                ]\r\n            },\r\n            \"domicilio\": {\r\n                \"id\": 6,\r\n                \"calle\": \"Beltrán\",\r\n                \"numero\": 342,\r\n                \"codigoPostal\": 5500,\r\n                \"localidad\": \"Godoy Cruz\",\r\n                \"numeroDpto\": 3,\r\n                \"pisoDpto\": 2,\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\"\r\n            },\r\n            \"detallesPedidos\": [\r\n                {\r\n                    \"id\": 6,\r\n                    \"cantidad\": 6,\r\n                    \"subtotal\": 7000,\r\n                    \"subtotal_costo\": 5000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 6,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023/09/13\",\r\n                        \"fechaModificacion\": \"2023/03/21\",\r\n                        \"fechaBaja\": \"2023/05/19\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 6,\r\n                                \"cantidad\": 4,\r\n                                \"articuloInsumo\": {\r\n                                    \"id\": 6,\r\n                                    \"denominacion\": \"Carne molida\",\r\n                                    \"urlImagen\": \"http://imagengod.com\",\r\n                                    \"precioCompra\": 50000,\r\n                                    \"stockActual\": 200,\r\n                                    \"stockMinimo\": 100,\r\n                                    \"fechaAlta\": \"2023/09/13\",\r\n                                    \"fechaModificacion\": \"2023/03/21\",\r\n                                    \"fechaBaja\": \"2023/05/19\",\r\n                                    \"rubroArticulo\": {\r\n                                        \"id\": 4,\r\n                                        \"denominacion\": \"Verdura\",\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\"\r\n                                    },\r\n                                    \"unidadMedida\": {\r\n                                        \"id\": 4,\r\n                                        \"denominacion\": \"gramo\",\r\n                                        \"abreviatura\": \"Gr\",\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\"\r\n                                    }\r\n                                }\r\n                            }\r\n                        ],\r\n                        \"detalleFacturas\": [\r\n                            {\r\n                                \"id\": 10,\r\n                                \"cantidad\": 3,\r\n                                \"subtotal\": 4000\r\n                            }\r\n                        ]\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": 7,\r\n                    \"cantidad\": 4,\r\n                    \"subtotal\": 3000,\r\n                    \"subtotal_costo\": 1000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 7,\r\n                        \"denominacion\": \"Pizza\",\r\n                        \"descripcion\": \"Pizza con jamón\",\r\n                        \"tiempoEstimadoCocina\": 30,\r\n                        \"precioVenta\": 15000,\r\n                        \"costo\": 2000,\r\n                        \"urlImagen\": \"http//mmmmPizzita.com\",\r\n                        \"fechaAlta\": \"2023/05/19\",\r\n                        \"fechaModificacion\": \"2023/03/21\",\r\n                        \"fechaBaja\": \"2023/09/13\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 7,\r\n                                \"cantidad\": 5,\r\n                                \"articuloInsumo\": {\r\n                                    \"id\": 7,\r\n                                    \"denominacion\": \"Tomate\",\r\n                                    \"urlImagen\": \"httpp//imagengodtomatito.com\",\r\n                                    \"precioCompra\": 25000,\r\n                                    \"stockActual\": 200,\r\n                                    \"stockMinimo\": 100,\r\n                                    \"fechaAlta\": \"2023/09/13\",\r\n                                    \"fechaModificacion\": \"2023/03/21\",\r\n                                    \"fechaBaja\": \"2023/05/19\",\r\n                                    \"rubroArticulo\": {\r\n                                        \"id\": 5,\r\n                                        \"denominacion\": \"Verdura\",\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\"\r\n                                    },\r\n                                    \"unidadMedida\": {\r\n                                        \"id\": 5,\r\n                                        \"denominacion\": \"gramo\",\r\n                                        \"abreviatura\": \"Gr\",\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\"\r\n                                    }\r\n                                }\r\n                            }\r\n                        ],\r\n                        \"detalleFacturas\": [\r\n                            {\r\n                                \"id\": 11,\r\n                                \"cantidad\": 4,\r\n                                \"subtotal\": 5000\r\n                            }\r\n                        ]\r\n                    }\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n            \"total\": 9000,\r\n            \"nroPedido\": \"953421\",\r\n            \"totalCosto\": 3260,\r\n            \"estado\": \"COMPLETADO\",\r\n            \"tipoEnvio\": \"TAKE_AWAY\",\r\n            \"formaPago\": \"EFECTIVO\",\r\n            \"fechaAlta\": \"2023/09/13\",\r\n            \"fechaModificacion\": \"2023/03/21\",\r\n            \"fechaBaja\": \"2023/05/19\",\r\n            \"factura\": {\r\n                \"id\": 5,\r\n                \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                \"paymentid\": 3423523775,\r\n                \"merchantorder\": 201933394,\r\n                \"preferenceid\": \"3423523775\",\r\n                \"paymenttype\": \"niIdea\",\r\n                \"formapago\": \"EFECTIVO\",\r\n                \"totalventa\": 3099,\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": null,\r\n                \"notaCredito\": {\r\n                    \"id\": 8,\r\n                    \"montoTotal\": 13000,\r\n                    \"motivoAnulacion\": \"Cancelado por cliente\"\r\n                },\r\n                \"detalleFacturas\": [\r\n                    {\r\n                        \"id\": 12,\r\n                        \"cantidad\": 7,\r\n                        \"subtotal\": 12000\r\n                    }\r\n                ]\r\n            },\r\n            \"domicilio\": {\r\n                \"id\": 7,\r\n                \"calle\": \"Belgrano\",\r\n                \"numero\": 302,\r\n                \"codigoPostal\": 5519,\r\n                \"localidad\": \"Capital\",\r\n                \"numeroDpto\": 4,\r\n                \"pisoDpto\": 1,\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\"\r\n            },\r\n            \"detallesPedidos\": [\r\n                {\r\n                    \"id\": 8,\r\n                    \"cantidad\": 12,\r\n                    \"subtotal\": 13000,\r\n                    \"subtotal_costo\": 4500,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 8,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Grand Tasty\",\r\n                        \"tiempoEstimadoCocina\": 45,\r\n                        \"precioVenta\": 12000,\r\n                        \"costo\": 5000,\r\n                        \"urlImagen\": \"http://www.burguerCopada.com\",\r\n                        \"fechaAlta\": \"2023/03/21\",\r\n                        \"fechaModificacion\": \"2023/09/13\",\r\n                        \"fechaBaja\": \"2023/05/19\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 8,\r\n                                \"cantidad\": 9,\r\n                                \"articuloInsumo\": {\r\n                                    \"id\": 8,\r\n                                    \"denominacion\": \"Lechuga\",\r\n                                    \"urlImagen\": \"http://www.lalechugadelabuena.com\",\r\n                                    \"precioCompra\": 12000,\r\n                                    \"stockActual\": 200,\r\n                                    \"stockMinimo\": 100,\r\n                                    \"fechaAlta\": \"2023/09/13\",\r\n                                    \"fechaModificacion\": \"2023/03/21\",\r\n                                    \"fechaBaja\": \"2023/05/19\",\r\n                                    \"rubroArticulo\": {\r\n                                        \"id\": 6,\r\n                                        \"denominacion\": \"Verdura\",\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\"\r\n                                    },\r\n                                    \"unidadMedida\": {\r\n                                        \"id\": 6,\r\n                                        \"denominacion\": \"gramo\",\r\n                                        \"abreviatura\": \"Gr\",\r\n                                        \"fechaAlta\": \"2023/09/13\",\r\n                                        \"fechaModificacion\": \"2023/03/21\",\r\n                                        \"fechaBaja\": \"2023/05/19\"\r\n                                    }\r\n                                }\r\n                            }\r\n                        ],\r\n                        \"detalleFacturas\": [\r\n                            {\r\n                                \"id\": 13,\r\n                                \"cantidad\": 7,\r\n                                \"subtotal\": 12000\r\n                            }\r\n                        ]\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"domicilios\": [\r\n        {\r\n            \"id\": 4,\r\n            \"calle\": \"Beltrán\",\r\n            \"numero\": 342,\r\n            \"codigoPostal\": 5500,\r\n            \"localidad\": \"Godoy Cruz\",\r\n            \"numeroDpto\": 3,\r\n            \"pisoDpto\": 2,\r\n            \"fechaAlta\": \"2023/09/13\",\r\n            \"fechaModificacion\": \"2023/03/21\",\r\n            \"fechaBaja\": \"2023/05/19\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"calle\": \"Belgrano\",\r\n            \"numero\": 302,\r\n            \"codigoPostal\": 5519,\r\n            \"localidad\": \"Capital\",\r\n            \"numeroDpto\": 4,\r\n            \"pisoDpto\": 1,\r\n            \"fechaAlta\": \"2023/09/13\",\r\n            \"fechaModificacion\": \"2023/03/21\",\r\n            \"fechaBaja\": \"2023/05/19\"\r\n        }\r\n    ],\r\n    \"notasCredito\": [\r\n        {\r\n            \"id\": 5,\r\n            \"montoTotal\": 7000,\r\n            \"motivoAnulacion\": \"Cancelado por cliente\"\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"montoTotal\": 13000,\r\n            \"motivoAnulacion\": \"Cancelado por cliente\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -55,18 +54,17 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/1",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas/2",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"clientes",
-								"1"
+								"personas",
+								"2"
 							]
 						}
 					},
@@ -78,17 +76,16 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/2",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas/2",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"clientes",
+								"personas",
 								"2"
 							]
 						}
@@ -96,22 +93,21 @@
 					"response": []
 				},
 				{
-					"name": "GET ONE BY ID",
+					"name": "GET ONE",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/1",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas/1",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"clientes",
+								"personas",
 								"1"
 							]
 						}
@@ -124,17 +120,16 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"clientes"
+								"personas"
 							]
 						}
 					},
@@ -146,60 +141,44 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/paged?page=0&size=3&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas/paged",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"clientes",
+								"personas",
 								"paged"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "3"
-								},
-								{
-									"key": "sort",
-									"value": "id,desc"
-								}
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "SEARCH BY NAME OR SURNAME",
+					"name": "SEARCH",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/search?filtro=Gim",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas/search?nombre=Juan",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"clientes",
+								"personas",
 								"search"
 							],
 							"query": [
 								{
-									"key": "filtro",
-									"value": "Gim"
+									"key": "nombre",
+									"value": "Juan"
 								}
 							]
 						}
@@ -207,41 +186,82 @@
 					"response": []
 				},
 				{
-					"name": "SEARCH PAGED BY NAME OR SURNAME",
+					"name": "SEARCH PAGED",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/clientes/searchPaged?filtro=Juan&page=0&size=3&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/personas/searchPaged?nombre=Juan",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"clientes",
+								"personas",
 								"searchPaged"
 							],
 							"query": [
 								{
-									"key": "filtro",
+									"key": "nombre",
 									"value": "Juan"
-								},
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "3"
-								},
-								{
-									"key": "sort",
-									"value": "id,desc"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ranking Personas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/rankingPersonas?fechaInicio=2023/01/19&fechaFin=2023/12/19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"rankingPersonas"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2023/01/19"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2023/12/19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busqueda empleados Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/personas/ListaEmpleadosAdm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"ListaEmpleadosAdm"
 							]
 						}
 					},
@@ -250,7 +270,7 @@
 			]
 		},
 		{
-			"name": "Usuario",
+			"name": "Usuario LISTO",
 			"item": [
 				{
 					"name": "CREATE",
@@ -259,7 +279,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"auth0Id\": \"User03\",\r\n        \"username\": \"Alfredito\",\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n    }",
+							"raw": "    {\r\n        \"auth0Id\": \"User02\",\r\n        \"username\": \"PABLIT044\",\r\n        \"fechaAlta\": \"2023/03/19\",\r\n        \"fechaModificacion\": \"2023/05/13\",\r\n        \"fechaBaja\": \"2023/10/20\"\r\n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -267,13 +287,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -290,7 +309,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "    {\r\n        \"id\": 3,\r\n        \"auth0Id\": \"User05\",\r\n        \"username\": \"Vegetta777\",\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n    }",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"auth0Id\": \"User2\",\r\n    \"username\": \"Willyrex\",\r\n    \"fechaAlta\": \"2023/03/19\",\r\n    \"fechaModificacion\": \"2023/05/13\",\r\n    \"fechaBaja\": \"2023/10/20\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -298,18 +317,17 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/3",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/usuarios/2",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"usuarios",
-								"3"
+								"2"
 							]
 						}
 					},
@@ -321,13 +339,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/4",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/usuarios/4",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -339,18 +356,17 @@
 					"response": []
 				},
 				{
-					"name": "GET ONE BY ID",
+					"name": "GET ONE",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/1",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/usuarios/1",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -367,13 +383,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/usuarios",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -389,13 +404,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/paged?page=0&size=2&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/usuarios/paged?page=0&size=2&sort=id,desc",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -419,81 +433,11 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "SEARCH BY USERNAME OR AUTH0ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/search?filtro=Alfre",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"usuarios",
-								"search"
-							],
-							"query": [
-								{
-									"key": "filtro",
-									"value": "Alfre"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SEARCH PAGED BY USERNAME OR AUTH0ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/usuarios/searchPaged?filtro=Alfredito&page=0&size=2&sort=id,desc",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"usuarios",
-								"searchPaged"
-							],
-							"query": [
-								{
-									"key": "filtro",
-									"value": "Alfredito"
-								},
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "2"
-								},
-								{
-									"key": "sort",
-									"value": "id,desc"
-								}
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
 		{
-			"name": "Pedido",
+			"name": "Articulo Manufacturado (Productos) LISTO",
 			"item": [
 				{
 					"name": "CREATE",
@@ -502,7 +446,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 9000,\r\n        \"totalCosto\": 3000,\r\n        \"estado\": \"PAGADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \r\n            \"calle\": \"San Martin\",\r\n            \"numero\": 287,\r\n            \"codigoPostal\": 5533,\r\n            \"localidad\": \"Guaymallen\",\r\n            \"numeroDpto\": 2,\r\n            \"pisoDpto\": 4,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n               \r\n                \"cantidad\": 3,\r\n                \"subtotal\": 2000,\r\n                \"subtotalCosto\": 1000\r\n            },\r\n            {\r\n               \r\n                \"cantidad\": 7,\r\n                \"subtotal\": 5000,\r\n                \"subtotalCosto\": 2500\r\n            }\r\n        ]\r\n    }",
+							"raw": "{\r\n    \"denominacion\": \"Hamburguesa\",\r\n    \"descripcion\": \"Hamburguesa triple con chedar\",\r\n    \"tiempoEstimadoCocina\": 20,\r\n    \"precioVenta\": 15000,\r\n    \"costo\": 6000,\r\n    \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n    \"fechaAlta\": \"2023/04/13\",\r\n    \"fechaModificacion\": \"2023/05/21\",\r\n    \"fechaBaja\": \"2023/09/19\",\r\n    \"detalleArticulosManufacturados\": [\r\n        {\r\n            \"cantidad\": 20,\r\n            \"articuloInsumo\": {\r\n                \"denominacion\": \"Carne molida\",\r\n                \"urlImagen\": \"http://imagengod.com\",\r\n                \"precioCompra\": 50000,\r\n                \"stockActual\": 200,\r\n                \"stockMinimo\": 100,\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\",\r\n                \"rubroArticulo\": {\r\n                    \"denominacion\": \"Carnes\",\r\n                    \"fechaAlta\": \"2023/09/13\",\r\n                    \"fechaModificacion\": \"2023/03/21\",\r\n                    \"fechaBaja\": \"2023/05/19\"\r\n                },\r\n                \"unidadMedida\": {\r\n                    \"denominacion\": \"gramo\",\r\n                    \"abreviatura\": \"Gr\",\r\n                    \"fechaAlta\": \"2023/09/13\",\r\n                    \"fechaModificacion\": \"2023/03/21\",\r\n                    \"fechaBaja\": \"2023/05/19\"\r\n                }\r\n            }\r\n        }\r\n    ],\r\n    \"detalleFacturas\": [\r\n        {\r\n            \"cantidad\": 5,\r\n            \"subtotal\": 12000\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -510,429 +454,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
-							"path": [
-								"api",
-								"v1",
-								"pedidos"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "UPDATE",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "\r\n    {\r\n        \"id\": 7,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 900,\r\n        \"totalCosto\": 3000,\r\n        \"estado\": \"PAGADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 3,\r\n            \"calle\": \"San Martin\",\r\n            \"numero\": 287,\r\n            \"codigoPostal\": 5533,\r\n            \"localidad\": \"Guaymallen\",\r\n            \"numeroDpto\": 2,\r\n            \"pisoDpto\": 4,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 1,\r\n                \"cantidad\": 3,\r\n                \"subtotal\": 2000,\r\n                \"subtotalCosto\": 1000\r\n            },\r\n            {\r\n                \"id\": 2,\r\n                \"cantidad\": 7,\r\n                \"subtotal\": 5000,\r\n                \"subtotalCosto\": 2500\r\n            }\r\n        ]\r\n    }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/7",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"pedidos",
-								"7"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/7",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"pedidos",
-								"7"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ONE BY ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/1",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"pedidos",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"pedidos"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL PAGED",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/pedidos/paged?page=0&size=2&sort=id,desc",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"pedidos",
-								"paged"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "2"
-								},
-								{
-									"key": "sort",
-									"value": "id,desc"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Factura",
-			"item": [
-				{
-					"name": "CREATE",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"mpPaymentId\": 3423523525,\r\n    \"mpMerchantOrderId\": 285929394,\r\n    \"mpPreferenceId\": \"IDPreferido\",\r\n    \"mpPaymentType\": \"MercadoPago\",\r\n    \"formaPago\": \"EFECTIVO\",\r\n    \"totalVenta\": 3092939,\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": null,\r\n    \"pedido\": {\r\n        \"id\": 1,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 4000,\r\n        \"totalCosto\": 2000,\r\n        \"estado\": \"PAGADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 3,\r\n            \"calle\": \"Beltrán\",\r\n            \"numero\": 342,\r\n            \"codigoPostal\": 5500,\r\n            \"localidad\": \"Godoy Cruz\",\r\n            \"numeroDpto\": 3,\r\n            \"pisoDpto\": 2,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 3,\r\n                \"cantidad\": 6,\r\n                \"subtotal\": 7000,\r\n                \"subtotalCosto\": 5000\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"cantidad\": 4,\r\n                \"subtotal\": 3000,\r\n                \"subtotalCosto\": 1000\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "UPDATE",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": 2,\r\n    \"fechaFacturacion\": \"2023-08-21T03:00:00.000+00:00\",\r\n    \"mpPaymentId\": 23456791,\r\n    \"mpMerchantOrderId\": 585929394,\r\n    \"mpPreferenceId\": \"Idea\",\r\n    \"mpPaymentType\": \"MercadoPago\",\r\n    \"formaPago\": \"MERCADO_PAGO\",\r\n    \"totalVenta\": 23000,\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": null,\r\n    \"pedido\": {\r\n        \"id\": 2,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 9000,\r\n        \"totalCosto\": 3260,\r\n        \"estado\": \"COMPLETADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 2,\r\n            \"calle\": \"Belgrano\",\r\n            \"numero\": 302,\r\n            \"codigoPostal\": 5519,\r\n            \"localidad\": \"Capital\",\r\n            \"numeroDpto\": 4,\r\n            \"pisoDpto\": 1,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 3,\r\n                \"cantidad\": 12,\r\n                \"subtotal\": 13000,\r\n                \"subtotalCosto\": 4500\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/2",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DELETE",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/7",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"7"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ONE",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/2",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "GET ALL PAGED",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/paged?page=0&size=3&sort=id,desc",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"paged"
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "3"
-								},
-								{
-									"key": "sort",
-									"value": "id,desc"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SEARCH",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/search?filtro=Men",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"search"
-							],
-							"query": [
-								{
-									"key": "filtro",
-									"value": "Men"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SEARCH PAGED",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/facturas/searchPaged?filtro=MenosIdea&page=0&size=3&sort=id,desc",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
-							"path": [
-								"api",
-								"v1",
-								"facturas",
-								"searchPaged"
-							],
-							"query": [
-								{
-									"key": "filtro",
-									"value": "MenosIdea"
-								},
-								{
-									"key": "page",
-									"value": "0"
-								},
-								{
-									"key": "size",
-									"value": "3"
-								},
-								{
-									"key": "sort",
-									"value": "id,desc"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Articulo Manufacturado",
-			"item": [
-				{
-					"name": "CREATE",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"denominacion\": \"Pizza\",\r\n    \"descripcion\": \"Pizza simple con muzzarella\",\r\n    \"tiempoEstimadoCocina\": 25,\r\n    \"precioVenta\": 14500,\r\n    \"costo\": 4000,\r\n    \"urlImagen\": \"http//pizzas.com\",\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"detalleArticulosManufacturados\": [\r\n        {\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"cantidad\": 7\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/ArticuloManufacturado",
-							"protocol": "https",
-							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
-							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -949,7 +476,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 2,\r\n    \"denominacion\": \"Pancho\",\r\n    \"descripcion\": \"Pancho simple\",\r\n    \"tiempoEstimadoCocina\": 15,\r\n    \"precioVenta\": 3500,\r\n    \"costo\": 200,\r\n    \"urlImagen\": \"http//panchos.com\",\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"detalleArticulosManufacturados\": [\r\n        {\r\n            \"id\": 5,\r\n            \"cantidad\": 6\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"cantidad\": 9\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"denominacion\": \"Pizza\",\r\n    \"descripcion\": \"Pizza con muzzarela y jamon cocido\",\r\n    \"tiempoEstimadoCocina\": 20,\r\n    \"precioVenta\": 13000,\r\n    \"costo\": 45000,\r\n    \"urlImagen\": \"http://www.pizzasitas.com\",\r\n    \"fechaAlta\": \"2023/07/13\",\r\n    \"fechaModificacion\": \"2023/09/21\",\r\n    \"fechaBaja\": \"2023/11/19\",\r\n    \"detalleArticulosManufacturados\": [\r\n        {\r\n            \"id\": 4,\r\n            \"cantidad\": 20,\r\n            \"articuloInsumo\": {\r\n                \"id\": 4,\r\n                \"denominacion\": \"Queso\",\r\n                \"urlImagen\": \"http://imagengod.com\",\r\n                \"precioCompra\": 50000,\r\n                \"stockActual\": 200,\r\n                \"stockMinimo\": 100,\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\",\r\n                \"rubroArticulo\": {\r\n                    \"id\": 2,\r\n                    \"denominacion\": \"Lacteos\",\r\n                    \"fechaAlta\": \"2023/09/13\",\r\n                    \"fechaModificacion\": \"2023/03/21\",\r\n                    \"fechaBaja\": \"2023/05/19\"\r\n                },\r\n                \"unidadMedida\": {\r\n                    \"id\": 2,\r\n                    \"denominacion\": \"gramo\",\r\n                    \"abreviatura\": \"Gr\",\r\n                    \"fechaAlta\": \"2023/09/13\",\r\n                    \"fechaModificacion\": \"2023/03/21\",\r\n                    \"fechaBaja\": \"2023/05/19\"\r\n                }\r\n            }\r\n        }\r\n    ],\r\n    \"detalleFacturas\": [\r\n        {\r\n            \"id\": 4,\r\n            \"cantidad\": 8,\r\n            \"subtotal\": 23000\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -957,18 +484,17 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/ArticuloManufacturado/2",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado/4",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"ArticuloManufacturado",
-								"2"
+								"4"
 							]
 						}
 					},
@@ -980,18 +506,17 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/ArticuloManufacturado/1",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado/4",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"ArticuloManufacturado",
-								"1"
+								"4"
 							]
 						}
 					},
@@ -1003,13 +528,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/ArticuloManufacturado/1",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado/1",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1026,13 +550,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/ArticuloManufacturado",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1048,13 +571,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/ArticuloManufacturado/paged?page=0&size=2&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado/paged?page=0&size=2&sort=id,desc",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1085,13 +607,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/ArticuloManufacturado/search?filtro=Ham",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado/search?filtro=Piz",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1101,7 +622,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "Ham"
+									"value": "Piz"
 								}
 							]
 						}
@@ -1114,13 +635,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/ArticuloManufacturado/searchPaged?filtro=Hambu&page=0&size=2&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado/searchPaged?filtro=Hambu&page=0&size=2&sort=id,desc",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1148,6 +668,555 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Productos Mas Vendidos",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloManufacturado/productosMasVendidos?fechaInicio=2023/01/19&fechaFin=2023/12/19&sort=cantidad,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloManufacturado",
+								"productosMasVendidos"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2023/01/19"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2023/12/19"
+								},
+								{
+									"key": "sort",
+									"value": "cantidad,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Articulo Insumo (Ingredientes) LISTO",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Queso\",\r\n    \"urlImagen\": \"http://imagengod.com\",\r\n    \"precioCompra\": 50000,\r\n    \"stockActual\": 105,\r\n    \"stockMinimo\": 100,\r\n    \"fechaAlta\": \"2023/02/13\",\r\n    \"fechaModificacion\": \"2023/05/21\",\r\n    \"fechaBaja\": \"2023/08/19\",\r\n    \"rubroArticulo\": {\r\n        \"denominacion\": \"Lacteos\",\r\n        \"fechaAlta\": \"2023/03/13\",\r\n        \"fechaModificacion\": \"2023/05/21\",\r\n        \"fechaBaja\": \"2023/08/19\"\r\n    },\r\n    \"unidadMedida\": {\r\n        \"denominacion\": \"gramo\",\r\n        \"abreviatura\": \"Gr\",\r\n        \"fechaAlta\": \"2023/02/13\",\r\n        \"fechaModificacion\": \"2023/05/21\",\r\n        \"fechaBaja\": \"2023/08/19\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"denominacion\": \"Leche\",\r\n    \"urlImagen\": \"http://imagengod.com\",\r\n    \"precioCompra\": 50000,\r\n    \"stockActual\": 105,\r\n    \"stockMinimo\": 100,\r\n    \"fechaAlta\": \"2023/02/13\",\r\n    \"fechaModificacion\": \"2023/05/21\",\r\n    \"fechaBaja\": \"2023/08/19\",\r\n    \"rubroArticulo\": {\r\n        \"id\": 2,\r\n        \"denominacion\": \"Lacteos\",\r\n        \"fechaAlta\": \"2023/03/13\",\r\n        \"fechaModificacion\": \"2023/05/21\",\r\n        \"fechaBaja\": \"2023/08/19\"\r\n    },\r\n    \"unidadMedida\": {\r\n        \"id\": 2,\r\n        \"denominacion\": \"gramo\",\r\n        \"abreviatura\": \"Gr\",\r\n        \"fechaAlta\": \"2023/02/13\",\r\n        \"fechaModificacion\": \"2023/05/21\",\r\n        \"fechaBaja\": \"2023/08/19\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo/paged?page=0&size=3&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo/search?denominacion=Carne",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo",
+								"search"
+							],
+							"query": [
+								{
+									"key": "denominacion",
+									"value": "Carne"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo/searchPaged?denominacion=Carne&page=0&size=3&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "denominacion",
+									"value": "Carne"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stock Bajo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo/stockBajo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo",
+								"stockBajo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stock Insuficiente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ArticuloInsumo/stockInsuficiente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ArticuloInsumo",
+								"stockInsuficiente"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido LISTO",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n    \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n    \"total\": 9000,\r\n    \"nroPedido\": \"193746\",\r\n    \"totalCosto\": 3000,\r\n    \"estado\": \"PAGADO\",\r\n    \"tipoEnvio\": \"TAKE_AWAY\",\r\n    \"formaPago\": \"EFECTIVO\",\r\n    \"fechaAlta\": \"2023/04/13\",\r\n    \"fechaModificacion\": \"2023/01/21\",\r\n    \"fechaBaja\": \"2023/07/19\",\r\n    \"factura\": {\r\n        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"paymentid\": 3423523775,\r\n        \"merchantorder\": 201933394,\r\n        \"preferenceid\": \"3423523775\",\r\n        \"paymenttype\": \"niIdea\",\r\n        \"formapago\": \"EFECTIVO\",\r\n        \"totalventa\": 3099,\r\n        \"fechaAlta\": \"2023/09/13\",\r\n        \"fechaModificacion\": \"2023/03/21\",\r\n        \"fechaBaja\": null,\r\n        \"notaCredito\": {\r\n            \"montoTotal\": 15000,\r\n            \"motivoAnulacion\": \"Cancelado por cliente\"\r\n        },\r\n        \"detalleFacturas\": [\r\n            {\r\n                \"cantidad\": 3,\r\n                \"subtotal\": 4000\r\n            },\r\n            {\r\n                \"cantidad\": 4,\r\n                \"subtotal\": 5000\r\n            }\r\n        ]\r\n    },\r\n    \"domicilio\": {\r\n        \"calle\": \"Beltrán\",\r\n        \"numero\": 342,\r\n        \"codigoPostal\": 5500,\r\n        \"localidad\": \"Godoy Cruz\",\r\n        \"numeroDpto\": 3,\r\n        \"pisoDpto\": 2,\r\n        \"fechaAlta\": \"2023/09/13\",\r\n        \"fechaModificacion\": \"2023/03/21\",\r\n        \"fechaBaja\": \"2023/05/19\"\r\n    },\r\n    \"detallesPedidos\": [\r\n        {\r\n            \"cantidad\": 6,\r\n            \"subtotal\": 7000,\r\n            \"subtotal_costo\": 5000,\r\n            \"articuloManufacturado\": {\r\n                \"denominacion\": \"Hamburguesa\",\r\n                \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                \"tiempoEstimadoCocina\": 20,\r\n                \"precioVenta\": 13000,\r\n                \"costo\": 3922,\r\n                \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\",\r\n                \"detalleArticulosManufacturados\": [\r\n                    {\r\n                        \"cantidad\": 4,\r\n                        \"articuloInsumo\": {\r\n                            \"denominacion\": \"Carne molida\",\r\n                            \"urlImagen\": \"http://imagengod.com\",\r\n                            \"precioCompra\": 50000,\r\n                            \"stockActual\": 200,\r\n                            \"stockMinimo\": 100,\r\n                            \"fechaAlta\": \"2023/09/13\",\r\n                            \"fechaModificacion\": \"2023/03/21\",\r\n                            \"fechaBaja\": \"2023/05/19\",\r\n                            \"rubroArticulo\": {\r\n                                \"denominacion\": \"Verdura\",\r\n                                \"fechaAlta\": \"2023/09/13\",\r\n                                \"fechaModificacion\": \"2023/03/21\",\r\n                                \"fechaBaja\": \"2023/05/19\"\r\n                            },\r\n                            \"unidadMedida\": {\r\n                                \"denominacion\": \"gramo\",\r\n                                \"abreviatura\": \"Gr\",\r\n                                \"fechaAlta\": \"2023/09/13\",\r\n                                \"fechaModificacion\": \"2023/03/21\",\r\n                                \"fechaBaja\": \"2023/05/19\"\r\n                            }\r\n                        }\r\n                    }\r\n                ],\r\n                \"detalleFacturas\": [\r\n                    {\r\n                        \"cantidad\": 3,\r\n                        \"subtotal\": 4000\r\n                    }\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"cantidad\": 4,\r\n            \"subtotal\": 3000,\r\n            \"subtotal_costo\": 1000,\r\n            \"articuloManufacturado\": {\r\n                \"denominacion\": \"Pizza\",\r\n                \"descripcion\": \"Pizza con jamón\",\r\n                \"tiempoEstimadoCocina\": 30,\r\n                \"precioVenta\": 15000,\r\n                \"costo\": 2000,\r\n                \"urlImagen\": \"http//mmmmPizzita.com\",\r\n                \"fechaAlta\": \"2023/05/19\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/09/13\",\r\n                \"detalleArticulosManufacturados\": [\r\n                    {\r\n                        \"cantidad\": 5,\r\n                        \"articuloInsumo\": {\r\n                            \"denominacion\": \"Tomate\",\r\n                            \"urlImagen\": \"httpp//imagengodtomatito.com\",\r\n                            \"precioCompra\": 25000,\r\n                            \"stockActual\": 200,\r\n                            \"stockMinimo\": 100,\r\n                            \"fechaAlta\": \"2023/09/13\",\r\n                            \"fechaModificacion\": \"2023/03/21\",\r\n                            \"fechaBaja\": \"2023/05/19\",\r\n                            \"rubroArticulo\": {\r\n                                \"denominacion\": \"Verdura\",\r\n                                \"fechaAlta\": \"2023/09/13\",\r\n                                \"fechaModificacion\": \"2023/03/21\",\r\n                                \"fechaBaja\": \"2023/05/19\"\r\n                            },\r\n                            \"unidadMedida\": {\r\n                                \"denominacion\": \"gramo\",\r\n                                \"abreviatura\": \"Gr\",\r\n                                \"fechaAlta\": \"2023/09/13\",\r\n                                \"fechaModificacion\": \"2023/03/21\",\r\n                                \"fechaBaja\": \"2023/05/19\"\r\n                            }\r\n                        }\r\n                    }\r\n                ],\r\n                \"detalleFacturas\": [\r\n                    {\r\n                        \"cantidad\": 4,\r\n                        \"subtotal\": 5000\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n    \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n    \"total\": 15000,\r\n    \"nroPedido\": \"193746\",\r\n    \"totalCosto\": 4000,\r\n    \"estado\": \"PAGADO\",\r\n    \"tipoEnvio\": \"TAKE_AWAY\",\r\n    \"formaPago\": \"EFECTIVO\",\r\n    \"fechaAlta\": \"2023/04/13\",\r\n    \"fechaModificacion\": \"2023/01/21\",\r\n    \"fechaBaja\": \"2023/07/19\",\r\n    \"factura\": {\r\n        \"id\": 3,\r\n        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"paymentid\": 3423523775,\r\n        \"merchantorder\": 201933394,\r\n        \"preferenceid\": \"3423523775\",\r\n        \"paymenttype\": \"niIdea\",\r\n        \"formapago\": \"EFECTIVO\",\r\n        \"totalventa\": 3099,\r\n        \"fechaAlta\": \"2023/09/13\",\r\n        \"fechaModificacion\": \"2023/03/21\",\r\n        \"fechaBaja\": null,\r\n        \"notaCredito\": {\r\n            \"montoTotal\": 15000,\r\n            \"motivoAnulacion\": \"Cancelado por cliente\"\r\n        },\r\n        \"detalleFacturas\": [\r\n            {\r\n                \"id\": 4,\r\n                \"cantidad\": 3,\r\n                \"subtotal\": 4000\r\n            },\r\n            {\r\n                \"id\": 5,\r\n                \"cantidad\": 4,\r\n                \"subtotal\": 5000\r\n            }\r\n        ]\r\n    },\r\n    \"domicilio\": {\r\n        \"id\": 3,\r\n        \"calle\": \"Beltrán\",\r\n        \"numero\": 342,\r\n        \"codigoPostal\": 5500,\r\n        \"localidad\": \"Godoy Cruz\",\r\n        \"numeroDpto\": 3,\r\n        \"pisoDpto\": 2,\r\n        \"fechaAlta\": \"2023/09/13\",\r\n        \"fechaModificacion\": \"2023/03/21\",\r\n        \"fechaBaja\": \"2023/05/19\"\r\n    },\r\n    \"detallesPedidos\": [\r\n        {\r\n            \"id\": 4,\r\n            \"cantidad\": 6,\r\n            \"subtotal\": 7000,\r\n            \"subtotal_costo\": 5000,\r\n            \"articuloManufacturado\": {\r\n                \"id\": 4,\r\n                \"denominacion\": \"Hamburguesa\",\r\n                \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                \"tiempoEstimadoCocina\": 20,\r\n                \"precioVenta\": 13000,\r\n                \"costo\": 3922,\r\n                \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                \"fechaAlta\": \"2023/09/13\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/05/19\",\r\n                \"detalleArticulosManufacturados\": [\r\n                    {\r\n                        \"id\": 4,\r\n                        \"cantidad\": 4,\r\n                        \"articuloInsumo\": {\r\n                            \"id\": 4,\r\n                            \"denominacion\": \"Carne molida\",\r\n                            \"urlImagen\": \"http://imagengod.com\",\r\n                            \"precioCompra\": 50000,\r\n                            \"stockActual\": 200,\r\n                            \"stockMinimo\": 100,\r\n                            \"fechaAlta\": \"2023/09/13\",\r\n                            \"fechaModificacion\": \"2023/03/21\",\r\n                            \"fechaBaja\": \"2023/05/19\",\r\n                            \"rubroArticulo\": {\r\n                                \"id\": 2,\r\n                                \"denominacion\": \"Verdura\",\r\n                                \"fechaAlta\": \"2023/09/13\",\r\n                                \"fechaModificacion\": \"2023/03/21\",\r\n                                \"fechaBaja\": \"2023/05/19\"\r\n                            },\r\n                            \"unidadMedida\": {\r\n                                \"id\": 2,\r\n                                \"denominacion\": \"gramo\",\r\n                                \"abreviatura\": \"Gr\",\r\n                                \"fechaAlta\": \"2023/09/13\",\r\n                                \"fechaModificacion\": \"2023/03/21\",\r\n                                \"fechaBaja\": \"2023/05/19\"\r\n                            }\r\n                        }\r\n                    }\r\n                ],\r\n                \"detalleFacturas\": [\r\n                    {\r\n                        \"id\": 6,\r\n                        \"cantidad\": 3,\r\n                        \"subtotal\": 4000\r\n                    }\r\n                ]\r\n            }\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"cantidad\": 4,\r\n            \"subtotal\": 3000,\r\n            \"subtotal_costo\": 1000,\r\n            \"articuloManufacturado\": {\r\n                \"id\": 5,\r\n                \"denominacion\": \"Pizza\",\r\n                \"descripcion\": \"Pizza con jamón\",\r\n                \"tiempoEstimadoCocina\": 30,\r\n                \"precioVenta\": 15000,\r\n                \"costo\": 2000,\r\n                \"urlImagen\": \"http//mmmmPizzita.com\",\r\n                \"fechaAlta\": \"2023/05/19\",\r\n                \"fechaModificacion\": \"2023/03/21\",\r\n                \"fechaBaja\": \"2023/09/13\",\r\n                \"detalleArticulosManufacturados\": [\r\n                    {\r\n                        \"id\": 5,\r\n                        \"cantidad\": 5,\r\n                        \"articuloInsumo\": {\r\n                            \"id\": 5,\r\n                            \"denominacion\": \"Tomate\",\r\n                            \"urlImagen\": \"httpp//imagengodtomatito.com\",\r\n                            \"precioCompra\": 25000,\r\n                            \"stockActual\": 200,\r\n                            \"stockMinimo\": 100,\r\n                            \"fechaAlta\": \"2023/09/13\",\r\n                            \"fechaModificacion\": \"2023/03/21\",\r\n                            \"fechaBaja\": \"2023/05/19\",\r\n                            \"rubroArticulo\": {\r\n                                \"id\": 3,\r\n                                \"denominacion\": \"Verdura\",\r\n                                \"fechaAlta\": \"2023/09/13\",\r\n                                \"fechaModificacion\": \"2023/03/21\",\r\n                                \"fechaBaja\": \"2023/05/19\"\r\n                            },\r\n                            \"unidadMedida\": {\r\n                                \"id\": 3,\r\n                                \"denominacion\": \"gramo\",\r\n                                \"abreviatura\": \"Gr\",\r\n                                \"fechaAlta\": \"2023/09/13\",\r\n                                \"fechaModificacion\": \"2023/03/21\",\r\n                                \"fechaBaja\": \"2023/05/19\"\r\n                            }\r\n                        }\r\n                    }\r\n                ],\r\n                \"detalleFacturas\": [\r\n                    {\r\n                        \"id\": 7,\r\n                        \"cantidad\": 4,\r\n                        \"subtotal\": 5000\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos/paged?page=0&size=2&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "2"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH BY CLIENTE ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos/searchPedidos?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"searchPedidos"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista pedidos Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/pedidos/listaPedidosCliente?legajo=48755",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"pedidos",
+								"listaPedidosCliente"
+							],
+							"query": [
+								{
+									"key": "legajo",
+									"value": "48755"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1169,13 +1238,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/rubroArticulo",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/rubroArticulo",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1200,13 +1268,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/rubroArticulo/2",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/rubroArticulo/2",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1223,13 +1290,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/rubroArticulo/3",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/rubroArticulo/3",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1246,13 +1312,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/rubroArticulo/1",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/rubroArticulo/1",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1269,13 +1334,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/rubroArticulo",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/rubroArticulo",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1291,13 +1355,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/rubroArticulo/paged?page=0&size=3&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/rubroArticulo/paged?page=0&size=3&sort=id,desc",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1328,13 +1391,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/rubroArticulo/search?filtro=Carn",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/rubroArticulo/search?filtro=Verd",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1344,7 +1406,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "Carn"
+									"value": "Verd"
 								}
 							]
 						}
@@ -1357,13 +1419,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/rubroArticulo/searchPaged?filtro=Carn&page=0&size=3&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/rubroArticulo/searchPaged?filtro=Verd&page=0&size=3&sort=id,desc",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1373,7 +1434,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "Carn"
+									"value": "Verd"
 								},
 								{
 									"key": "page",
@@ -1404,7 +1465,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"denominacion\": \"kilogramo\",\r\n    \"abreviatura\": \"kg\",\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"articulosInsumo\": [\r\n        {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Carne molida\",\r\n            \"urlImagen\": \"http://imagengod.com\",\r\n            \"precioCompra\": 50000,\r\n            \"stockActual\": 200,\r\n            \"stockMinimo\": 100,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesFactura\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"cantidad\": 3,\r\n                    \"subtotal\": 4000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 3,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 1,\r\n                                \"cantidad\": 4\r\n                            },\r\n                            {\r\n                                \"id\": 2,\r\n                                \"cantidad\": 5\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523525,\r\n                        \"mpMerchantOrderId\": 285929394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3092939,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 7,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 4000,\r\n                            \"totalCosto\": 2000,\r\n                            \"estado\": \"PAGADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 1,\r\n                                \"calle\": \"Beltrán\",\r\n                                \"numero\": 342,\r\n                                \"codigoPostal\": 5500,\r\n                                \"localidad\": \"Godoy Cruz\",\r\n                                \"numeroDpto\": 3,\r\n                                \"pisoDpto\": 2,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 1,\r\n                                    \"cantidad\": 6,\r\n                                    \"subtotal\": 7000,\r\n                                    \"subtotalCosto\": 5000\r\n                                },\r\n                                {\r\n                                    \"id\": 2,\r\n                                    \"cantidad\": 4,\r\n                                    \"subtotal\": 3000,\r\n                                    \"subtotalCosto\": 1000\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"cantidad\": 4,\r\n                    \"subtotal\": 5000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 3,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 1,\r\n                                \"cantidad\": 4\r\n                            },\r\n                            {\r\n                                \"id\": 2,\r\n                                \"cantidad\": 5\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523525,\r\n                        \"mpMerchantOrderId\": 285929394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3092939,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 8,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 4000,\r\n                            \"totalCosto\": 2000,\r\n                            \"estado\": \"PAGADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 1,\r\n                                \"calle\": \"Beltrán\",\r\n                                \"numero\": 342,\r\n                                \"codigoPostal\": 5500,\r\n                                \"localidad\": \"Godoy Cruz\",\r\n                                \"numeroDpto\": 3,\r\n                                \"pisoDpto\": 2,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 1,\r\n                                    \"cantidad\": 6,\r\n                                    \"subtotal\": 7000,\r\n                                    \"subtotalCosto\": 5000\r\n                                },\r\n                                {\r\n                                    \"id\": 2,\r\n                                    \"cantidad\": 4,\r\n                                    \"subtotal\": 3000,\r\n                                    \"subtotalCosto\": 1000\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                }\r\n            ],\r\n            \"rubroArticulo\": {\r\n                \"id\": 1,\r\n                \"denominacion\": \"Carne\",\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"denominacion\": \"Tomate\",\r\n            \"urlImagen\": \"httpp//imagengodtomatito.com\",\r\n            \"precioCompra\": 25000,\r\n            \"stockActual\": 200,\r\n            \"stockMinimo\": 100,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesFactura\": [\r\n                {\r\n                    \"id\": 3,\r\n                    \"cantidad\": 7,\r\n                    \"subtotal\": 12000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 4,\r\n                        \"denominacion\": \"Pizza\",\r\n                        \"descripcion\": \"Pizza con jamón\",\r\n                        \"tiempoEstimadoCocina\": 30,\r\n                        \"precioVenta\": 15000,\r\n                        \"costo\": 2000,\r\n                        \"urlImagen\": \"http//mmmmPizzita.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 3,\r\n                                \"cantidad\": 9\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523775,\r\n                        \"mpMerchantOrderId\": 201933394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3099,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 9,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 9000,\r\n                            \"totalCosto\": 3260,\r\n                            \"estado\": \"COMPLETADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 2,\r\n                                \"calle\": \"Belgrano\",\r\n                                \"numero\": 302,\r\n                                \"codigoPostal\": 5519,\r\n                                \"localidad\": \"Capital\",\r\n                                \"numeroDpto\": 4,\r\n                                \"pisoDpto\": 1,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 3,\r\n                                    \"cantidad\": 12,\r\n                                    \"subtotal\": 13000,\r\n                                    \"subtotalCosto\": 4500\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                }\r\n            ],\r\n            \"rubroArticulo\": {\r\n                \"id\": 2,\r\n                \"denominacion\": \"ArticulosLimpieza\",\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"denominacion\": \"kilogramo\",\r\n    \"abreviatura\": \"kg\",\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"articulosInsumo\": [\r\n        {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Carne molida\",\r\n            \"urlImagen\": \"http://imagengod.com\",\r\n            \"precioCompra\": 50000,\r\n            \"stockActual\": 200,\r\n            \"stockMinimo\": 100,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesFactura\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"cantidad\": 3,\r\n                    \"subtotal\": 4000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 1,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 1,\r\n                                \"cantidad\": 4\r\n                            },\r\n                            {\r\n                                \"id\": 2,\r\n                                \"cantidad\": 5\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523525,\r\n                        \"mpMerchantOrderId\": 285929394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3092939,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 3,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 4000,\r\n                            \"totalCosto\": 2000,\r\n                            \"estado\": \"PAGADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 1,\r\n                                \"calle\": \"Beltrán\",\r\n                                \"numero\": 342,\r\n                                \"codigoPostal\": 5500,\r\n                                \"localidad\": \"Godoy Cruz\",\r\n                                \"numeroDpto\": 3,\r\n                                \"pisoDpto\": 2,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 1,\r\n                                    \"cantidad\": 6,\r\n                                    \"subtotal\": 7000,\r\n                                    \"subtotalCosto\": 5000\r\n                                },\r\n                                {\r\n                                    \"id\": 2,\r\n                                    \"cantidad\": 4,\r\n                                    \"subtotal\": 3000,\r\n                                    \"subtotalCosto\": 1000\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": 2,\r\n                    \"cantidad\": 4,\r\n                    \"subtotal\": 5000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 1,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 1,\r\n                                \"cantidad\": 4\r\n                            },\r\n                            {\r\n                                \"id\": 2,\r\n                                \"cantidad\": 5\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523525,\r\n                        \"mpMerchantOrderId\": 285929394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3092939,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 4,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 4000,\r\n                            \"totalCosto\": 2000,\r\n                            \"estado\": \"PAGADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 1,\r\n                                \"calle\": \"Beltrán\",\r\n                                \"numero\": 342,\r\n                                \"codigoPostal\": 5500,\r\n                                \"localidad\": \"Godoy Cruz\",\r\n                                \"numeroDpto\": 3,\r\n                                \"pisoDpto\": 2,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 1,\r\n                                    \"cantidad\": 6,\r\n                                    \"subtotal\": 7000,\r\n                                    \"subtotalCosto\": 5000\r\n                                },\r\n                                {\r\n                                    \"id\": 2,\r\n                                    \"cantidad\": 4,\r\n                                    \"subtotal\": 3000,\r\n                                    \"subtotalCosto\": 1000\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                }\r\n            ],\r\n            \"rubroArticulo\": {\r\n                \"id\": 1,\r\n                \"denominacion\": \"Carne\",\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"denominacion\": \"Tomate\",\r\n            \"urlImagen\": \"httpp//imagengodtomatito.com\",\r\n            \"precioCompra\": 25000,\r\n            \"stockActual\": 200,\r\n            \"stockMinimo\": 100,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesFactura\": [\r\n                {\r\n                    \"id\": 3,\r\n                    \"cantidad\": 7,\r\n                    \"subtotal\": 12000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 2,\r\n                        \"denominacion\": \"Pizza\",\r\n                        \"descripcion\": \"Pizza con jamón\",\r\n                        \"tiempoEstimadoCocina\": 30,\r\n                        \"precioVenta\": 15000,\r\n                        \"costo\": 2000,\r\n                        \"urlImagen\": \"http//mmmmPizzita.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 3,\r\n                                \"cantidad\": 9\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523775,\r\n                        \"mpMerchantOrderId\": 201933394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3099,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 5,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 9000,\r\n                            \"totalCosto\": 3260,\r\n                            \"estado\": \"COMPLETADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 2,\r\n                                \"calle\": \"Belgrano\",\r\n                                \"numero\": 302,\r\n                                \"codigoPostal\": 5519,\r\n                                \"localidad\": \"Capital\",\r\n                                \"numeroDpto\": 4,\r\n                                \"pisoDpto\": 1,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 3,\r\n                                    \"cantidad\": 12,\r\n                                    \"subtotal\": 13000,\r\n                                    \"subtotalCosto\": 4500\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                }\r\n            ],\r\n            \"rubroArticulo\": {\r\n                \"id\": 2,\r\n                \"denominacion\": \"ArticulosLimpieza\",\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1412,13 +1473,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/unidadMedida",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/unidadMedida",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1435,7 +1495,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 5,\r\n    \"denominacion\": \"litro\",\r\n    \"abreviatura\": \"lt\",\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"articulosInsumo\": [\r\n        {\r\n            \"id\": 8,\r\n            \"denominacion\": \"Carne molida\",\r\n            \"urlImagen\": \"http://imagengod.com\",\r\n            \"precioCompra\": 50000,\r\n            \"stockActual\": 200,\r\n            \"stockMinimo\": 100,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesFactura\": [\r\n                {\r\n                    \"id\": 8,\r\n                    \"cantidad\": 3,\r\n                    \"subtotal\": 4000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 1,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023-09-13T00:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T00:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T00:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 1,\r\n                                \"cantidad\": 4\r\n                            },\r\n                            {\r\n                                \"id\": 2,\r\n                                \"cantidad\": 5\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"id\": 12,\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523525,\r\n                        \"mpMerchantOrderId\": 285929394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3092939,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 1,\r\n                            \"fechaPedido\": \"2023-07-11T00:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-01T21:05:03.000+00:00\",\r\n                            \"total\": 4000,\r\n                            \"totalCosto\": 2000,\r\n                            \"estado\": \"PAGADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 1,\r\n                                \"calle\": \"Beltrán\",\r\n                                \"numero\": 342,\r\n                                \"codigoPostal\": 5500,\r\n                                \"localidad\": \"Godoy Cruz\",\r\n                                \"numeroDpto\": 3,\r\n                                \"pisoDpto\": 2,\r\n                                \"fechaAlta\": \"2023-09-13T00:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T00:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T00:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T00:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T00:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T00:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 1,\r\n                                    \"cantidad\": 6,\r\n                                    \"subtotal\": 7000,\r\n                                    \"subtotalCosto\": 5000\r\n                                },\r\n                                {\r\n                                    \"id\": 2,\r\n                                    \"cantidad\": 4,\r\n                                    \"subtotal\": 3000,\r\n                                    \"subtotalCosto\": 1000\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": 9,\r\n                    \"cantidad\": 4,\r\n                    \"subtotal\": 5000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 1,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023-09-13T00:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T00:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T00:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 1,\r\n                                \"cantidad\": 4\r\n                            },\r\n                            {\r\n                                \"id\": 2,\r\n                                \"cantidad\": 5\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"id\": 13,\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523525,\r\n                        \"mpMerchantOrderId\": 285929394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3092939,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 5,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 9000,\r\n                            \"totalCosto\": 3000,\r\n                            \"estado\": \"PAGADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 9,\r\n                                \"calle\": \"San Martin\",\r\n                                \"numero\": 287,\r\n                                \"codigoPostal\": 5533,\r\n                                \"localidad\": \"Guaymallen\",\r\n                                \"numeroDpto\": 2,\r\n                                \"pisoDpto\": 4,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 7,\r\n                                    \"cantidad\": 3,\r\n                                    \"subtotal\": 2000,\r\n                                    \"subtotalCosto\": 1000\r\n                                },\r\n                                {\r\n                                    \"id\": 8,\r\n                                    \"cantidad\": 7,\r\n                                    \"subtotal\": 5000,\r\n                                    \"subtotalCosto\": 2500\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                }\r\n            ],\r\n            \"rubroArticulo\": {\r\n                \"id\": 9,\r\n                \"denominacion\": \"Carne\",\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 9,\r\n            \"denominacion\": \"Tomate\",\r\n            \"urlImagen\": \"httpp//imagengodtomatito.com\",\r\n            \"precioCompra\": 25000,\r\n            \"stockActual\": 200,\r\n            \"stockMinimo\": 100,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesFactura\": [\r\n                {\r\n                    \"id\": 10,\r\n                    \"cantidad\": 7,\r\n                    \"subtotal\": 12000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 2,\r\n                        \"denominacion\": \"Pancho\",\r\n                        \"descripcion\": \"Pancho simple\",\r\n                        \"tiempoEstimadoCocina\": 15,\r\n                        \"precioVenta\": 3500,\r\n                        \"costo\": 200,\r\n                        \"urlImagen\": \"http//panchos.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 5,\r\n                                \"cantidad\": 6\r\n                            },\r\n                            {\r\n                                \"id\": 6,\r\n                                \"cantidad\": 9\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"id\": 14,\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523775,\r\n                        \"mpMerchantOrderId\": 201933394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3099,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 6,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 12000,\r\n                            \"totalCosto\": 6260,\r\n                            \"estado\": \"COMPLETADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 10,\r\n                                \"calle\": \"Tucuman\",\r\n                                \"numero\": 543,\r\n                                \"codigoPostal\": 5519,\r\n                                \"localidad\": \"Capital\",\r\n                                \"numeroDpto\": 2,\r\n                                \"pisoDpto\": 2,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 9,\r\n                                    \"cantidad\": 15,\r\n                                    \"subtotal\": 16000,\r\n                                    \"subtotalCosto\": 7500\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                }\r\n            ],\r\n            \"rubroArticulo\": {\r\n                \"id\": 10,\r\n                \"denominacion\": \"ArticulosLimpieza\",\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"denominacion\": \"litros\",\r\n    \"abreviatura\": \"lt\",\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"articulosInsumo\": [\r\n        {\r\n            \"id\": 5,\r\n            \"denominacion\": \"Carne molida\",\r\n            \"urlImagen\": \"http://imagengod.com\",\r\n            \"precioCompra\": 50000,\r\n            \"stockActual\": 200,\r\n            \"stockMinimo\": 100,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesFactura\": [\r\n                {\r\n                    \"id\": 4,\r\n                    \"cantidad\": 3,\r\n                    \"subtotal\": 4000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 1,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 1,\r\n                                \"cantidad\": 4\r\n                            },\r\n                            {\r\n                                \"id\": 2,\r\n                                \"cantidad\": 5\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"id\": 8,\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523525,\r\n                        \"mpMerchantOrderId\": 285929394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3092939,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 3,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 9000,\r\n                            \"totalCosto\": 3000,\r\n                            \"estado\": \"PAGADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 5,\r\n                                \"calle\": \"San Martin\",\r\n                                \"numero\": 287,\r\n                                \"codigoPostal\": 5533,\r\n                                \"localidad\": \"Guaymallen\",\r\n                                \"numeroDpto\": 2,\r\n                                \"pisoDpto\": 4,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 4,\r\n                                    \"cantidad\": 3,\r\n                                    \"subtotal\": 2000,\r\n                                    \"subtotalCosto\": 1000\r\n                                },\r\n                                {\r\n                                    \"id\": 5,\r\n                                    \"cantidad\": 7,\r\n                                    \"subtotal\": 5000,\r\n                                    \"subtotalCosto\": 2500\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                },\r\n                {\r\n                    \"id\": 5,\r\n                    \"cantidad\": 4,\r\n                    \"subtotal\": 5000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 1,\r\n                        \"denominacion\": \"Hamburguesa\",\r\n                        \"descripcion\": \"Hamburguesa simple con cheddar\",\r\n                        \"tiempoEstimadoCocina\": 20,\r\n                        \"precioVenta\": 13000,\r\n                        \"costo\": 3922,\r\n                        \"urlImagen\": \"http//hamborguesitas-o-ke.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 1,\r\n                                \"cantidad\": 4\r\n                            },\r\n                            {\r\n                                \"id\": 2,\r\n                                \"cantidad\": 5\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"id\": 9,\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523525,\r\n                        \"mpMerchantOrderId\": 285929394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3092939,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 4,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 12000,\r\n                            \"totalCosto\": 6260,\r\n                            \"estado\": \"COMPLETADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 6,\r\n                                \"calle\": \"Tucuman\",\r\n                                \"numero\": 543,\r\n                                \"codigoPostal\": 5519,\r\n                                \"localidad\": \"Capital\",\r\n                                \"numeroDpto\": 2,\r\n                                \"pisoDpto\": 2,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 6,\r\n                                    \"cantidad\": 15,\r\n                                    \"subtotal\": 16000,\r\n                                    \"subtotalCosto\": 7500\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                }\r\n            ],\r\n            \"rubroArticulo\": {\r\n                \"id\": 4,\r\n                \"denominacion\": \"Carne\",\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"denominacion\": \"Tomate\",\r\n            \"urlImagen\": \"httpp//imagengodtomatito.com\",\r\n            \"precioCompra\": 25000,\r\n            \"stockActual\": 200,\r\n            \"stockMinimo\": 100,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n            \"detallesFactura\": [\r\n                {\r\n                    \"id\": 6,\r\n                    \"cantidad\": 7,\r\n                    \"subtotal\": 12000,\r\n                    \"articuloManufacturado\": {\r\n                        \"id\": 2,\r\n                        \"denominacion\": \"Pizza\",\r\n                        \"descripcion\": \"Pizza con jamón\",\r\n                        \"tiempoEstimadoCocina\": 30,\r\n                        \"precioVenta\": 15000,\r\n                        \"costo\": 2000,\r\n                        \"urlImagen\": \"http//mmmmPizzita.com\",\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"detalleArticulosManufacturados\": [\r\n                            {\r\n                                \"id\": 3,\r\n                                \"cantidad\": 9\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"facturas\": {\r\n                        \"id\": 10,\r\n                        \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n                        \"mpPaymentId\": 3423523775,\r\n                        \"mpMerchantOrderId\": 201933394,\r\n                        \"mpPreferenceId\": \"MenosIdea\",\r\n                        \"mpPaymentType\": \"niIdea\",\r\n                        \"formaPago\": \"EFECTIVO\",\r\n                        \"totalVenta\": 3099,\r\n                        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                        \"fechaBaja\": null,\r\n                        \"pedido\": {\r\n                            \"id\": 5,\r\n                            \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n                            \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n                            \"total\": 9000,\r\n                            \"totalCosto\": 3000,\r\n                            \"estado\": \"PAGADO\",\r\n                            \"tipoEnvio\": \"TAKE_AWAY\",\r\n                            \"formaPago\": \"EFECTIVO\",\r\n                            \"domicilioEntrega\": {\r\n                                \"id\": 9,\r\n                                \"calle\": \"San Martin\",\r\n                                \"numero\": 287,\r\n                                \"codigoPostal\": 5533,\r\n                                \"localidad\": \"Guaymallen\",\r\n                                \"numeroDpto\": 2,\r\n                                \"pisoDpto\": 4,\r\n                                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n                            },\r\n                            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n                            \"detallesPedidos\": [\r\n                                {\r\n                                    \"id\": 7,\r\n                                    \"cantidad\": 3,\r\n                                    \"subtotal\": 2000,\r\n                                    \"subtotalCosto\": 1000\r\n                                },\r\n                                {\r\n                                    \"id\": 8,\r\n                                    \"cantidad\": 7,\r\n                                    \"subtotal\": 5000,\r\n                                    \"subtotalCosto\": 2500\r\n                                }\r\n                            ]\r\n                        }\r\n                    }\r\n                }\r\n            ],\r\n            \"rubroArticulo\": {\r\n                \"id\": 5,\r\n                \"denominacion\": \"ArticulosLimpieza\",\r\n                \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n                \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n                \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n            }\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1443,18 +1503,17 @@
 							}
 						},
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/unidadMedida/5",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/unidadMedida/3",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
 								"unidadMedida",
-								"5"
+								"3"
 							]
 						}
 					},
@@ -1466,13 +1525,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/unidadMedida/1",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/unidadMedida/1",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1489,13 +1547,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/unidadMedida/1",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/unidadMedida/1",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1512,13 +1569,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/unidadMedida",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/unidadMedida",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1534,13 +1590,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/unidadMedida/paged?page=0&size=3&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/unidadMedida/paged?page=0&size=3&sort=id,desc",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1571,13 +1626,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/unidadMedida/search?filtro=litro",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/unidadMedida/search?filtro=kilo",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1587,7 +1641,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "litro"
+									"value": "kilo"
 								}
 							]
 						}
@@ -1600,13 +1654,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://sprint4-front-eo.onrender.com/api/v1/unidadMedida/searchPaged?filtro=litro&page=0&size=3&sort=id,desc",
-							"protocol": "https",
+							"raw": "http://localhost:8080/api/v1/unidadMedida/searchPaged?filtro=kilo&page=0&size=3&sort=id,desc",
+							"protocol": "http",
 							"host": [
-								"sprint4-front-eo",
-								"onrender",
-								"com"
+								"localhost"
 							],
+							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -1616,7 +1669,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "litro"
+									"value": "kilo"
 								},
 								{
 									"key": "page",
@@ -1638,13 +1691,35 @@
 			]
 		},
 		{
-			"name": "Domicilio",
+			"name": "Factura",
 			"item": [
 				{
 					"name": "CREATE",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaFacturacion\": \"2023-05-19T03:00:00.000+00:00\",\r\n    \"mpPaymentId\": 3423523525,\r\n    \"mpMerchantOrderId\": 285929394,\r\n    \"mpPreferenceId\": \"IDPreferido\",\r\n    \"mpPaymentType\": \"MercadoPago\",\r\n    \"formaPago\": \"EFECTIVO\",\r\n    \"totalVenta\": 3092939,\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": null,\r\n    \"pedido\": {\r\n        \"id\": 3,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 4000,\r\n        \"totalCosto\": 2000,\r\n        \"estado\": \"PAGADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 3,\r\n            \"calle\": \"Beltrán\",\r\n            \"numero\": 342,\r\n            \"codigoPostal\": 5500,\r\n            \"localidad\": \"Godoy Cruz\",\r\n            \"numeroDpto\": 3,\r\n            \"pisoDpto\": 2,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 3,\r\n                \"cantidad\": 6,\r\n                \"subtotal\": 7000,\r\n                \"subtotalCosto\": 5000\r\n            },\r\n            {\r\n                \"id\": 4,\r\n                \"cantidad\": 4,\r\n                \"subtotal\": 3000,\r\n                \"subtotalCosto\": 1000\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/facturas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"facturas"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1652,7 +1727,30 @@
 					"name": "UPDATE",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"fechaFacturacion\": \"2023-08-21T03:00:00.000+00:00\",\r\n    \"mpPaymentId\": 23456791,\r\n    \"mpMerchantOrderId\": 585929394,\r\n    \"mpPreferenceId\": \"Idea\",\r\n    \"mpPaymentType\": \"MercadoPago\",\r\n    \"formaPago\": \"MERCADO_PAGO\",\r\n    \"totalVenta\": 23000,\r\n    \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n    \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n    \"fechaBaja\": null,\r\n    \"pedido\": {\r\n        \"id\": 2,\r\n        \"fechaPedido\": \"2023-07-11T03:00:00.000+00:00\",\r\n        \"horaEstimadaFinalizacion\": \"1970-01-02T00:05:03.000+00:00\",\r\n        \"total\": 9000,\r\n        \"totalCosto\": 3260,\r\n        \"estado\": \"COMPLETADO\",\r\n        \"tipoEnvio\": \"TAKE_AWAY\",\r\n        \"formaPago\": \"EFECTIVO\",\r\n        \"domicilioEntrega\": {\r\n            \"id\": 2,\r\n            \"calle\": \"Belgrano\",\r\n            \"numero\": 302,\r\n            \"codigoPostal\": 5519,\r\n            \"localidad\": \"Capital\",\r\n            \"numeroDpto\": 4,\r\n            \"pisoDpto\": 1,\r\n            \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n            \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n            \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\"\r\n        },\r\n        \"fechaAlta\": \"2023-09-13T03:00:00.000+00:00\",\r\n        \"fechaModificacion\": \"2023-03-21T03:00:00.000+00:00\",\r\n        \"fechaBaja\": \"2023-05-19T03:00:00.000+00:00\",\r\n        \"detallesPedidos\": [\r\n            {\r\n                \"id\": 3,\r\n                \"cantidad\": 12,\r\n                \"subtotal\": 13000,\r\n                \"subtotalCosto\": 4500\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/facturas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1660,15 +1758,43 @@
 					"name": "DELETE",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/facturas/16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"16"
+							]
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "GET ONE BY ID",
+					"name": "GET ONE",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/facturas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1676,7 +1802,20 @@
 					"name": "GET ALL",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/facturas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"facturas"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1684,7 +1823,210 @@
 					"name": "GET ALL PAGED",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/facturas/paged?page=0&size=3&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/facturas/search?paymentid=3423523775",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "paymentid",
+									"value": "3423523775"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/facturas/searchPaged?paymentid=3423523775&page=0&size=3&sort=id,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"facturas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "paymentid",
+									"value": "3423523775"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JWT",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Facu\",\r\n    \"lastname\": \"Olea\",\r\n    \"username\": \"Facustriker\",\r\n    \"password\": \"123ABC\",\r\n    \"email\": \"facu@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Facustriker\",\r\n    \"password\": \"123ABC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Probando Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGYWN1c3RyaWtlciIsImlhdCI6MTY5OTkxOTE5NCwiZXhwIjoxNjk5OTIwNjM0fQ.a_0knh4HFnbWd026ziGmpYDzyWtdgDlhgEZrfUbT5zY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJGYWN1c3RyaWtlciIsImlhdCI6MTY5OTkxOTE5NCwiZXhwIjoxNjk5OTIwNjM0fQ.a_0knh4HFnbWd026ziGmpYDzyWtdgDlhgEZrfUbT5zY",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/demoUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"demoUser"
+							]
+						}
 					},
 					"response": []
 				}

@@ -1,5 +1,6 @@
 package com.utn.sprint_4.controladores;
 
+import com.utn.sprint_4.dtos.ListaPedidosClienteFiltroDTO;
 import com.utn.sprint_4.entidades.Domicilio;
 import com.utn.sprint_4.entidades.Pedido;
 import com.utn.sprint_4.enumeraciones.EstadoPedido;
@@ -78,6 +79,17 @@ public class PedidoController extends BaseControllerImpl<Pedido, PedidoServiceIm
         }
     }
 
+//Lista Pedidos Cliente
+
+    @GetMapping("/listaPedidosCliente")
+    public ResponseEntity<?> listaPedidosCliente(ListaPedidosClienteFiltroDTO listaPedidosClienteFiltroDTO){
+        try{
+            return ResponseEntity.status(HttpStatus.OK).body(servicio.listaPedidosCliente(listaPedidosClienteFiltroDTO));
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(("{\"error\": \"" + e.getMessage() + "\"}"));
+        }
+    }
 
 
 }

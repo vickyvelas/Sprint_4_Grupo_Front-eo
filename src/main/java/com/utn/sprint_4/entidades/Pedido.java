@@ -38,6 +38,10 @@ public class Pedido extends Base {
     private int total;
 
     @NotNull
+    @Column(name = "nroPedido", nullable = false, unique = true)
+    private String nroPedido;
+
+    @NotNull
     @Column(name = "total_costo", precision = 10, scale = 2)
     private int totalCosto;
 
@@ -58,14 +62,17 @@ public class Pedido extends Base {
     @NotNull
     @Column(name = "fecha_alta")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaAlta;
 
     @Column(name = "fecha_modificacion")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaModificacion;
 
     @Column(name = "fecha_baja")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaBaja;
 
     @NotNull

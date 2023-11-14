@@ -1,10 +1,7 @@
 package com.utn.sprint_4.entidades;
 
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.*;
 import com.utn.sprint_4.enumeraciones.FormaPago;
 import jakarta.persistence.*;
 import lombok.*;
@@ -52,16 +49,23 @@ public class Factura extends Base {
     @NotNull
     @Column(name = "fechaAlta")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaAlta;
 
     @Column(name = "fechaModificacion")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaModificacion;
 
     @Column(name = "fechaBaja")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaBaja;
 
+    //Relacion Factura -1-------1-> NotaCredito
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "notaCredito_id")
+    private NotaCredito notaCredito;
 
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @Builder.Default
