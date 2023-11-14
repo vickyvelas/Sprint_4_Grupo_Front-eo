@@ -60,6 +60,9 @@ public class ArticuloManufacturado extends Base {
     @JsonFormat(pattern = "yyyy/MM/dd")
     private Date fechaBaja;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "rubroArticuloManufacturado_id")
+    private RubroArticuloManufacturado rubroArticuloManufacturado;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     @NotNull

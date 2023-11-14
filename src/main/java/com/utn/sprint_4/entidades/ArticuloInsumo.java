@@ -5,9 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.antlr.v4.runtime.misc.NotNull;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "articulo_insumo")
@@ -56,7 +54,7 @@ public class ArticuloInsumo extends Base {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "rubroArticulo_id")
-    private RubroArticulo rubroArticulo;
+    private RubroArticuloInsumo rubroArticuloInsumo;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "unidadDeMedida_id")

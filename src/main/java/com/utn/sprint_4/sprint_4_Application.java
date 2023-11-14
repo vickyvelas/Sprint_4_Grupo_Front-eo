@@ -72,20 +72,33 @@ public class sprint_4_Application {
                     .fechaModificacion(fecha3)
                     .build();
 
-            RubroArticulo rubroArticulo = RubroArticulo.builder()
+            RubroArticuloInsumo rubroArticuloInsumo = RubroArticuloInsumo.builder()
                     .denominacion("Carne")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
                     .build();
 
-            RubroArticulo rubroArticulo2 = RubroArticulo.builder()
+            RubroArticuloInsumo rubroArticuloInsumo2 = RubroArticuloInsumo.builder()
                     .denominacion("Verdura")
                     .fechaAlta(fecha)
                     .fechaBaja(fecha2)
                     .fechaModificacion(fecha3)
                     .build();
 
+            RubroArticuloManufacturado rubroArticuloManufacturado1 = RubroArticuloManufacturado.builder()
+                    .denominacion("Hamburguesa")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
+
+            RubroArticuloManufacturado rubroArticuloManufacturado2 = RubroArticuloManufacturado.builder()
+                    .denominacion("Lomo")
+                    .fechaAlta(fecha)
+                    .fechaBaja(fecha2)
+                    .fechaModificacion(fecha3)
+                    .build();
 
             DetalleArticuloManufacturado detArtManu1 = DetalleArticuloManufacturado.builder()
                     .cantidad(4)
@@ -183,6 +196,7 @@ public class sprint_4_Application {
                     .precioVenta(13000)
                     .tiempoEstimadoCocina(20)
                     .urlImagen("http//hamborguesitas-o-ke.com")
+                    .rubroArticuloManufacturado(rubroArticuloManufacturado1)
                     .build();
 
             ArticuloManufacturado articuloManufacturado2 = ArticuloManufacturado.builder()
@@ -195,6 +209,7 @@ public class sprint_4_Application {
                     .precioVenta(15000)
                     .tiempoEstimadoCocina(30)
                     .urlImagen("http//mmmmPizzita.com")
+                    .rubroArticuloManufacturado(rubroArticuloManufacturado2)
                     .build();
 
             ArticuloManufacturado articuloManufacturado3 = ArticuloManufacturado.builder()
@@ -207,6 +222,7 @@ public class sprint_4_Application {
                     .precioVenta(12000)
                     .tiempoEstimadoCocina(45)
                     .urlImagen("http://www.burguerCopada.com")
+                    .rubroArticuloManufacturado(rubroArticuloManufacturado2)
                     .build();
 
             Usuario usuario = Usuario.builder()
@@ -364,12 +380,12 @@ public class sprint_4_Application {
             detArtManu2.setArticuloInsumo(artIns2);
             detArtManu3.setArticuloInsumo(artIns3);
 
-            artIns1.setRubroArticulo(rubroArticulo);
-            artIns2.setRubroArticulo(rubroArticulo);
-            artIns3.setRubroArticulo(rubroArticulo);
-            artIns1.setRubroArticulo(rubroArticulo2);
-            artIns2.setRubroArticulo(rubroArticulo2);
-            artIns3.setRubroArticulo(rubroArticulo2);
+            artIns1.setRubroArticuloInsumo(rubroArticuloInsumo);
+            artIns2.setRubroArticuloInsumo(rubroArticuloInsumo);
+            artIns3.setRubroArticuloInsumo(rubroArticuloInsumo);
+            artIns1.setRubroArticuloInsumo(rubroArticuloInsumo2);
+            artIns2.setRubroArticuloInsumo(rubroArticuloInsumo2);
+            artIns3.setRubroArticuloInsumo(rubroArticuloInsumo2);
             artIns1.setUnidadMedida(unidadMedida);
             artIns2.setUnidadMedida(unidadMedida);
             artIns3.setUnidadMedida(unidadMedida);
