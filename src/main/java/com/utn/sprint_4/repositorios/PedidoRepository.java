@@ -52,6 +52,14 @@ public interface PedidoRepository extends BaseRepository<Pedido,Long> {
             "LEFT JOIN persona WHERE persona.legajo LIKE %:legajo% "
             , nativeQuery = true)
     List<Pedido> listaPedidosCliente(@Param("legajo") String legajo);
+ @Query(value = "SELECT * FROM pedido WHERE pedido.estado LIKE %:estado% ",
+            nativeQuery = true)
+    List<Pedido> searchNativoPedidosEstado(@Param("estado") EstadoPedido estado, Pageable pageable);
+
+  
+
+    //@Query("SELECT p FROM Pedido p WHERE p.fecha BETWEEN :fechaInicio AND :fechaFin")
+    //List<Pedido> pedidosEntreFechas(@Param("fechaInicio") java.util.Date fechaInicio, @Param("fechaFin") java.util.Date fechaFin);
 
 
 }
