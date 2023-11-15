@@ -39,6 +39,7 @@ public class SecurityConfig {
 
                                 .requestMatchers(new AntPathRequestMatcher("/auth/**")).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/api/v1/**")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/api/v2/**")).permitAll()
                                 .requestMatchers(PathRequest.toH2Console()).permitAll()
                                 .requestMatchers(new AntPathRequestMatcher("/api/v1/demoAdmin/**")).hasAuthority("ADMIN")
                                 .requestMatchers(new AntPathRequestMatcher("/api/v1/demoUser/**")).hasAuthority("USER")

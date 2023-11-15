@@ -1,9 +1,8 @@
 package com.utn.sprint_4.Auth;
 
 import com.utn.sprint_4.JWT.JwtService;
-import com.utn.sprint_4.User.Role;
-import com.utn.sprint_4.User.User;
-import com.utn.sprint_4.User.UserRepository;
+import com.utn.sprint_4.User.*;
+import com.utn.sprint_4.entidades.Persona;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -16,6 +15,7 @@ import org.springframework.stereotype.Service;
 public class AuthService {
 
     private final UserRepository userRepository;
+    private final UsuarioPersonaRepository usuarioPersonaRepository;
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
@@ -44,6 +44,31 @@ public class AuthService {
 
         return AuthResponse.builder()
                 .token(jwtService.getToken(user))
+                .build();
+
+
+    }
+
+    public AuthResponse registerUser(UserRegisterRequest request) {
+
+        UsuarioPersona persona = UsuarioPersona.builder()
+                .firstname(request.getFirstname())
+                .lastname(request.getLastname())
+                .username(request.getUsername())
+                .telefono(request.getTelefono())
+                .password(passwordEncoder.encode(request.getPassword()))
+                .repeatPassword(passwordEncoder.encode(request.getRepeatPassword()))
+                .email(request.getEmail())
+                .direccion(request.getDireccion())
+                .departamento(request.getDepartamento())
+                .fechaNacimiento(request.getFechaNacimiento())
+                .role(Role.USER)
+                .build();
+
+        usuarioPersonaRepository.save(persona);
+
+        return AuthResponse.builder()
+                .token(jwtService.getToken(persona))
                 .build();
 
 
